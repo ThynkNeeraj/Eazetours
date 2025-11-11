@@ -17,8 +17,8 @@ DEEPL_API_URL = "https://api-free.deepl.com/v2/translate"
 # Language codes for DeepL
 LANGUAGES = {
     "es": "ES",  # Spanish
-    "de": "DE",  # German
-    "fr": "FR"   # French
+    # "de": "DE",  # German
+    # "fr": "FR"   # French
 }
 
 def translate_text(text: str, target_lang: str) -> str:
@@ -158,7 +158,7 @@ def main():
         return
     
     # Get all JSON files from the English directory
-    json_files = ['aboutus.json', 'blog-structure.json', 'testimonials.json']
+    json_files = ['delta.json']
     
     if not json_files:
         print(f"No JSON files found in {en_dir}")

@@ -109,7 +109,7 @@ export default function TestimonialVideoSection({ currentLocale }: TestimonialVi
   }, [currentLocale]);
 
   useEffect(() => {
-    videoRefs.current.forEach((video) => {
+    videoRefs.current.forEach(video => {
       if (video) {
         const onLoadedMetadata = () => {
           try {
@@ -142,7 +142,7 @@ export default function TestimonialVideoSection({ currentLocale }: TestimonialVi
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      const newStates = videoRefs.current.map((video) => {
+      const newStates = videoRefs.current.map(video => {
         const elem = document.fullscreenElement;
         return elem === video || elem === video?.parentElement;
       });
@@ -171,7 +171,7 @@ export default function TestimonialVideoSection({ currentLocale }: TestimonialVi
               >
                 {/* Video */}
                 <video
-                  ref={(el) => (videoRefs.current[index] = el)}
+                  ref={el => (videoRefs.current[index] = el)}
                   className={`absolute top-0 left-0 w-full h-full rounded-t-2xl z-10 ${
                     fullscreenStates[index] ? "object-contain" : "object-cover"
                   }`}

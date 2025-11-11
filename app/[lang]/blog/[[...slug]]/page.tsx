@@ -4,23 +4,23 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import enBlogData from "../../../../data/en/blog-structure.json";
 import Script from "next/script";
-import { IBlogDataType } from "../../../../types/Common";
+import { IBlogDataType } from "../../../../types/Common"; // adjust import path if needed
 import { getBlogTranslations } from "../../../../lib/translationHelper";
- 
+
 type Params = {
   params: Promise<{
     slug?: string[];
   }>;
 };
- 
+
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const param = await props.params;
   const slug = param.slug;
- 
+
   if (slug !== undefined && slug.length === 1) {
     const blogUrlb = slug[0];
     const blog = enBlogData.find(item => item.url === blogUrlb);
- 
+
     if (blog) {
       return {
         title: blog.title,
@@ -28,18 +28,18 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       };
     }
   }
- 
+
   return {
     title: "Latest Blogs - Eaze Tours",
     description:
       "Discover the latest travel blogs and updates from Eaze Tours. Get insights, tips, and destination guides for your next adventure!",
   };
 }
- 
+
 export default async function Blogs({ params }: { params: { slug?: string[]; lang: string } }) {
   const { slug, lang } = params;
   const blogData = getBlogTranslations(lang);
- 
+
   if (!slug) {
     return (
       <div>
@@ -51,7 +51,7 @@ export default async function Blogs({ params }: { params: { slug?: string[]; lan
   } else if (slug.length === 1) {
     const blogUrlb = slug[0];
     const blog = blogData.find(item => item.url === blogUrlb) as IBlogDataType | undefined;
- 
+
     if (blog) {
       const faqSchema =
         blog.faq && blog.faq.length > 0
@@ -68,7 +68,7 @@ export default async function Blogs({ params }: { params: { slug?: string[]; lan
               })),
             }
           : null;
- 
+
       return (
         <>
           {faqSchema && (
@@ -88,6 +88,6 @@ export default async function Blogs({ params }: { params: { slug?: string[]; lan
       );
     }
   }
- 
+
   return notFound();
 }

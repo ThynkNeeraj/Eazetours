@@ -4,7 +4,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/bundle";
-import "swiper/css/effect-cards";
 import "swiper/css/effect-fade";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -12,21 +11,24 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "../../styles/globals.css";
-import React from "react";
+
+import React, { Suspense } from "react";
 import Script from "next/script";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { usePathname } from "next/navigation";
+
 import GoogleAnalytics from "../../components/GoogleAnalytics";
 import CookieConsentBanner from "../../components/CookieConsentBanner";
 import NavBar from "../../components/Navbar";
-import LandingNavBar from "../../components/LandingNavBar"; // Specific Navbar for Landing Page
+import LandingNavBar from "../../components/LandingNavBar";
 import Footer from "../../components/Footer";
 import CanonicalURL from "../../components/CanonicalURL";
-import logo from "../../public/images/logo.png";
 import GTMAnalytics from "../../components/gtmComponent";
-import { Suspense } from "react";
+import logo from "../../public/images/logo.png";
+
+const GTM_ID = "GTM-K4N7X8MK"; // GTM Container ID
 
 const homePageJsonLd = {
   "@context": "https://schema.org",
@@ -61,7 +63,7 @@ export default function RootLayout({
   params: { lang: string };
 }) {
   const { lang } = params;
-  const pathname = usePathname(); // Get current route
+  const pathname = usePathname();
 
   return (
     <html lang={lang}>
@@ -72,7 +74,7 @@ export default function RootLayout({
         <meta name="author" content="Eaze Tours" />
         <meta
           name="google-site-verification"
-          content="Onwjmct_4h7Zidg3dgn_ybMwxYsipyAREOHgDHawUKs"
+          content="6LAck0ASlqXJ_cAT0c3qjx9-cQmgC1y0rMnJo11P7DU"
         />
         <title>Eaze Tours</title>
         <link
@@ -80,46 +82,83 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </Head>
+
       <body>
-        {/* Google Consent Mode v2 Setup - Must be before consent banner */}
+        {/* Load before GTM */}
         <Script
-          id="consent-mode-setup"
+          id="consent-mode"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
-              function gtag() { dataLayer.push(arguments); }
+              function gtag(){dataLayer.push(arguments);}
+              // Default (privacy first)
               gtag('consent', 'default', {
                 'ad_user_data': 'denied',
                 'ad_personalization': 'denied',
                 'ad_storage': 'denied',
                 'analytics_storage': 'denied',
-                'wait_for_update': 500,
+                'functionality_storage': 'granted',
+                'security_storage': 'granted'
               });
-              dataLayer.push({'gtm.start': new Date().getTime(), 'event': 'gtm.js'});
             `,
           }}
         />
+
+        {/* Google Tag Manager loader (always load) */}
+        <Script
+          id="gtm-loader"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];
+                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${GTM_ID}');
+            `,
+          }}
+        />
+
+        {/* Structured Data */}
         <Script
           id="organization-schema"
           type="application/ld+json"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }}
         />
+
         <CanonicalURL />
 
-        {/* Conditionally Render NavBar */}
-        {pathname === `/${lang}` ? <LandingNavBar locale={lang} /> : <NavBar locale={lang} />}
+        {/* Conditional Navbar */}
+        {/* pathname === `/${lang}` ? <LandingNavBar locale={lang} /> : <NavBar locale={lang} /> */}
+        {<NavBar key={pathname} locale={lang} />}        
 
         <main>{children}</main>
+
         <Footer locale={lang} />
+
+        {/* Analytics, Consent Banner & Speed Tools */}
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics />
         <CookieConsentBanner />
+
         <Suspense>
           <GTMAnalytics />
         </Suspense>
+
+        {/* GTM NoScript Fallback */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
       </body>
     </html>
   );

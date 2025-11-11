@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-// ✅ Extended Country options with flag + code
+// Extended Country options with flag + code
 const countryOptions = [
   { code: "+1", flag: "🇺🇸", name: "United States" },
   { code: "+44", flag: "🇬🇧", name: "United Kingdom" },
@@ -92,7 +92,7 @@ const handleChange = (
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [showToast, setShowToast] = useState(false);
 
-  // ✅ Auto-detect country code by IP
+  // Auto-detect country Mobile code by IP
   useEffect(() => {
     const detectCountryCode = async () => {
       try {
@@ -202,7 +202,7 @@ const handleChange = (
 
         <form className="card-body" onSubmit={onSubmit} noValidate>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* ✅ Full Name (text only + accent friendly + red border feedback) */}
+            {/* Full Name (text only + accent friendly + red border feedback) */}
             <div>
               <input
                 type="text"
@@ -224,7 +224,7 @@ const handleChange = (
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
 
-            {/* ✅ City */}
+            {/* City */}
             <div>
               <input
                 type="text"
@@ -259,7 +259,7 @@ const handleChange = (
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
 
-            {/* ✅ Phone with country code */}
+            {/* Phone with country code */}
             <div>
               <div className="flex items-center space-x-2">
                 <select
@@ -292,7 +292,7 @@ const handleChange = (
               {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
             </div>
 
-            {/* ✅ Destination */}
+            {/* Destination */}
             <div>
               <input
                 type="text"
@@ -324,11 +324,11 @@ const handleChange = (
                 value={formData.dateOfTravel}
                 onChange={handleChange}
                 onClick={(e) => {
-                  const input = e.currentTarget; // ✅ store ref before async
+                  const input = e.currentTarget; // store ref before async
                   input.blur(); // prevent blue selection highlight
 
                   requestAnimationFrame(() => {
-                    // ✅ use stored element safely
+                    // use stored element safely
                     if (typeof input.showPicker === "function") {
                       input.showPicker();
                     } else {

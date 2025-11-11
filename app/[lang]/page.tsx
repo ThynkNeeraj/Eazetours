@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "India Best Tour Packages for USA Travelers - Eaze Tours",
   description:
-  "Explore incredible India with our trips to India packages. Eaze Tours offers the best India tours packages tailored for an unforgettable journey.",
+    "Explore incredible India with our trips to India packages. Eaze Tours offers the best India tours packages tailored for an unforgettable journey.",
   robots: {
     index: true,
     follow: true,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "Onwjmct_4h7Zidg3dgn_ybMwxYsipyAREOHgDHawUKs",
+    google: "6LAck0ASlqXJ_cAT0c3qjx9-cQmgC1y0rMnJo11P7DU",
   },
 };
 export default function Home({ params }: { params: { lang: string } }) {

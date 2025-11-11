@@ -1,17 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import { IBlogDataType } from "../types/Common";
- 
+
 interface IBlogProp {
   blog: IBlogDataType;
   locale: string;
 }
- 
+
 function BlogSummaryCard({ blog, locale }: IBlogProp) {
   const getPackageHref = (Urlb: string) => {
     return `/${locale}/blog/${Urlb}`;
   };
- 
+
   return (
     <>
       <div className="bg-white rounded-[23px] shadow-[0px_0px_2px_1px_#00000040] flex flex-col ml-1">
@@ -26,7 +26,7 @@ function BlogSummaryCard({ blog, locale }: IBlogProp) {
               <li>India</li>
             </ul>
           </div>
- 
+
           <p className="text-[22px] text-[#04000B] line-clamp-2 font-semibold hover:text-[#6E9753]">
             <Link href={getPackageHref(blog.url)} passHref>
               {blog.page_heading}
@@ -47,5 +47,5 @@ function BlogSummaryCard({ blog, locale }: IBlogProp) {
     </>
   );
 }
- 
+
 export default BlogSummaryCard;

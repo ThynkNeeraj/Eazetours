@@ -29,26 +29,22 @@ const ClientDestinationSlider = ({
   const totalBoxes = slides.length;
   const [visibleBoxes, setVisibleBoxes] = useState(1);
 
-  const slideToIndex = (
-    sliderRef: React.RefObject<HTMLDivElement>,
-    index: number
-  ) => {
+  const slideToIndex = (sliderRef: React.RefObject<HTMLDivElement>, index: number) => {
     if (sliderRef.current) {
       sliderRef.current.style.transition = "transform 0.4s ease-in-out";
-      sliderRef.current.style.transform = `translateX(-${boxWidth.current * index
-        }px)`;
+      sliderRef.current.style.transform = `translateX(-${boxWidth.current * index}px)`;
     }
   };
 
   const handleNextInfoBox = () => {
     if (currentIndex < totalBoxes - visibleBoxes) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
+      setCurrentIndex(prevIndex => prevIndex + 1);
     }
   };
 
   const handlePrevInfoBox = () => {
     if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
+      setCurrentIndex(prevIndex => prevIndex - 1);
     }
   };
 
@@ -66,9 +62,7 @@ const ClientDestinationSlider = ({
 
       // Measure box width
       if (infoSliderRef.current) {
-        const box = infoSliderRef.current.querySelector(
-          ".slider-box"
-        ) as HTMLElement;
+        const box = infoSliderRef.current.querySelector(".slider-box") as HTMLElement;
         if (box) {
           const computedStyle = window.getComputedStyle(box);
           const marginRight = parseFloat(computedStyle.marginRight) || 0;

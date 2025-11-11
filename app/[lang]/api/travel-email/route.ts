@@ -4,7 +4,7 @@ import { Resend } from "resend";
 export const dynamic = "force-dynamic";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const enquiry_email = process.env.ENQUIRY_EMAIL || "thynk.rahul@gmail.com";
+const enquiry_email = process.env.ENQUIRY_EMAIL || "utsavan@gmail.com"; // changed to your desired email
 
 function getFromAddress() {
   const customDomain = "site@eazetours.com";
@@ -27,12 +27,12 @@ export async function POST(request: Request) {
       children: number;
       infants: number;
       message: string;
-      packageName: string; // 👈 added
+      packageName: string; // added
     } = await request.json();
 
     const { data, error } = await resend.emails.send({
       from: getFromAddress(),
-      to: ["thynk.rahul@gmail.com", enquiry_email],
+      to: ["utsavan@gmail.com", enquiry_email],
       subject: `New Travel Enquiry for ${request_data.packageName} from ${request_data.name}`,
       react: EmailTemplateTravel(request_data), // make sure your template uses packageName
     });

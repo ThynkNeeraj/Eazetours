@@ -66,7 +66,7 @@ function VerticalTimeline({ tourPackage }: VerticalTimelineProp) {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <h1 className="text-[20px] sm:text-[30px] font-semibold text-black text-left leading-[1.2em] sm:leading-[1.5em]">
-             <span>{tourPackage.Name}</span>
+                <span>{tourPackage.Name}</span>
             </h1>
             <button
               className="mt-4 sm:mt-0 bg-[#EA2330] hover:bg-[#D60F0F] text-white font-semibold px-6 py-2 rounded-xl shadow-md transition-all w-[142px] whitespace-nowrap"

@@ -61,7 +61,7 @@ const LandingNavBar: React.FC<{ locale: string }> = ({ locale }) => {
     { href: `/${locale}/testimonials`, label: navigation.links.testimonials },
     { href: `/${locale}/packages`, label: navigation.links.packages },
     { href: `/${locale}/gallery`, label: navigation.links.gallery },
-    { href: `/${locale}/blog`, label: "Blog" },
+    { href: `/${locale}/blog`, label: navigation.links.blog },
   ];
 
   const navLinks =

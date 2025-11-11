@@ -47,11 +47,11 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ locale = "en" }) => {
           >
             {popularPackages.heading}
           </h2>
-          <Link href={destinationsLink}>
+          { /* <Link href={destinationsLink}>
             <span className="text-[#025C7A] hover:text-[#034A5D] cursor-pointer font-medium transition-colors duration-300">
               {destinations.cta}
             </span>
-          </Link>
+          </Link> */}
         </div>
       </div>
 

@@ -20,42 +20,52 @@ function getLocaleFromPath(path: string) {
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // Allow all static/public files to pass through
-  if (PUBLIC_FILE.test(pathname) || pathname === "/robots.txt" || pathname === "/sitemap.xml") {
-    return NextResponse.next();
-  }
-
-  // Check if URL already has a locale
-  const pathnameHasLocale = locales.some(
-    locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  );
-
-  // Redirect to default locale if missing
-  if (!pathnameHasLocale) {
+  // redirect english locale → root canonical
+  if (pathname === "/en" || pathname.startsWith("/en/")) {
     const url = req.nextUrl.clone();
-    url.pathname = `/${defaultLocale}${pathname}`;
+    url.pathname = pathname.replace(/^\/en/, "") || "/";
     return NextResponse.redirect(url);
   }
 
-  // Get locale from path
+  // static/public
+  if (
+    PUBLIC_FILE.test(pathname) ||
+    pathname === "/robots.txt" ||
+    pathname === "/sitemap.xml"
+  ) {
+    return NextResponse.next();
+  }
+
+  // prefix check
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  // if no prefix → english → rewrite internally to /en
+  if (!pathnameHasLocale) {
+    const url = req.nextUrl.clone();
+    url.pathname = `/en${pathname}`;
+    return NextResponse.rewrite(url);
+  }
+
+  // get locale
   const locale = getLocaleFromPath(pathname);
 
-  // Handle package redirects
+  // package redirects (same as your original)
   if (pathname.startsWith(`/${locale}/packages`)) {
     const packagePathReplaced = pathname.replace(`/${locale}/packages/`, "");
     const packageId = parseInt(packagePathReplaced);
 
-    // Redirect based on package ID
     if (!Number.isNaN(packageId) && packageId > 0 && packageId < 52) {
-      const tourPackage = packageData.find(p => p.Id === packageId);
+      const tourPackage = packageData.find((p) => p.Id === packageId);
       if (tourPackage && tourPackage.Uri) {
-        return NextResponse.redirect(new URL(`/${locale}/packages/${tourPackage.Uri}`, req.url), {
-          status: 308,
-        });
+        return NextResponse.redirect(
+          new URL(`/${locale}/packages/${tourPackage.Uri}`, req.url),
+          { status: 308 }
+        );
       }
     }
 
-    // Redirect special package slugs
     const packageRedirects: Record<string, string> = {
       "wildlife-tours": "wildlife-safari-tour-package-india",
       "tribals-tours": "gujarat-tribal-tour-package-india",
@@ -71,11 +81,9 @@ export function middleware(req: NextRequest) {
     }
   }
 
-  // Continue to requested page
   return NextResponse.next();
 }
 
-// Apply middleware to all routes except Next.js internals
 export const config = {
   matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };

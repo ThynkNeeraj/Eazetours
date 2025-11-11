@@ -63,9 +63,7 @@ const TestimonialsSection = ({ locale = "en" }: TestimonialsSectionProps) => {
           <h2 className="text-white text-[28px] sm:text-[40px] mb-4 font-semibold leading-[1.2em]">
             {subscribe.heading}
           </h2>
-          <p className="text-white mb-6">
-            {subscribe.description}
-          </p>
+          <p className="text-white mb-6">{subscribe.description}</p>
 
           {/* Toast Notification */}
           <div className={showToast}>

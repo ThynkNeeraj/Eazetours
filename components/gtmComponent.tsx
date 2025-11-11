@@ -5,13 +5,6 @@ import { useEffect } from "react";
 import { getCookie } from "cookies-next";
 import { pageview } from "../lib/gtm";
 
-// Extend Window interface to include dataLayer
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
-
 export default function Analytics() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -21,9 +14,14 @@ export default function Analytics() {
 
     pageview(pathname);
 
-    window.dataLayer = window.dataLayer || [];
-    const gtag = (...args: any[]) => {
-      window.dataLayer!.push(...args);
+    // Safely ensure dataLayer exists
+    const win = window as unknown as { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void };
+    if (!win.dataLayer) {
+      win.dataLayer = [];
+    }
+
+    const gtag = (...args: unknown[]) => {
+      win.dataLayer!.push(args);
     };
 
     const consentGiven = getCookie("consent");
@@ -46,14 +44,16 @@ export default function Analytics() {
       });
     }
 
+    // Load GTM if not already added
     if (!document.getElementById("gtm-script")) {
       const script = document.createElement("script");
       script.id = "gtm-script";
       script.async = true;
-      script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-N77ZQ757";
+      script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-K4N7X8MK";
       document.head.appendChild(script);
     }
 
+    // Handle cookie consent updates
     const updateConsent = () => {
       gtag("consent", "update", {
         ad_storage: "granted",
@@ -62,7 +62,6 @@ export default function Analytics() {
         personalization_storage: "granted",
         security_storage: "granted",
       });
-
       gtag("event", "cookie_consent_given");
     };
 
@@ -76,7 +75,7 @@ export default function Analytics() {
   return (
     <noscript>
       <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-N77ZQ757"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K4N7X8MK"
         height="0"
         width="0"
         style={{ display: "none", visibility: "hidden" }}
