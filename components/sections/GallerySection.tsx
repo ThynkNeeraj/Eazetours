@@ -17,14 +17,14 @@ const GallerySection = ({ locale = "en" }: GallerySectionProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    "/images/gallery/12.jpg",
-    "/images/gallery/20.jpg",
-    "/images/gallery/10.jpg",
-    "/images/gallery/8.jpg",
-    "/images/gallery/19.jpg",
-    "/images/gallery/16.jpg",
-    "/images/gallery/26.jpg",
-    "/images/gallery/28.jpg",
+    "/images/gallery/31.jpg",
+    "/images/gallery/32.jpg",
+    "/images/gallery/33.jpg",
+    "/images/gallery/34.jpg",
+    "/images/gallery/35.jpg",
+    "/images/gallery/36.jpg",
+    "/images/gallery/37.jpg",
+    "/images/gallery/38.jpg",
   ];
 
   const openModal = (index: number) => {
