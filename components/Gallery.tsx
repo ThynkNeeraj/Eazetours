@@ -50,6 +50,20 @@ import gallery_44 from "../public/images/gallery/44.jpg";
 
 // Use StaticImageData type for images
 const gallery_images: StaticImageData[] = [
+  gallery_31,
+  gallery_32,
+  gallery_33,
+  gallery_34,
+  gallery_35,
+  gallery_36,
+  gallery_37,
+  gallery_38,
+  gallery_39,
+  gallery_40,
+  gallery_41,
+  gallery_42,
+  gallery_43,
+  gallery_44,
   gallery_1,
   gallery_2,
   gallery_3,
@@ -79,20 +93,6 @@ const gallery_images: StaticImageData[] = [
   gallery_28,
   gallery_29,
   gallery_30,
-  gallery_31,
-  gallery_32,
-  gallery_33,
-  gallery_34,
-  gallery_35,
-  gallery_36,
-  gallery_37,
-  gallery_38,
-  gallery_39,
-  gallery_40,
-  gallery_41,
-  gallery_42,
-  gallery_43,
-  gallery_44,
 ];
 
 export default function GalleryComponent() {
