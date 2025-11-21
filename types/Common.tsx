@@ -59,6 +59,7 @@ interface IBlogLink {
 type IBlogLinks = IBlogLink[];
 
 interface IBlogIntroduction {
+  heading?: string;
   content: string;
   links?: IBlogLinks;
 }
