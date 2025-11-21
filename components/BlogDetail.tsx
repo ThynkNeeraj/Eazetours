@@ -97,17 +97,17 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
 
             {/* Section Image Support */}
             {section.image && (
-  <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-md mb-6">
+  <div className="w-full mb-6">
     <Image
       src={section.image}
-      alt={section.heading || 'section-image'}
-      fill
-      className="object-cover"
+      alt={section.heading || "section-image"}
+      width={0} 
+      height={0}
+      sizes="100vw"
+      className="w-full h-auto rounded-3xl"
     />
   </div>
 )}
-
-
             {isContentSection(section) && (
               <div className="prose prose-lg max-w-none mb-6">
                 <p>{renderContent(section.content, section.links)}</p>
