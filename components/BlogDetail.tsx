@@ -95,14 +95,14 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
           <div key={index} className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>
 
-            {/* NEW — Section Image Support */}
+            {/* Section Image Support */}
             {section.image && (
               <div className="relative w-full h-[220px] sm:h-[400px] rounded-3xl overflow-hidden shadow-md mb-6">
                 <Image
                   src={section.image}
                   alt={section.heading || "section-image"}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             )}
