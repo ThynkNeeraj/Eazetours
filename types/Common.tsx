@@ -48,7 +48,8 @@ interface ITestimonialDataType {
   Img: string;
 }
 
-// Blog structure interfaces
+/* ---------------- BLOG INTERFACES ---------------- */
+
 interface IBlogLink {
   text: string;
   url: string;
@@ -79,6 +80,9 @@ interface IBlogSection {
   links?: IBlogLinks;
   bullet_points?: Array<string | IBlogBulletPoint>;
   subheadings?: Array<IBlogSubheading>;
+
+  /** NEW — allows images inside sections */
+  image?: string;
 }
 
 interface IBlogConclusion {
@@ -105,9 +109,13 @@ interface IBlogDataType {
   image: string;
   feature_image: string;
   page_heading: string;
+
   structure: IBlogStructure;
-  faq?: IBlogFAQItem[]; // <-- Add FAQ here as optional
+
+  faq?: IBlogFAQItem[];
 }
+
+/* ---------------- OTHER TYPES ---------------- */
 
 interface IPackage {
   location: string;
@@ -125,90 +133,41 @@ interface ITranslations {
       cta: string;
     };
     infoBoxes: {
-      box1: {
-        heading: string;
-        content: string;
-      };
-      box2: {
-        heading: string;
-        content: string;
-      };
-      box3: {
-        heading: string;
-        content: string;
-      };
-      box4: {
-        heading: string;
-        content: string;
-      };
+      box1: { heading: string; content: string };
+      box2: { heading: string; content: string };
+      box3: { heading: string; content: string };
+      box4: { heading: string; content: string };
     };
     destinations: {
       heading: string;
       locations: {
-        india: {
-          title: string;
-          content: string;
-        };
-        maldives: {
-          title: string;
-          content: string;
-        };
-        nepal: {
-          title: string;
-          content: string;
-        };
-        bhutan: {
-          title: string;
-          content: string;
-        };
-        sriLanka: {
-          title: string;
-          content: string;
-        };
+        india: { title: string; content: string };
+        maldives: { title: string; content: string };
+        nepal: { title: string; content: string };
+        bhutan: { title: string; content: string };
+        sriLanka: { title: string; content: string };
       };
       cta: string;
       ctaButton: string;
     };
     tripIdeas: {
       heading: string;
-      indiaTrip: {
-        heading: string;
-        description: string;
-        cta: string;
-      };
-      amritsarTrip: {
-        heading: string;
-        description: string;
-        cta: string;
-      };
+      indiaTrip: { heading: string; description: string; cta: string };
+      amritsarTrip: { heading: string; description: string; cta: string };
     };
     testimonials: {
       heading: string;
-      reviews: {
-        [key: string]: {
-          name: string;
-          location: string;
-          content: string;
-        };
-      };
+      reviews: { [key: string]: { name: string; location: string; content: string } };
       cta: string;
     };
     popularPackages: {
       heading: string;
-      packages: {
-        [key: string]: IPackage;
-      };
-      cta: {
-        details: string;
-        allPackages: string;
-      };
+      packages: { [key: string]: IPackage };
+      cta: { details: string; allPackages: string };
     };
     gallery: {
       heading: string;
-      cta: {
-        viewAll: string;
-        instagram: string;
-      };
+      cta: { viewAll: string; instagram: string };
     };
     subscribe: {
       heading: string;
@@ -223,20 +182,14 @@ interface ITranslations {
     };
   };
   blogs: {
-    accreditations: {
-      heading: string;
-    };
-    latest: {
-      heading: string;
-    };
+    accreditations: { heading: string };
+    latest: { heading: string };
     blogCard: {
       company: string;
       location: string;
       continueReading: string;
     };
-    cta: {
-      viewAll: string;
-    };
+    cta: { viewAll: string };
   };
   footer: {
     about: string;
