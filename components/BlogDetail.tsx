@@ -85,6 +85,7 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
 
         {/* Introduction */}
         <div className="prose prose-lg max-w-none mb-12" style={{ whiteSpace: 'pre-line' }}>
+          <h2 className="text-2xl font-semibold mb-4">{blog.structure.introduction.heading}</h2>
           <p>
             {renderContent(blog.structure.introduction.content, blog.structure.introduction.links)}
           </p>
