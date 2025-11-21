@@ -84,12 +84,17 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
         </div>
 
         {/* Introduction */}
-        <div className="prose prose-lg max-w-none mb-12" style={{ whiteSpace: 'pre-line' }}>
-          <h2 className="text-2xl font-semibold mb-4">{blog.structure.introduction.heading}</h2>
-          <p>
-            {renderContent(blog.structure.introduction.content, blog.structure.introduction.links)}
-          </p>
-        </div>
+<div className="prose prose-lg max-w-none mb-12" style={{ whiteSpace: 'pre-line' }}>
+  {blog.structure.introduction.heading && (
+    <h2 className="text-2xl font-semibold mb-4">
+      {blog.structure.introduction.heading}
+    </h2>
+  )}
+  <p>
+    {renderContent(blog.structure.introduction.content, blog.structure.introduction.links)}
+  </p>
+</div>
+
 
         {/* Main Sections */}
         {blog.structure.main_sections.map((section, index) => (
