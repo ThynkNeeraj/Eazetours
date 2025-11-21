@@ -29,7 +29,7 @@ export async function POST(request: Request) {
 
     const { data, error } = await resend.emails.send({
       from: getFromAddress(),
-      to: ["info@eazetours.com", enquiry_email], // send to info@eazetours.com
+      to: ["thynk.rahul@gmail.com", enquiry_email], // send to info@eazetours.com
       cc: ["thynk.ravi@gmail.com"], // CC copy of email
       subject: `New Enquiry - ${request_data.tourType}`,
       react: EmailTemplate(request_data),
