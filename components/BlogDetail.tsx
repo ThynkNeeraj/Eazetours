@@ -2,19 +2,17 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-
 import {
   IBlogDataType,
   IBlogLinks,
   IBlogSection,
-  IBlogBulletPoint,
   IBlogSubheading,
+  IBlogBulletPoint,
+  IBlogFAQItem,
 } from "../types/Common";
-import { getBlogTranslations } from "../lib/translationHelper";
 
 interface BlogDetailProps {
-  blogId?: string;
-  locale: string;
+  blog: IBlogDataType;
 }
 
 // Helper: render content with dynamic links
@@ -43,16 +41,13 @@ const renderContent = (content: string, links: IBlogLinks = []) => {
   });
 };
 
+// Type guard for bullet points
 const isBulletPoint = (point: string | IBlogBulletPoint): point is IBlogBulletPoint => {
   return typeof point === "object" && "content" in point;
 };
 
-export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
-  const blogData = getBlogTranslations(locale);
-  const blog = blogData.find((item) => item.url === blogId) as IBlogDataType | undefined;
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-
-  if (!blog) return <p>Blog not found</p>;
+export default function BlogDetail({ blog }: BlogDetailProps) {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex((prev) => (prev === index ? null : index));
@@ -81,7 +76,7 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
       )}
 
       {/* Main Sections */}
-      {blog.structure.main_sections.map((section, index) => (
+      {blog.structure.main_sections.map((section: IBlogSection, index: number) => (
         <div key={index} className="mb-12">
           {section.heading_before && (
             <h2 className="text-2xl font-bold mb-2">{section.heading_before}</h2>
@@ -95,20 +90,20 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
             </div>
           )}
 
-          {/* Render Subheadings in "Best For → Highlights → Why Choose" format */}
+          {/* Subheadings */}
           {section.subheadings && section.subheadings.length > 0 && (
             <div className="space-y-4">
-              {section.subheadings.map((sub, idx) => (
+              {section.subheadings.map((sub: IBlogSubheading, idx: number) => (
                 <div key={idx}>
                   <h3 className="text-lg font-semibold mb-1">{sub.title}</h3>
-                  <p className="mb-2">{renderContent(sub.content, section.links)}</p>
+                  <p className="mb-2">{renderContent(sub.content, sub.links || section.links || [])}</p>
 
-                  {/* Bullet Points under subheading (Highlights) */}
-                  {sub.bullet_points && (
+                  {/* Bullet points for Highlights */}
+                  {"bullet_points" in sub && sub.bullet_points && (
                     <ul className="list-disc ml-6 mb-4">
-                      {sub.bullet_points.map((bp, bpIdx) => (
-                        <li key={bpIdx}>
-                          {isBulletPoint(bp) ? renderContent(bp.content, section.links) : renderContent(bp, section.links)}
+                      {sub.bullet_points.map((bp, i) => (
+                        <li key={i}>
+                          {isBulletPoint(bp) ? renderContent(bp.content, section.links || []) : renderContent(bp, section.links || [])}
                         </li>
                       ))}
                     </ul>
@@ -118,28 +113,28 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
             </div>
           )}
 
-          {/* Section-level bullet points (if any) */}
+          {/* Section-level bullet points */}
           {section.bullet_points && (
             <ul className="list-disc ml-6 mt-2">
               {section.bullet_points.map((point, i) => (
                 <li key={i}>
                   {isBulletPoint(point) ? (
                     <>
-                      <strong>{point.title}</strong>
-                      <p>{renderContent(point.content, section.links)}</p>
+                      {point.title && <strong>{point.title}: </strong>}
+                      {renderContent(point.content, section.links || [])}
                     </>
                   ) : (
-                    <span>{renderContent(point, section.links)}</span>
+                    renderContent(point, section.links || [])
                   )}
                 </li>
               ))}
             </ul>
           )}
 
-          {/* Section-level content */}
-          {"content" in section && (
+          {/* Section content */}
+          {section.content && (
             <div className="prose prose-lg max-w-none mt-4">
-              <p>{renderContent(section.content, section.links)}</p>
+              <p>{renderContent(section.content, section.links || [])}</p>
             </div>
           )}
         </div>
@@ -152,7 +147,7 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
             <h2 className="text-2xl font-semibold mb-4">{blog.structure.conclusion.heading}</h2>
           )}
           <div className="prose prose-lg max-w-none">
-            <p>{renderContent(blog.structure.conclusion.content, blog.structure.conclusion.links)}</p>
+            <p>{renderContent(blog.structure.conclusion.content, blog.structure.conclusion.links || [])}</p>
           </div>
         </div>
       )}
@@ -162,7 +157,7 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
         <div className="mt-16 max-w-[1200px] mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-[#000]">Frequently Asked Questions</h2>
           <div className="space-y-4">
-            {blog.faq.map((faqItem, index) => (
+            {blog.faq.map((faqItem: IBlogFAQItem, index: number) => (
               <div
                 key={index}
                 className={`border rounded-2xl shadow-lg transition-shadow duration-300 ${
@@ -190,7 +185,6 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
