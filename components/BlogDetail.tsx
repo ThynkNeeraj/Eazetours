@@ -99,6 +99,8 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
         {/* Main Sections */}
         {blog.structure.main_sections.map((section, index) => (
           <div key={index} className="mb-12">
+            {section.heading_before && (
+  <h2 className="text-2xl font-bold mb-2">{section.heading_before}</h2>)}
             <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>
 
             {/* Section Image Support */}
