@@ -98,12 +98,14 @@ export default function BlogDetail({ blog }: BlogDetailProps) {
                   <h3 className="text-lg font-semibold mb-1">{sub.title}</h3>
                   <p className="mb-2">{renderContent(sub.content, sub.links || section.links || [])}</p>
 
-                  {/* Bullet points for Highlights */}
-                  {"bullet_points" in sub && sub.bullet_points && (
+                  {/* Render bullet points only for "Highlights Typically Include" */}
+                  {sub.title.toLowerCase().includes("highlight") && sub.bullet_points && (
                     <ul className="list-disc ml-6 mb-4">
                       {sub.bullet_points.map((bp, i) => (
                         <li key={i}>
-                          {isBulletPoint(bp) ? renderContent(bp.content, section.links || []) : renderContent(bp, section.links || [])}
+                          {isBulletPoint(bp)
+                            ? renderContent(bp.content, section.links || [])
+                            : renderContent(bp, section.links || [])}
                         </li>
                       ))}
                     </ul>
