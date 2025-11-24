@@ -40,11 +40,9 @@
               "UNESCO World Heritage sites across India"
             ]
           },
-
           {
             "title": "Why Choose This Style:",
-            "content": " You’ll gain meaningful insights into India’s past and present through curated storytelling, heritage walks, museum visits, and local interactions."
-            
+            "content": "You’ll gain meaningful insights into India’s past and present through curated storytelling, heritage walks, museum visits, and local interactions."
           }
         ]
       },
@@ -94,16 +92,20 @@
             "content": "Young travelers, adrenaline seekers, outdoor lovers, photography enthusiasts."
           },
           {
+            "title": "Highlights Typically Include:",
+            "content": "Get ready for high-adrenaline activities and breathtaking natural scenery.",
+            "bullet_points": [
+              "Trekking in the Himalayas (Ladakh, Himachal, Uttarakhand)",
+              "White-water rafting in Rishikesh",
+              "Camping in Rann of Kutch or deserts of Rajasthan",
+              "Paragliding in Bir-Billing",
+              "Scuba diving in Andaman & Lakshadweep"
+            ]
+          },
+          {
             "title": "Why Choose This Style:",
             "content": "You’ll experience India’s wild landscapes and natural wonders up close, guided by trained experts and adventure professionals."
           }
-        ],
-        "bullet_points": [
-          "Trekking in the Himalayas (Ladakh, Himachal, Uttarakhand)",
-          "White-water rafting in Rishikesh",
-          "Camping in Rann of Kutch or deserts of Rajasthan",
-          "Paragliding in Bir-Billing",
-          "Scuba diving in Andaman & Lakshadweep"
         ]
       },
       {
@@ -116,17 +118,21 @@
             "content": "Newlyweds, anniversary trips, couples wanting privacy & romance."
           },
           {
+            "title": "Highlights Typically Include:",
+            "content": "Intimate experiences to cherish with your partner.",
+            "bullet_points": [
+              "Houseboat stays in Kerala",
+              "Beach resorts in Andaman with Romantic Andaman Package options",
+              "Luxury palace stays in Udaipur or Jaipur",
+              "Private candle-light dinners",
+              "Couple spa therapies",
+              "Sunset cruises and nature walks"
+            ]
+          },
+          {
             "title": "Why Choose This Style:",
             "content": "These packages are designed to offer intimacy, comfort, scenic beauty, and premium services that couples cherish."
           }
-        ],
-        "bullet_points": [
-          "Houseboat stays in Kerala",
-          "Beach resorts in Andaman with options like the Romantic Andaman Package",
-          "Luxury palace stays in Udaipur or Jaipur",
-          "Private candle-light dinners",
-          "Couple spa therapies",
-          "Sunset cruises and nature walks"
         ]
       },
       {
@@ -138,16 +144,20 @@
             "content": "Families with children, multi-generational groups."
           },
           {
+            "title": "Highlights Typically Include:",
+            "content": "Fun and safe activities suitable for all ages.",
+            "bullet_points": [
+              "Fun theme parks and wildlife experiences",
+              "Relaxed sightseeing schedules",
+              "Family suites in hotels",
+              "Beach days, boat rides, science museums, & cultural shows",
+              "Kid-friendly activities (camel rides, toy train journeys, cooking demos)"
+            ]
+          },
+          {
             "title": "Why Choose This Style:",
             "content": "These trips prioritize safety, comfort, and entertainment for all age groups."
           }
-        ],
-        "bullet_points": [
-          "Fun theme parks and wildlife experiences",
-          "Relaxed sightseeing schedules",
-          "Family suites in hotels",
-          "Beach days, boat rides, science museums, & cultural shows",
-          "Kid-friendly activities (camel rides, toy train journeys, cooking demos)"
         ]
       },
       {
@@ -160,17 +170,21 @@
             "content": "Yoga practitioners, spiritual seekers, wellness travelers, seniors."
           },
           {
+            "title": "Highlights Typically Include:",
+            "content": "Spiritual and wellness experiences to rejuvenate mind, body, and soul.",
+            "bullet_points": [
+              "Yoga retreats in Rishikesh, Mysore, Kerala",
+              "Meditation programs in monasteries & ashrams",
+              "Visits to sacred sites (Varanasi, Rameswaram, Amritsar, Bodh Gaya)",
+              "Pilgrimage circuits like the Chardham Yatra Tour Package",
+              "Ayurvedic healing and spa therapies",
+              "Temple darshans and cultural rituals"
+            ]
+          },
+          {
             "title": "Why Choose This Style:",
             "content": "Perfect for travelers seeking relaxation, reflection, or a spiritual awakening."
           }
-        ],
-        "bullet_points": [
-          "Yoga retreats in Rishikesh, Mysore, Kerala",
-          "Meditation programs in monasteries & ashrams",
-          "Visits to sacred sites (Varanasi, Rameswaram, Amritsar, Bodh Gaya)",
-          "Pilgrimage circuits like the Chardham Yatra Tour Package",
-          "Ayurvedic healing and spa therapies",
-          "Temple darshans and cultural rituals"
         ]
       },
       {
@@ -182,16 +196,20 @@
             "content": "Wildlife photographers, bird watchers, nature explorers, families."
           },
           {
+            "title": "Highlights Typically Include:",
+            "content": "Safari experiences with incredible wildlife encounters.",
+            "bullet_points": [
+              "Ranthambore National Park (Tigers)",
+              "Jim Corbett National Park",
+              "Kaziranga National Park (Rhinos)",
+              "Gir National Park (Asiatic Lions)",
+              "Periyar Wildlife Sanctuary (Elephants, Birds)"
+            ]
+          },
+          {
             "title": "Why Choose This Style:",
             "content": "These tours deliver thrilling safari experiences with expert naturalists and comfortable jungle lodges."
           }
-        ],
-        "bullet_points": [
-          "Ranthambore National Park (Tigers)",
-          "Jim Corbett National Park",
-          "Kaziranga National Park (Rhinos)",
-          "Gir National Park (Asiatic Lions)",
-          "Periyar Wildlife Sanctuary (Elephants, Birds)"
         ]
       },
       {
@@ -203,16 +221,20 @@
             "content": "Backpackers, digital nomads, self-explorers."
           },
           {
+            "title": "Highlights Typically Include:",
+            "content": "Safe and flexible travel itineraries for independent travelers.",
+            "bullet_points": [
+              "Boutique stays in safe areas",
+              "Local experiences like cooking classes or craft workshops",
+              "Guided tours with reliable drivers",
+              "Flexible schedules and customizable stops",
+              "Community-based tourism"
+            ]
+          },
+          {
             "title": "Why Choose This Style:",
             "content": "Solo travel itineraries offer independence while ensuring security and smooth planning."
           }
-        ],
-        "bullet_points": [
-          "Boutique stays in safe areas",
-          "Local experiences like cooking classes or craft workshops",
-          "Guided tours with reliable drivers",
-          "Flexible schedules and customizable stops",
-          "Community-based tourism"
         ]
       }
     ],
