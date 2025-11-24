@@ -77,6 +77,7 @@ interface IBlogSubheading {
 
 interface IBlogSection {
   heading: string;
+  heading_before?: string;
   content?: string;
   links?: IBlogLinks;
   bullet_points?: Array<string | IBlogBulletPoint>;
