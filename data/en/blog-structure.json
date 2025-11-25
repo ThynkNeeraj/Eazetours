@@ -39,11 +39,9 @@
               "UNESCO World Heritage sites across India"
             ]
           },
-
           {
             "title": "Why Choose This Style:",
-            "content": " You’ll gain meaningful insights into India’s past and present through curated storytelling, heritage walks, museum visits, and local interactions."
-            
+            "content": "You’ll gain meaningful insights into India’s past and present through curated storytelling, heritage walks, museum visits, and local interactions."
           }
         ]
       },
@@ -213,9 +211,8 @@
           "Flexible schedules and customizable stops",
           "Community-based tourism"
         ]
-      }
-
-{
+      },
+      {
         "heading": "What’s Included in Each Type of Package",
         "image": "/images/blogs/main_image/Spiritual_innerimg.png",
         "content": "While inclusions vary depending on the travel style, most India tour packages provide:",
@@ -227,27 +224,25 @@
           {
             "title": "✔ Transportation",
             "content": "Private car transfers, domestic flights, trains, or chauffeur-driven vehicles."
-          }
+          },
           {
             "title": "✔ Sightseeing & Activities",
             "content": "Guided tours, entry tickets, local experiences, workshops, safaris, or treks."
-          }
+          },
           {
             "title": "✔ Expert Guides",
             "content": "English-speaking local guides or tour leaders, depending on the package."
-          }
+          },
           {
             "title": "✔ 24/7 Support",
             "content": "On-ground assistance for seamless travel."
-          }
+          },
           {
             "title": "✔ Custom Add-ons",
             "content": "Spa sessions, adventure sports, luxury cruises, festival experiences, etc. Each tour category comes with unique add-ons such as:"
           }
-        ],
-        
-      }
-
+        ]
+      },
       {
         "heading": "How to Choose Your Ideal Travel Style",
         "image": "/images/blogs/main_image/Spiritual_innerimg.png",
@@ -260,33 +255,30 @@
           {
             "title": "2. Consider Your Pace",
             "content": "Do you prefer slow travel, fast itineraries, or a mix?"
-          }
+          },
           {
             "title": "3. Set Your Budget",
             "content": "Luxury vs mid-range vs budget-friendly travel."
-          }
+          },
           {
             "title": "4. Pick Your Regions of Interest",
-            "content": "North India for culture & mountains, South India for beaches & temples, East India for wildlife & spirituality,  West India for deserts & royal heritage",
-          }
+            "content": "North India for culture & mountains, South India for beaches & temples, East India for wildlife & spirituality, West India for deserts & royal heritage"
+          },
           {
             "title": "5. Think About Who You’re Traveling With",
-            "content": "Family, partner, solo, friends-each group shapes the itinerary."
-          }
+            "content": "Family, partner, solo, friends—each group shapes the itinerary."
+          },
           {
             "title": "6. Decide Your Preferred Experiences",
             "content": "Safari? Trek? Spa? Cooking classes? Local markets? Festivals? Answering these questions helps refine the ideal package type."
           }
-        ],
-        
-      }
-
+        ]
+      },
       {
         "heading": "How Eaze Tours Customizes Trips Based on Preferences",
         "image": "/images/blogs/main_image/Spiritual_innerimg.png",
-        "content": "At Eaze Tours, personalization is at the heart of every itinerary. We don’t believe in one-size-fits-all tours—your journey should reflect you.",       
-      }
-
+        "content": "At Eaze Tours, personalization is at the heart of every itinerary. We don’t believe in one-size-fits-all tours—your journey should reflect you."
+      },
       {
         "heading": "How We Tailor Your Trip:",
         "subheadings": [
@@ -297,70 +289,63 @@
           {
             "title": "✔ Customized Itinerary Planning",
             "content": "Routes, sightseeing, and experiences curated exclusively for your style."
-          }
+          },
           {
             "title": "✔ Flexible Add-ons",
             "content": "Festival tours, spa sessions, adventure sports, food trails, photography walks—added based on your interests."
-          }
+          },
           {
             "title": "✔ Handpicked Stays",
-            "content": "From boutique hotels to luxury palaces, chosen to match your personality.",
-          }
+            "content": "From boutique hotels to luxury palaces, chosen to match your personality."
+          },
           {
             "title": "✔ Safety & Comfort First",
             "content": "Trusted guides, reliable chauffeurs, and verified accommodations."
-          }
+          },
           {
             "title": "✔ Transparent Pricing",
             "content": "No hidden fees, clearly detailed inclusions. Whether you're dreaming of a romantic houseboat in Kerala, a thrilling safari in Ranthambore, a peaceful yoga retreat in Rishikesh, or a heritage exploration across Rajasthan—the Eaze Tours team makes it effortless and memorable."
           }
-        ],
-        
-      }
-
+        ]
+      },
       {
         "heading": "Tell Us Your Travel Style - Get a Tailor-Made Itinerary",
         "content": "Your dream trip to India starts with one question:",
         "subheadings": [
           {
             "title": "What’s your travel style?",
-            "content": "Share your preferences with us, and Eaze Tours will create a custom, carefully crafted itinerary, perfectly aligned with your interests, time, and budget. \n\nReady to explore India your way? Tell us your travel style and get your dream itinerary today!"
-          },
-          
-        ],
-        
+            "content": "Share your preferences with us, and Eaze Tours will create a custom, carefully crafted itinerary, perfectly aligned with your interests, time, and budget.\n\nReady to explore India your way? Tell us your travel style and get your dream itinerary today!"
+          }
+        ]
       }
-
-
     ],
     "conclusion": {
       "heading": "",
       "content": ""
     }
   },
-
   "faq": [
-      {
-        "question": "1. What are the most popular types of India tour packages?",
-        "answer": "Popular categories include cultural heritage tours, luxury trips, adventure packages, wildlife safaris, honeymoons, family tours, and spiritual journeys."
-      },
-      {
-        "question": "2. How do I choose the right India tour package for my travel style?",
-        "answer": "Define your purpose of travel, budget, pace, preferred destinations, and group type. These factors help you select the perfect travel style."
-      },
-      {
-        "question": "3. Are India tour packages customizable?",
-        "answer": "Yes. Most tour operators, including Eaze Tours, offer fully customizable itineraries based on your interests, comfort level, and timeframe."
-      },
-      {
-        "question": "4. What is typically included in India tour packages?",
-        "answer": "Packages generally include accommodation, transportation, guided sightseeing, activities, entry tickets, expert guides, and 24/7 support.."
-      },
-      {
-        "question": "5. Which India tour package is best for first-time travelers?",
-        "answer": "Cultural heritage tours, Golden Triangle itineraries, or balanced family-friendly tours are great introductions to India’s culture, history, and landscapes."
-      }
-    ]
+    {
+      "question": "1. What are the most popular types of India tour packages?",
+      "answer": "Popular categories include cultural heritage tours, luxury trips, adventure packages, wildlife safaris, honeymoons, family tours, and spiritual journeys."
+    },
+    {
+      "question": "2. How do I choose the right India tour package for my travel style?",
+      "answer": "Define your purpose of travel, budget, pace, preferred destinations, and group type. These factors help you select the perfect travel style."
+    },
+    {
+      "question": "3. Are India tour packages customizable?",
+      "answer": "Yes. Most tour operators, including Eaze Tours, offer fully customizable itineraries based on your interests, comfort level, and timeframe."
+    },
+    {
+      "question": "4. What is typically included in India tour packages?",
+      "answer": "Packages generally include accommodation, transportation, guided sightseeing, activities, entry tickets, expert guides, and 24/7 support."
+    },
+    {
+      "question": "5. Which India tour package is best for first-time travelers?",
+      "answer": "Cultural heritage tours, Golden Triangle itineraries, or balanced family-friendly tours are great introductions to India’s culture, history, and landscapes."
+    }
+  ]
 },
   {
     "url": "rajasthan-forts-palaces-tour",
