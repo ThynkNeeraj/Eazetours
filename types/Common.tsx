@@ -63,22 +63,29 @@ interface IBlogLink {
 
 type IBlogLinks = IBlogLink[];
 
+/**
+ * Blog content can be:
+ * - single string
+ * - array of strings (paragraphs / line breaks)
+ */
+type IBlogContent = string | string[];
+
 interface IBlogIntroduction {
   heading?: string;
-  content: string;
+  content: IBlogContent; // ✅ FIXED
   links?: IBlogLinks;
 }
 
 interface IBlogBulletPoint {
   title?: string;
-  content: string;
-  links?: IBlogLinks; // ✅ already correct
+  content: IBlogContent; // ✅ FIXED
+  links?: IBlogLinks;
 }
 
 interface IBlogSubheading {
   title: string;
-  content?: string;
-  bullet_points?: Array<string | IBlogBulletPoint>; // ✅ widened (non-breaking)
+  content?: IBlogContent; // ✅ FIXED
+  bullet_points?: Array<string | IBlogBulletPoint>;
   links?: IBlogLinks;
 }
 
@@ -86,7 +93,7 @@ interface IBlogSection {
   heading: string;
   heading_before?: string;
   image?: string;
-  content?: string;
+  content?: IBlogContent; // ✅ FIXED
   links?: IBlogLinks;
   bullet_points?: Array<string | IBlogBulletPoint>;
   subheadings?: Array<IBlogSubheading>;
@@ -95,7 +102,7 @@ interface IBlogSection {
 
 interface IBlogConclusion {
   heading: string;
-  content: string;
+  content: IBlogContent; // ✅ FIXED
   links?: IBlogLinks;
 }
 
