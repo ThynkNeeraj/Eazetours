@@ -1,3 +1,6 @@
+// =======================
+// PACKAGE + TESTIMONIALS
+// =======================
 interface IItineraryLineDataType {
   Name: string;
   Description: Array<string>;
@@ -48,7 +51,9 @@ interface ITestimonialDataType {
   Img: string;
 }
 
-/* ---------------- BLOG INTERFACES ---------------- */
+// =======================
+// BLOG STRUCTURE
+// =======================
 
 interface IBlogLink {
   text: string;
@@ -67,24 +72,25 @@ interface IBlogIntroduction {
 interface IBlogBulletPoint {
   title?: string;
   content: string;
+  links?: IBlogLinks; // ✅ already correct
 }
 
 interface IBlogSubheading {
   title: string;
-  content: string;
+  content?: string;
+  bullet_points?: Array<string | IBlogBulletPoint>; // ✅ widened (non-breaking)
   links?: IBlogLinks;
 }
 
 interface IBlogSection {
   heading: string;
   heading_before?: string;
+  image?: string;
   content?: string;
   links?: IBlogLinks;
   bullet_points?: Array<string | IBlogBulletPoint>;
   subheadings?: Array<IBlogSubheading>;
-
-  /** NEW — allows images inside sections */
-  image?: string;
+  title?: string;
 }
 
 interface IBlogConclusion {
@@ -111,13 +117,13 @@ interface IBlogDataType {
   image: string;
   feature_image: string;
   page_heading: string;
-
   structure: IBlogStructure;
-
   faq?: IBlogFAQItem[];
 }
 
-/* ---------------- OTHER TYPES ---------------- */
+// =======================
+// LANDING TRANSLATION
+// =======================
 
 interface IPackage {
   location: string;
@@ -159,7 +165,9 @@ interface ITranslations {
     };
     testimonials: {
       heading: string;
-      reviews: { [key: string]: { name: string; location: string; content: string } };
+      reviews: {
+        [key: string]: { name: string; location: string; content: string };
+      };
       cta: string;
     };
     popularPackages: {
@@ -178,19 +186,12 @@ interface ITranslations {
       button: string;
       toast: string;
     };
-    common: {
-      reviews: string;
-      rating: string;
-    };
+    common: { reviews: string; rating: string };
   };
   blogs: {
     accreditations: { heading: string };
     latest: { heading: string };
-    blogCard: {
-      company: string;
-      location: string;
-      continueReading: string;
-    };
+    blogCard: { company: string; location: string; continueReading: string };
     cta: { viewAll: string };
   };
   footer: {
