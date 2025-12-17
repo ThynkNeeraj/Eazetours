@@ -1,359 +1,804 @@
 [
-   {
-  "url": "types-of-india-tour-packages-for-every-travel-style",
-  "title": "Types of India Tour Packages: Find the Perfect Travel Style for Your Journey",
-  "page_heading": "Types of India Tour Packages for Every Travel Style",
-  "description": "Explore top India tour packages based on travel style-cultural, luxury, adventure, family, wildlife & more. Find your perfect trip.",
-  "image": "/images/blogs/main_image/India_Tour_Packages_m.jpg",
-  "feature_image": "/images/blogs/feature_image/India_Tour_Packages_f.png",
-  "structure": {
-    "introduction": {
-      "heading": "Introduction: Why India Suits Every Travel Style",
-      "content": "Few destinations on earth offer the kind of depth, color, and contrast that India does. From snow-capped Himalayan peaks to golden desert dunes, from spiritual havens to luxury retreats, from energetic marketplaces to secluded romantic hideaways - India is a country designed for every kind of traveler. Whether you're someone who loves history, adventure, serenity, wildlife, or cultural immersion, there is an India tour package crafted just for you.\n\nBut with so many travel styles and itinerary options available, choosing the right one can feel overwhelming. That’s where tailored India tour packages come in - allowing you to explore India in the way that best matches your personality, preferences, pace, and budget.\n\nThis pillar guide helps you understand the most popular types of India tour packages, what they include, who they’re ideal for, and how to choose the perfect travel style for your upcoming journey. By the end, you’ll have clarity on the best-fit experience - and how Eaze Tours can customize it just for you."
+  {
+    "url": "romantic-honeymoon-destinations-in-india",
+    "title": "Romantic and Honeymoon Destinations in India for Couples",
+    "description": "Discover the most romantic honeymoon destinations in India, from Manali and Kerala to Goa and Andaman, perfect for couples.",
+    "image": "/images/blogs/main_image/Romantic_Honeymoon_Destinations.jpg",
+    "feature_image": "/images/blogs/feature_image/Romantic_Honeymoon.jpg",
+    "page_heading": "Romantic & Honeymoon Destinations in India: Top Picks for Couples",
+    "structure": {
+      "introduction": {
+        "heading": "",
+        "content": ["The wedding invitations have been sent, the venues are booked, and the whirlwind of festivities is about to begin. But for the couple, the real magic happens after the 'I dos.' Your honeymoon isn't just a holiday; it is the first chapter of your shared life—a time to unwind, connect, and create memories that will last a lifetime.",
+        "At **Eaze Tours**, we understand that every couple’s definition of romance is unique. Whether you dream of waking up to snow-capped peaks, drifting silently through tropical backwaters, or walking hand-in-hand on a secluded beach, India offers a kaleidoscope of romantic settings. Here is our curated guide to the most enchanting getaways for couples."]
+      },
+      "main_sections": [
+       {
+          "heading": "1. Manali: A Snowy Mountain Fairytale",
+          "content": ["For couples who find romance in cozy woolen sweaters, crackling fireplaces, and misty mornings, Manali is the quintessential choice. Nestled in the lap of the Himalayas, this hill station offers a perfect blend of adventure and solitude.","Imagine sipping hot tea while looking out at the Beas River or taking a playful walk through the cedar forests. For the adventurous duo, Solang Valley offers thrilling activities, while Old Manali provides charming cafes and vibrant culture."],
+             "bullet_points": [
+            "**Our Recommendation:** Experience the magic of the mountains with our {{LINK:exotic_manali:Exotic Manali Sightseeing Tour Package}}. We ensure you hit all the scenic spots—from Rohtang Pass to Hadimba Temple—while leaving plenty of time for private moments."
+          ],
+          "links": [
+            {
+              "key": "exotic_manali",
+              "text": "Exotic Manali Sightseeing Tour Package",
+              "url": "https://www.eazetours.com/packages/exotic-manali-tour-package-india"
+            }
+          ]
+        },
+       {
+          "heading": "2. Kerala: Drifting Through 'God’s Own Country'",
+          "content": ["If your idea of romance involves slowing down time, Kerala is the answer. There is nothing quite like the experience of a traditional houseboat (Kettuvallam) gliding through the emerald backwaters of Alleppey.","Kerala offers a sensory feast: the scent of spices in Thekkady, the cool breeze of Munnar’s tea plantations, and the rhythmic sound of water against your private boat. It is intimate, serene, and incredibly beautiful."],
+             "bullet_points": [
+            "**Our Recommendation:** Let us arrange a private houseboat stay and a candlelit dinner on the deck with our {{LINK:romantic_kerala:Romantic Kerala Honeymoon Tour Package}}. It is the perfect blend of nature and luxury."
+          ],
+          "links": [
+            {
+              "key": "romantic_kerala",
+              "text": "Romantic Kerala Honeymoon Tour Package",
+              "url": "https://www.eazetours.com/packages/romantic-kerala-tour-package-india"
+            }
+          ]
+        },
+       {
+          "heading": "3. Andaman & Nicobar: Turquoise Waters and Secluded Shores",
+          "content": ["For those seeking an exotic island vibe without leaving India, the Andaman Islands are a paradise rivaling any international destination. With pristine white sands, crystal-clear turquoise waters, and some of the world’s best diving spots, Havelock and Neil Island offer unmatched seclusion.","Spend your days snorkeling at Elephant Beach or watching the sunset at the world-famous Radhanagar Beach. It is the ultimate sun-soaked escape for water lovers."],
+             "bullet_points": [
+            "**Our Recommendation:** Dive into luxury with our {{LINK:romantic_andaman:Romantic Andaman Package}}, designed to give you the best of beachside relaxation and underwater adventure."
+          ],
+          "links": [
+            {
+              "key": "romantic_andaman",
+              "text": "Romantic Andaman Package",
+              "url": "https://www.eazetours.com/packages/romantic-andaman-tour-package-india"
+            }
+          ]
+        },
+        {
+          "heading": "4. Goa: Sunsets and Sea Breeze",
+          "content": "Goa remains a classic for a reason. Beyond the parties, South Goa offers luxurious beach resorts, quiet coves, and Portuguese heritage that oozes charm. Whether it's a private boat ride to spot dolphins or a romantic dinner at a seaside shack, Goa offers a laid-back vibe that lets you set your own pace."
+        },
+        {
+          "heading": "Crafting the Perfect Itinerary",
+          "content": ["A honeymoon shouldn't be stressful to plan. Whether you want a luxury stay with a private jacuzzi or an adventurous trek, the key is matching the destination to your personality as a couple.","Are you unsure if you want a cultural trip, a wildlife safari, or a pure relaxation package? To help you narrow down your choices, read our guide on {{LINK:packages_find:Types of India Tour Packages: Find the Perfect Travel Style for Your Journey}}. It breaks down the different ways you can experience this incredible country."],
+          "links": [
+            {
+              "key": "packages_find",
+              "text": "Types of India Tour Packages: Find the Perfect Travel Style for Your Journey",
+              "url": "https://www.eazetours.com/blog/types-of-india-tour-packages-find-the-perfect-travel-style-for-your-journey"
+            }
+          ]
+        },
+        {
+          "heading": "Let Eaze Tours Plan Your Forever",
+          "content": ["At Eaze Tours, we specialize in turning travel dreams into reality. We handle the logistics—from luxury transfers to exclusive dining experiences—so you can focus entirely on each other.","Ready to start planning the most romantic trip of your life? Connect with us today on our {{LINK:map:Google Business Profile}} to see what other happy couples are saying and to get directions to our office. Let’s make your honeymoon unforgettable."],
+          "links": [
+            {
+              "key": "map",
+              "text": "Google Business Profile",
+              "url": "https://share.google/5GJes7PgyfBJJt5Rk"
+            }
+          ]
+        }
+      ],
+      "conclusion": {
+         "heading": "",
+          "content": ""
+        }
     },
-    "main_sections": [
+    "faq": [
       {
-        "heading_before": "Most Popular India Tour Package Types",
-        "heading": "1. Cultural Heritage Tours",
-        "image": "/images/blogs/main_image/Cultural_Heritage_innerimg.png",
-        "content": "India is a tapestry of kings, empires, traditions, and timeless artistry. Cultural heritage tours offer a deep dive into the architectural, historical, and cultural richness of the country. One of the most sought-after experiences is the Rajasthan forts and palaces journey, which showcases India’s royal past through grand architecture and vibrant cultural stories. Explore it in-depth through our curated {{LINK:forts_palaces:Forts and Palaces of India tour}}.",
-        "links": [
-          {
-            "key": "forts_palaces",
-            "text": "Forts and Palaces of India tour",
-            "url": "https://www.eazetours.com/packages/forts-and-palaces-india"
-          }
-        ],
-        "subheadings": [
-          {
-            "title": "Best For:",
-            "content": "History buffs, photographers, culture lovers, architecture enthusiasts."
-          },
-          {
-            "title": "Highlights Typically Include:",
-            "bullet_points": [
-              "Taj Mahal and Mughal heritage in Agra",
-              "Forts & palaces of Rajasthan",
-              "Temple towns like Varanasi, Khajuraho, Madurai, and Konark",
-              "Colonial architecture in Kolkata and Mumbai",
-              "UNESCO World Heritage sites across India"
-            ]
-          },
-          {
-            "title": "Why Choose This Style:",
-            "content": "You’ll gain meaningful insights into India’s past and present through curated storytelling, heritage walks, museum visits, and local interactions."
-          }
-        ]
+        "question": "1. What are the best honeymoon destinations in India for couples?",
+        "answer": "Manali, Kerala, Andaman & Nicobar Islands, and Goa are among the top romantic destinations offering diverse experiences for couples."
       },
       {
-        "heading": "2. Luxury India Tours",
-        "image": "/images/blogs/main_image/Luxury_India_innerimg.png",
-        "content": "India’s luxury travel segment is world-renowned. From palace hotels to private safaris, luxury trains to wellness retreats, these packages redefine indulgence. Many travelers especially love exploring India through curated rail experiences such as the {{LINK:palace_on_wheels:Palace on Wheels luxury train package}}.",
+        "question": "2. Which Indian destination is best for a romantic beach honeymoon?",
+        "answer": "Andaman & Nicobar Islands and South Goa are ideal for couples seeking serene beaches and intimate seaside stays."
+      },
+      {
+        "question": "3. Is Manali a good honeymoon destination year-round?",
+        "answer": "Manali is best visited from October to February for snow lovers, while summer months are perfect for pleasant weather and sightseeing."
+      },
+      {
+        "question": "4. Why is Kerala called “God’s Own Country” for honeymoons?",
+        "answer": "Kerala offers tranquil backwaters, lush tea gardens, wildlife experiences, and romantic houseboat stays, perfect for couples."
+      },
+      {
+        "question": "5. Can Eaze Tours customize honeymoon packages in India?",
+        "answer": "Yes, Eaze Tours specializes in tailor-made honeymoon packages, offering personalized itineraries, luxury stays, and romantic experiences."
+      }
+    ]
+  },
+  {
+    "url": "india-for-adventure-lovers-best-trekking-wildlife-outdoor-activities",
+    "title": "Adventure in India: Top Treks, Safaris & Water Sports",
+    "description": "Explore India's best adventures—Himalayan treks, tiger safaris, rafting, kayaking, desert safaris & water sports. Book your thrill with Eaze Tours.",
+    "image": "/images/blogs/main_image/India_for_adventure.jpg",
+    "feature_image": "/images/blogs/feature_image/India-for-adventure.jpg",
+    "page_heading": "India for Adventure Lovers: Best Trekking, Wildlife & Outdoor Activities",
+    "structure": {
+      "introduction": {
+        "heading": "",
+        "content": "India is often painted as a land of ancient spirituality and vibrant culture-a kaleidoscope of colors, spices, and history. But for the adrenaline junkie, it is a playground of epic proportions. From the frozen heights of the Himalayas to the tropical backwaters of the south, the subcontinent offers a diverse menu of thrills that few other destinations can match. At Eaze Tours, we’ve spent years curating experiences that go beyond the ordinary sightseeing trip. Whether you’re looking to conquer high-altitude passes or paddle through silent mangroves, here is your expert guide to the best adventure activities in India."
+      },
+      "main_sections": [
+        {
+          "heading": "1. Conquer the Himalayas: Markha Valley Trek",
+          "content": "For trekkers, Ladakh is the ultimate frontier, and the Markha Valley is its crown jewel. This isn’t just a walk; it’s an expedition into a high-altitude desert that feels like another planet. The trek takes you through remote villages like Skiu and Hankar, across the dizzying Kongmaru La Pass (5,200m), and past ancient monasteries clinging to craggy cliffs.",
+             "bullet_points": [
+            "Why it’s special: You aren’t just seeing the mountains; you’re living in them. The stark beauty of the Hemis National Park, home to the elusive Snow Leopard, makes every step exhilarating.",
+            "Ideal Season: June to September (when the rest of India is in monsoon, Ladakh is perfect).",
+            "Recommended Tour: {{LINK:markha_trek:Markha Valley Trekking Tour in India}} – An 11-day expertly guided journey into the heart of the Zanskar range."
+          ],
+          "links": [
+            {
+              "key": "markha_trek",
+              "text": "Markha Valley Trekking Tour in India",
+              "url": "https://www.eazetours.com/packages/markha-trek-leh-travel-package"
+            }
+          ]
+        },
+       {
+          "heading": "2. Into the Wild: Tiger Safaris",
+          "content": "If your idea of adventure involves the spine-tingling silence of a jungle waiting for a predator to emerge, India’s national parks are calling. The thrill of tracking the Royal Bengal Tiger in its natural habitat is unmatched. Our signature itineraries don't just stop at one park. We take you deep into the 'Tiger State' of Madhya Pradesh (Bandhavgarh and Kanha) and the royal ruins of Ranthambore in Rajasthan. These forests are the real-life setting of The Jungle Book, teeming with leopards, sloth bears, and barasingha.",
+             "bullet_points": [
+            "Why it’s special: It combines the raw thrill of wildlife tracking with the luxury of heritage stays.",
+            "Ideal Season: October to June (Peak sightings occur March-May when majestic cats visit waterholes).",
+            "Recommended Tour: {{LINK:tiger_safari:Tiger Safari Tour India}} – A 12-day immersive wildlife expedition."
+          ],
+          "links": [
+            {
+              "key": "tiger_safari",
+              "text": "Tiger Safari Tour India",
+              "url": "https://www.eazetours.com/packages/tiger-safari-tour-india"
+            }
+          ]
+        },
+        {
+          "heading": "3. Water Thrills: Rishikesh Rafting & Kerala Kayaking",
+          "content": "India’s waters offer two very different paces of adventure.",
+             "bullet_points": [
+            "Rishikesh River Rafting: The Ganges roars through the foothills of the Himalayas, offering Grade III and IV rapids that test your nerve.",
+            "Ideal Season: September to mid-November and March to May.",
+            "Kerala Kayaking: For a more serene but physically engaging experience, kayaking through the narrow canals of Alleppey lets you explore the 'Venice of the East' at water level, far away from the motorized houseboats.",
+            "Ideal Season: November to February (pleasant winter sun)."
+          ]
+        },
+        {
+          "heading": "Sand and Sea: Thar Desert & Goa",
+          "content": "",
+             "bullet_points": [
+            "Thar Desert Camel Safari: Jaisalmer offers a nomadic adventure like no other. Riding a camel into the golden dunes of Sam or Khuri at sunset is a bucket-list moment.",
+            "Ideal Season: October to March (avoid the scorching summer heat).",
+            "Goa Water Sports: Beyond the parties, Goa is India’s capital for parasailing, jet-skiing, and windsurfing.",
+            "Ideal Season: November to February ensures calm seas and clear skies."
+          ]
+        },
+        {
+          "heading": "Choosing Your Adventure",
+          "content": "With so many diverse landscapes, picking the right trip can be overwhelming. Are you a solo backpacker looking for raw thrills, or a family seeking a mix of comfort and activity? Understanding the different travel styles is key to planning a seamless journey. For a deeper dive into selecting the right itinerary for you, read our guide on {{LINK:packages:Types of India Tour Packages: Find the Perfect Travel Style for Your Journey}}.",
+          "links": [
+            {
+              "key": "packages",
+              "text": "Tiger Safari Tour India",
+              "url": "https://www.eazetours.com/packages"
+            }
+          ]
+        },
+        {
+         "heading": "Ready to Plan?",
+          "content": "India is not just a destination; it’s an experience that changes you. Whether you are browsing our general {{LINK:packages:India Travel Packages}} or looking for a custom itinerary, our team at Eaze Tours is here to make it seamless. Let’s start the conversation. Find us on Google: {{LINK:map:Eaze Tours Google Business Profile}}.",
+          "links": [
+            {
+              "key": "packages",
+              "text": "India Travel Packages",
+              "url": "https://www.eazetours.com/packages"
+            },
+             {
+              "key": "map",
+              "text": "Eaze Tours Google Business Profile",
+              "url": "https://share.google/5GJes7PgyfBJJt5Rk"
+            }
+          ]
+        }
+      ],
+      "conclusion": {
+        "heading": "",
+        "content": ""
+      }
+    },
+    "faq": [
+      {
+        "question": "1. What is the best adventure activity to try in India for first-time thrill seekers?",
+        "answer": "River rafting in Rishikesh or tiger safaris in Ranthambore are ideal for beginners—adventurous yet safe when done with certified operators."
+      },
+      {
+        "question": "2. When is the best time to go trekking in the Himalayas?",
+        "answer": "June to September is the ideal season for the Markha Valley and other Ladakh treks, as the weather is dry and trails are snow-free."
+      },
+      {
+        "question": "3. Are tiger safaris in India safe?",
+        "answer": "Yes. Tiger safaris are conducted in regulated national parks with trained guides, safety protocols, and designated safari routes."
+      },
+      {
+        "question": "4. Which adventure destination in India is suitable for families?",
+        "answer": "Goa (water sports), Kerala (kayaking), and Jaisalmer (desert safari) are great family-friendly adventure destinations with comfort-focused stays."
+      },
+      {
+        "question": "5. Can adventure tours in India be customized?",
+        "answer": "Absolutely. Reputable tour operators like Eaze Tours offer fully customizable itineraries based on interests, duration, fitness level, and travel style."
+      }
+    ]
+  },
+  {
+    "url": "top-cultural-heritage-experiences-to-add-to-your-india-tour",
+    "title": "Cultural & Heritage Experiences to Explore in India",
+    "description": "Discover India’s soul through forts, temples, art, and rituals. Top cultural & heritage experiences curated for an unforgettable India tour.",
+    "image": "/images/blogs/main_image/Top-Cultural-Heritage.jpg",
+    "feature_image": "/images/blogs/feature_image/Top_Cultural_&_Heritage.jpg",
+    "page_heading": "Unlocking the Soul of India: Top Cultural & Heritage Experiences to Add to Your India Tour",
+    "structure": {
+      "introduction": {
+        "heading": "",
+        "content": "India is not just a country; it is a feeling. It is the scent of marigolds at a temple gate, the echo of history in a crumbling fortress, and the vibrant chaos of a bazaar that has thrived for centuries. For travelers, the challenge isn’t finding culture—it’s deciding which of the million stories to listen to first. At Eaze Tours, we believe that a true journey goes beyond sightseeing. It is about immersion. Whether you are a history buff, a spiritual seeker, or an admirer of art, curating the right experiences can transform a simple vacation into a life-altering journey. To help you plan, we have curated a list of the top cultural and heritage experiences that define the very essence of our diverse land. If you are ready to start planning, explore our wide range of {{LINK:packages:india travel packages}} designed to bring these moments to life.",
         "links": [
           {
-            "key": "palace_on_wheels",
-            "text": "Palace on Wheels luxury train package",
+            "key": "packages",
+            "text": "india travel packages",
             "url": "https://www.eazetours.com/packages"
           }
-        ],
-        "subheadings": [
-          {
-            "title": "Best For:",
-            "content": "Affluent travelers, honeymooners, families seeking comfort, seniors."
-          },
-          {
-            "title": "Why Choose This Style:",
-            "content": "If you prefer seamless, stress-free travel with top-tier experiences, luxury tours offer unmatched comfort and exclusivity."
-          }
-        ],
-        "bullet_points": [
-          "Stays in iconic luxury hotels",
-          "Private chauffeurs and professional guides",
-          "Fine-dining experiences and curated local cuisine trails",
-          "Luxury trains like Golden Chariot & Palace on Wheels",
-          "Exclusive Ayurvedic spas and wellness resorts"
         ]
       },
-      {
-        "heading": "3. Adventure & Nature Tours",
-        "image": "/images/blogs/main_image/Adventure_innerimg.png",
-        "content": "From trekking to river rafting, from camping in valleys to exploring national parks, adventure tours deliver high-energy thrills and nature-centric escapes. One of the most iconic Himalayan adventures is the {{LINK:markha_valley:Markha Valley Trekking Tour}}.",
+      "main_sections": [
+        {
+          "heading": "1. Witnessing the Sunrise at the Taj Mahal",
+          "content": "There are monuments, and then there is the Taj Mahal. While beautiful at any time of day, the Taj Mahal at sunrise is a spiritual experience. As the first light of dawn kisses the white marble, the mausoleum transforms from soft grey to a pearlescent pink, finally glowing in brilliant white. This quiet hour, before the crowds arrive, offers a moment of profound silence and reflection that defines the magic of India.",
+          "image": "/images/blogs/main_image/Cultural_Heritage1.jpg",
+          "subheadings": [
+            {
+              "title": "",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "heading": "2. Walking Through History: Jaipur’s Forts & Palaces",
+          "content": "Rajasthan is the land of kings, and Jaipur is its crowning jewel. Beyond the pink façade lies a history of valor and opulence. Exploring the Amber Fort on a guided tour allows you to touch the walls that once protected dynasties. The City Palace is not just a museum; it is a living residence where the royal family still resides. To truly immerse yourself in this regal heritage, consider our {{LINK:forts_palaces:Fort and Palaces of India Tour}}. This itinerary is crafted to take you deep into the architectural marvels of the Rajput era, ensuring you don't just see the palaces, but understand the legends behind them.",
+          "links": [
+            {
+              "key": "forts_palaces",
+              "text": "Fort and Palaces of India Tour",
+              "url": "https://www.eazetours.com/packages/forts-and-palaces-india"
+            }
+          ],
+          "image": "/images/blogs/main_image/Cultural_Heritage2.jpg",
+          "subheadings": [
+            {
+              "title": "",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "heading": "3. The Open-Air Art Gallery: Sekhawati Havelis",
+          "content": "Often overshadowed by the major cities of Rajasthan, the region of Sekhawati is a hidden gem for culture lovers. Known as the 'open-air art gallery of Rajasthan,' the towns here are dotted with Havelis (mansions) adorned with intricate frescoes depicting everything from mythology to the British Raj. Our {{LINK:sekhawati_havelis:Sekhawati Havelis Tour}} takes you off the beaten path to Mandawa and Bikaner, where every wall tells a story. It is a must for anyone who appreciates art and wants to see a quieter, more artistic side of majestic Rajasthan.",
+          "links": [
+            {
+              "key": "sekhawati_havelis",
+              "text": "Sekhawati Havelis Tour",
+              "url": "https://www.eazetours.com/packages/sekhawati-havelis-delhi-bikaner-mandawa-jaipur-tour-india"
+            }
+          ],
+          "image": "/images/blogs/main_image/Cultural_Heritage3.jpg",
+          "subheadings": [
+            {
+              "title": "",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "heading": "4. The Spiritual Symphony: Varanasi Ganga Aarti",
+          "content": "Varanasi is one of the oldest living cities in the world, and the evening Ganga Aarti is its beating heart. As dusk falls, priests perform a synchronized ritual involving fire, chanting, and incense on the ghats of the River Ganges. It is a powerful sensory overload—the ringing bells, the rhythmic chanting, and the fire lamps reflecting on the dark water create an atmosphere of intense devotion that stays with you long after you leave.",
+          "image": "/images/blogs/main_image/Cultural_Heritage4.jpg",
+          "subheadings": [
+            {
+              "title": "",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "heading": "5. The Dravidian Masterpieces: South India’s Temple Circuit",
+          "content": "The culture of South India offers a distinct contrast to the North. Here, heritage is carved into the towering Gopurams (gateway towers) of ancient temples. From the Shore Temple in Mahabalipuram to the living traditions of Madurai’s Meenakshi Temple, the South is a treasure trove of Dravidian architecture. Experience the distinct flavors and sights of the south with our {{LINK:south_package:South India Chennai to Cochin Tour Package}}. This journey weaves through the best of Tamil Nadu and Kerala, offering a perfect blend of temple heritage and tropical serenity.",
+          "links": [
+            {
+              "key": "south_package",
+              "text": "South India Chennai to Cochin Tour Package",
+              "url": "https://www.eazetours.com/packages/south-india-chennai-cochin-tour-india"
+            }
+          ],
+          "image": "/images/blogs/main_image/Cultural_Heritage5.jpg",
+          "subheadings": [
+            {
+              "title": "",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "heading": "6. Carved in Stone: Khajuraho UNESCO Temples",
+          "content": "The Khajuraho Group of Monuments is a testament to the architectural genius of the Chandela dynasty. Famous for their Nagara-style architectural symbolism and erotic sculptures, these temples are actually a celebration of all aspects of life—dharma, kama, artha, and moksha. A guided walkthrough here reveals the profound philosophy hidden within the stone carvings.",
+          "image": "/images/blogs/main_image/Cultural_Heritage6.jpg"
+        },
+        {
+          "heading": "How Eaze Tours Enhances Your Cultural Experience",
+          "content": "At {{LINK:eazetours:Eaze Tours}}, we know that a monument is just a structure without a story. That is why our tours are led by government-approved, expert guides who are storytellers at heart. They don’t just show you the site; they bridge the gap between the past and the present, helping you understand the cultural nuances that guidebooks often miss.",
+          "links": [
+            {
+              "key": "eazetours",
+              "text": "Eaze Tours",
+              "url": "https://www.eazetours.com"
+            }
+          ]
+        },
+        {
+          "heading": "Find Your Perfect Travel Style",
+          "content": "With so many options, it can be hard to choose the right itinerary. If you are unsure where to begin, we recommend reading our detailed guide on Types of India Tour Packages: Find the Perfect Travel Style for Your Journey. It breaks down the different ways you can explore India, from luxury train journeys to wildlife safaris."
+        }
+      ],
+      "conclusion": {
+        "heading": "Ready to Explore?",
+        "content": "India is waiting to share her secrets with you. Whether it’s the desert culture of Rajasthan or the spiritual banks of Varanasi, let us handle the logistics while you soak in the experience.Connect with us and see what our travelers are saying on our {{LINK:map:Google Business Profile}}.",
         "links": [
           {
-            "key": "markha_valley",
-            "text": "Markha Valley Trekking Tour",
-            "url": "https://www.eazetours.com/packages"
-          }
-        ],
-        "subheadings": [
-          {
-            "title": "Best For:",
-            "content": "Young travelers, adrenaline seekers, outdoor lovers, photography enthusiasts."
-          },
-          {
-            "title": "Why Choose This Style:",
-            "content": "You’ll experience India’s wild landscapes and natural wonders up close, guided by trained experts and adventure professionals."
-          }
-        ],
-        "bullet_points": [
-          "Trekking in the Himalayas (Ladakh, Himachal, Uttarakhand)",
-          "White-water rafting in Rishikesh",
-          "Camping in Rann of Kutch or deserts of Rajasthan",
-          "Paragliding in Bir-Billing",
-          "Scuba diving in Andaman & Lakshadweep"
-        ]
-      },
-      {
-        "heading": "4. Honeymoon & Romantic Getaways",
-        "image": "/images/blogs/main_image/Honeymoon_innerimg.png",
-        "content": "India’s diverse romantic destinations are perfect for newlyweds or couples celebrating milestones. The Romantic Andaman Package is especially popular, offering turquoise beaches, candle-light dinners, and luxurious resort stays.",
-        "subheadings": [
-          {
-            "title": "Best For:",
-            "content": "Newlyweds, anniversary trips, couples wanting privacy & romance."
-          },
-          {
-            "title": "Why Choose This Style:",
-            "content": "These packages are designed to offer intimacy, comfort, scenic beauty, and premium services that couples cherish."
-          }
-        ],
-        "bullet_points": [
-          "Houseboat stays in Kerala",
-          "Beach resorts in Andaman with options like the Romantic Andaman Package",
-          "Luxury palace stays in Udaipur or Jaipur",
-          "Private candle-light dinners",
-          "Couple spa therapies",
-          "Sunset cruises and nature walks"
-        ]
-      },
-      {
-        "heading": "5. Family-Friendly Tours",
-        "content": "Family trips require comfort, convenience, and kid-safe activities. Family-friendly India tours focus on balanced itineraries that keep everyone—kids, parents, and seniors—engaged.",
-        "subheadings": [
-          {
-            "title": "Best For:",
-            "content": "Families with children, multi-generational groups."
-          },
-          {
-            "title": "Why Choose This Style:",
-            "content": "These trips prioritize safety, comfort, and entertainment for all age groups."
-          }
-        ],
-        "bullet_points": [
-          "Fun theme parks and wildlife experiences",
-          "Relaxed sightseeing schedules",
-          "Family suites in hotels",
-          "Beach days, boat rides, science museums, & cultural shows",
-          "Kid-friendly activities (camel rides, toy train journeys, cooking demos)"
-        ]
-      },
-      {
-        "heading": "6. Spiritual & Wellness Journeys",
-        "image": "/images/blogs/main_image/Spiritual_innerimg.png",
-        "content": "India is synonymous with spirituality. Whether you’re seeking inner peace, rejuvenation, or religious exploration, spiritual and wellness tours offer transformative experiences. For many devotees, the Chardham Yatra Tour Package is a profound spiritual journey through Uttarakhand’s sacred Himalayan shrines.",
-        "subheadings": [
-          {
-            "title": "Best For:",
-            "content": "Yoga practitioners, spiritual seekers, wellness travelers, seniors."
-          },
-          {
-            "title": "Why Choose This Style:",
-            "content": "Perfect for travelers seeking relaxation, reflection, or a spiritual awakening."
-          }
-        ],
-        "bullet_points": [
-          "Yoga retreats in Rishikesh, Mysore, Kerala",
-          "Meditation programs in monasteries & ashrams",
-          "Visits to sacred sites (Varanasi, Rameswaram, Amritsar, Bodh Gaya)",
-          "Pilgrimage circuits like the Chardham Yatra Tour Package",
-          "Ayurvedic healing and spa therapies",
-          "Temple darshans and cultural rituals"
-        ]
-      },
-      {
-        "heading": "7. Wildlife & Safari Tours",
-        "content": "India’s biodiversity is a paradise for wildlife lovers. With a variety of India wildlife tour packages, travelers can encounter tigers, elephants, rhinos, and exotic birds across diverse ecosystems.",
-        "subheadings": [
-          {
-            "title": "Best For:",
-            "content": "Wildlife photographers, bird watchers, nature explorers, families."
-          },
-          {
-            "title": "Why Choose This Style:",
-            "content": "These tours deliver thrilling safari experiences with expert naturalists and comfortable jungle lodges."
-          }
-        ],
-        "bullet_points": [
-          "Ranthambore National Park (Tigers)",
-          "Jim Corbett National Park",
-          "Kaziranga National Park (Rhinos)",
-          "Gir National Park (Asiatic Lions)",
-          "Periyar Wildlife Sanctuary (Elephants, Birds)"
-        ]
-      },
-      {
-        "heading": "8. Solo Travel Itineraries",
-        "content": "India is increasingly popular among solo travelers. These packages provide safe, flexible, and self-paced experiences, with the option to join group departures or enjoy private tours.",
-        "subheadings": [
-          {
-            "title": "Best For:",
-            "content": "Backpackers, digital nomads, self-explorers."
-          },
-          {
-            "title": "Why Choose This Style:",
-            "content": "Solo travel itineraries offer independence while ensuring security and smooth planning."
-          }
-        ],
-        "bullet_points": [
-          "Boutique stays in safe areas",
-          "Local experiences like cooking classes or craft workshops",
-          "Guided tours with reliable drivers",
-          "Flexible schedules and customizable stops",
-          "Community-based tourism"
-        ]
-      },
-      {
-        "heading": "What’s Included in Each Type of Package",
-        "image": "/images/blogs/main_image/Spiritual_innerimg.png",
-        "content": "While inclusions vary depending on the travel style, most India tour packages provide:",
-        "subheadings": [
-          {
-            "title": "✔ Accommodation",
-            "content": "Ranging from budget hotels to luxury resorts, boutique stays, or heritage properties."
-          },
-          {
-            "title": "✔ Transportation",
-            "content": "Private car transfers, domestic flights, trains, or chauffeur-driven vehicles."
-          },
-          {
-            "title": "✔ Sightseeing & Activities",
-            "content": "Guided tours, entry tickets, local experiences, workshops, safaris, or treks."
-          },
-          {
-            "title": "✔ Expert Guides",
-            "content": "English-speaking local guides or tour leaders, depending on the package."
-          },
-          {
-            "title": "✔ 24/7 Support",
-            "content": "On-ground assistance for seamless travel."
-          },
-          {
-            "title": "✔ Custom Add-ons",
-            "content": "Spa sessions, adventure sports, luxury cruises, festival experiences, etc. Each tour category comes with unique add-ons such as:"
-          }
-        ]
-      },
-      {
-        "heading": "How to Choose Your Ideal Travel Style",
-        "image": "/images/blogs/main_image/Spiritual_innerimg.png",
-        "content": "With so many options, here’s how to narrow it down:",
-        "subheadings": [
-          {
-            "title": "1. Define Your Purpose of Travel",
-            "content": "Why are you traveling? Adventure? Relaxation? Culture? This is the biggest deciding factor."
-          },
-          {
-            "title": "2. Consider Your Pace",
-            "content": "Do you prefer slow travel, fast itineraries, or a mix?"
-          },
-          {
-            "title": "3. Set Your Budget",
-            "content": "Luxury vs mid-range vs budget-friendly travel."
-          },
-          {
-            "title": "4. Pick Your Regions of Interest",
-            "content": "North India for culture & mountains, South India for beaches & temples, East India for wildlife & spirituality, West India for deserts & royal heritage"
-          },
-          {
-            "title": "5. Think About Who You’re Traveling With",
-            "content": "Family, partner, solo, friends—each group shapes the itinerary."
-          },
-          {
-            "title": "6. Decide Your Preferred Experiences",
-            "content": "Safari? Trek? Spa? Cooking classes? Local markets? Festivals? Answering these questions helps refine the ideal package type."
-          }
-        ]
-      },
-      {
-        "heading": "How Eaze Tours Customizes Trips Based on Preferences",
-        "image": "/images/blogs/main_image/Spiritual_innerimg.png",
-        "content": "At Eaze Tours, personalization is at the heart of every itinerary. We don’t believe in one-size-fits-all tours—your journey should reflect you."
-      },
-      {
-        "heading": "How We Tailor Your Trip:",
-        "subheadings": [
-          {
-            "title": "✔ Personal Travel Consultation",
-            "content": "We understand your preferences, interests, pace, comfort level, and budget."
-          },
-          {
-            "title": "✔ Customized Itinerary Planning",
-            "content": "Routes, sightseeing, and experiences curated exclusively for your style."
-          },
-          {
-            "title": "✔ Flexible Add-ons",
-            "content": "Festival tours, spa sessions, adventure sports, food trails, photography walks—added based on your interests."
-          },
-          {
-            "title": "✔ Handpicked Stays",
-            "content": "From boutique hotels to luxury palaces, chosen to match your personality."
-          },
-          {
-            "title": "✔ Safety & Comfort First",
-            "content": "Trusted guides, reliable chauffeurs, and verified accommodations."
-          },
-          {
-            "title": "✔ Transparent Pricing",
-            "content": "No hidden fees, clearly detailed inclusions. Whether you're dreaming of a romantic houseboat in Kerala, a thrilling safari in Ranthambore, a peaceful yoga retreat in Rishikesh, or a heritage exploration across Rajasthan—the Eaze Tours team makes it effortless and memorable."
-          }
-        ]
-      },
-      {
-        "heading": "Tell Us Your Travel Style - Get a Tailor-Made Itinerary",
-        "content": "Your dream trip to India starts with one question:",
-        "subheadings": [
-          {
-            "title": "What’s your travel style?",
-            "content": "Share your preferences with us, and Eaze Tours will create a custom, carefully crafted itinerary, perfectly aligned with your interests, time, and budget.\n\nReady to explore India your way? Tell us your travel style and get your dream itinerary today!"
+            "key": "map",
+            "text": "Google Business Profile",
+            "url": "https://share.google/5GJes7PgyfBJJt5Rk"
           }
         ]
       }
-    ],
-    "conclusion": {
-      "heading": "",
-      "content": ""
-    }
+    },
+    "faq": [
+      {
+        "question": "1. What is the best time to visit India for cultural and heritage tours?",
+        "answer": "October to March is ideal due to pleasant weather, making sightseeing comfortable across most regions."
+      },
+      {
+        "question": "2. Which cities are must-visit for India’s cultural experiences?",
+        "answer": "Agra, Jaipur, Varanasi, Chennai–Madurai temple circuit, and Khajuraho are top destinations for heritage seekers."
+      },
+      {
+        "question": "3. How many days are recommended for a cultural tour of India?",
+        "answer": "A minimum of 10–14 days is recommended to explore major cultural highlights without rushing."
+      },
+      {
+        "question": "4. Are guided tours available at historical and spiritual sites?",
+        "answer": "Yes, Eaze Tours provides government-approved expert guides to ensure a deeper cultural and historical understanding."
+      },
+      {
+        "question": "5. Can India cultural tour packages be customized?",
+        "answer": "Absolutely. Itineraries can be tailored based on interests—royal heritage, temples, art, spirituality, or a mixed experience."
+      }
+    ]
   },
-  "faq": [
-    {
-      "question": "1. What are the most popular types of India tour packages?",
-      "answer": "Popular categories include cultural heritage tours, luxury trips, adventure packages, wildlife safaris, honeymoons, family tours, and spiritual journeys."
+  {
+    "url": "types-of-india-tour-packages-find-the-perfect-travel-style-for-your-journey",
+    "title": "Types of India Tour Packages: Find the Perfect Travel Style for Your Journey",
+    "description": "Explore top India tour packages based on travel style-cultural, luxury, adventure, family, wildlife & more. Find your perfect trip.",
+    "image": "/images/blogs/main_image/India_Tour_Packages_m.webp",
+    "feature_image": "/images/blogs/feature_image/India_Tour_Packages_f.png",
+    "page_heading": "Types of India Tour Packages: Find the Perfect Travel Style for Your Journey",
+    "structure": {
+      "introduction": {
+        "heading": "Introduction: Why India Suits Every Travel Style",
+        "content": "Few destinations on earth offer the kind of depth, color, and contrast that India does. From snow-capped Himalayan peaks to golden desert dunes, from spiritual havens to luxury retreats, from energetic marketplaces to secluded romantic hideaways - India is a country designed for every kind of traveler. Whether you're someone who loves history, adventure, serenity, wildlife, or cultural immersion, there is an India tour package crafted just for you.\n\nBut with so many travel styles and itinerary options available, choosing the right one can feel overwhelming. That’s where tailored India tour packages come in - allowing you to explore India in the way that best matches your personality, preferences, pace, and budget.\n\nThis pillar guide helps you understand the most popular types of India tour packages, what they include, who they’re ideal for, and how to choose the perfect travel style for your upcoming journey. By the end, you’ll have clarity on the best-fit experience - and how Eaze Tours can customize it just for you."
+      },
+      "main_sections": [
+        {
+          "heading": "Most Popular India Tour Package Types"
+        },
+        {
+          "heading": "1. Cultural Heritage Tours",
+          "content": "India is a tapestry of kings, empires, traditions, and timeless artistry. Cultural heritage tours offer a deep dive into the architectural, historical, and cultural richness of the country. One of the most sought-after experiences is the Rajasthan forts and palaces tour, which showcases India’s royal past through grand architectures and vibrant cultural stories. Experience {{LINK:forts:Forts & palaces of Rajasthan}} for an unforgettable journey.",
+          "links": [
+            {
+              "key": "forts",
+              "text": "Forts & palaces of Rajasthan",
+              "url": "https://www.eazetours.com/packages/forts-and-palaces-india"
+            }
+          ],
+          "title": "Best For:",
+          "bullet_points": [
+            "History buffs",
+            "Photographers",
+            "Culture lovers",
+            "Architecture enthusiasts"
+          ],
+          "image": "/images/blogs/main_image/TravelStyle1.png",
+          "subheadings": [
+            {
+              "title": "Highlights Typically Include:",
+              "bullet_points": [
+                "Taj Mahal and Mughal heritage in Agra",
+                "Forts & palaces of Rajasthan",
+                "Temple towns like Varanasi, Khajuraho, Madurai, and Konark",
+                "Colonial architecture in Kolkata and Mumbai",
+                "UNESCO World Heritage sites across India"
+              ]
+            },
+            {
+              "title": "Why Choose This Style:",
+              "content": "To go even deeper into historic landmarks and immersive cultural moments, travelers can explore some of the {{Link:culture_heritage:top cultural heritage experiences to add to an India tour}}, showcasing museums, rituals, heritage walks, and iconic architectural masterpieces across the country.",
+              "links": [
+                {
+                  "key": "culture_heritage",
+                  "text": "top cultural heritage experiences to add to an India tour",
+                  "url": "https://www.eazetours.com/blog/top-cultural-heritage-experiences-to-add-to-your-india-tour"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. Luxury India Tours",
+          "content": "India’s luxury travel segment is world-renowned. From palace hotels to private safaris, luxury trains to wellness retreats, these packages redefine indulgence. Many travelers especially love exploring India through curated luxury rail experiences like the {{LINK:palace:Palace on Wheels}} package, offering unmatched royal-style travel.",
+          "links": [
+            {
+              "key": "palace",
+              "text": "Palace on Wheels",
+              "url": "https://www.eazetours.com/packages/palace-on-wheels-tour-package-india"
+            }
+          ],
+          "title": "Best For:",
+          "bullet_points": [
+            "Affluent travelers",
+            "Honeymooners",
+            "Families seeking comfort",
+            "Seniors"
+          ],
+          "image": "/images/blogs/main_image/TravelStyle2.png",
+          "subheadings": [
+            {
+              "title": "Highlights Typically Include:",
+              "bullet_points": [
+                "Stays in iconic luxury hotels",
+                "Private chauffeurs and professional guides",
+                "Fine-dining experiences and curated local cuisine trails",
+                "Luxury trains like Golden Chariot & {{LINK:palace:Palace on Wheels}}",
+                "Exclusive Ayurvedic spas and wellness resorts"
+              ],
+              "links": [
+                {
+                  "key": "palace",
+                  "text": "Palace on Wheels",
+                  "url": "https://www.eazetours.com/packages/palace-on-wheels-tour-package-india"
+                }
+              ]
+            },
+            {
+              "title": "Why Choose This Style:",
+              "content": "If you prefer seamless, stress-free travel with top-tier experiences, luxury tours offer unmatched comfort and exclusivity."
+            }
+          ]
+        },
+        {
+          "heading": "3. Adventure & Nature Tours",
+          "content": "From trekking to river rafting, from camping in valleys to exploring national parks, adventure tours deliver high-energy thrills and nature-centric escapes. One of the most iconic Himalayan adventures is the {{LINK:markha:Markha Valley Trekking Tour}}, perfect for trekkers who want to explore Ladakh’s raw, rugged landscapes.",
+          "links": [
+            {
+              "key": "markha",
+              "text": "Markha Valley Trekking Tour",
+              "url": "https://www.eazetours.com/packages/markha-trek-leh-travel-package"
+            }
+          ],
+          "title": "Best For:",
+          "bullet_points": [
+            "Young travelers",
+            "Adrenaline seekers",
+            "Outdoor lovers",
+            "Photography enthusiasts"
+          ],
+          "image": "/images/blogs/main_image/TravelStyle3.png",
+          "subheadings": [
+            {
+              "title": "Popular Options Include:",
+              "bullet_points": [
+                "Trekking in the Himalayas (Ladakh, Himachal, Uttarakhand)",
+                "White-water rafting in Rishikesh",
+                "Camping in Rann of Kutch or deserts of Rajasthan",
+                "Paragliding in Bir-Billing",
+                "Scuba diving in Andaman & Lakshadweep"
+              ]
+            },
+            {
+              "title": "Why Choose This Style:",
+              "content": "You’ll experience India’s wild landscapes and natural wonders up close, guided by trained experts and adventure professionals."
+            }
+          ]
+        },
+        {
+          "heading": "4. Honeymoon & Romantic Getaways",
+          "content": "India’s diverse romantic destinations are perfect for newlyweds or couples celebrating milestones. The {{LINK:andaman:Romantic Andaman Package}} is especially popular, offering turquoise beaches, candle-light dinners, and luxurious resort stays.",
+          "links": [
+            {
+              "key": "andaman",
+              "text": "Romantic Andaman Package",
+              "url": "https://www.eazetours.com/packages/romantic-andaman-tour-package-india"
+            }
+          ],
+          "title": "Best For:",
+          "bullet_points": [
+            "Newlyweds",
+            "Anniversary trips",
+            "Couples wanting privacy & romance"
+          ],
+          "image": "/images/blogs/main_image/TravelStyle4.png",
+          "subheadings": [
+            {
+              "title": "Highlights Typically Include:",
+              "bullet_points": [
+                "Houseboat stays in Kerala",
+                "Beach resorts in Andaman with options like the {{LINK:andaman:Romantic Andaman Package}}",
+                "Luxury palace stays in Udaipur or Jaipur",
+                "Private candle-light dinners",
+                "Couple spa therapies",
+                "Sunset cruises and nature walks"
+              ],
+              "links": [
+                {
+                  "key": "andaman",
+                  "text": "Romantic Andaman Package",
+                  "url": "https://www.eazetours.com/packages/romantic-andaman-tour-package-india"
+                }
+              ]
+            },
+            {
+              "title": "Why Choose This Style:",
+              "content": "These packages are designed to offer intimacy, comfort, scenic beauty, and premium services that couples cherish."
+            }
+          ]
+        },
+        {
+          "heading": "5. Family-Friendly Tours",
+          "content": "Family trips require comfort, convenience, and kid-safe activities. Family-friendly India tours focus on balanced itineraries that keep everyone-kids, parents, and seniors-engaged.",
+          "title": "Best For:",
+          "bullet_points": [
+            "Families with children",
+            "Multi-generational groups"
+          ],
+          "image": "/images/blogs/main_image/TravelStyle5.png",
+          "subheadings": [
+            {
+              "title": "Highlights Typically Include:",
+              "bullet_points": [
+                "Fun theme parks and wildlife experiences",
+                "Relaxed sightseeing schedules",
+                "Family suites in hotels",
+                "Beach days, boat rides, science museums, & cultural shows",
+                "Kid-friendly activities (camel rides, toy train journeys, cooking demos)"
+              ]
+            },
+            {
+              "title": "Why Choose This Style:",
+              "content": "These trips prioritize safety, comfort, and entertainment for all age groups."
+            }
+          ]
+        },
+        {
+          "heading": "6. Spiritual & Wellness Journeys",
+          "content": "India is synonymous with spirituality. Whether you’re seeking inner peace, rejuvenation, or religious exploration, spiritual and wellness tours offer transformative experiences. For many devotees, the {{LINK:chardham:Chardham Yatra Tour Package}} is a profound spiritual journey through Uttarakhand’s sacred Himalayan shrines.",
+          "links": [
+            {
+              "key": "chardham",
+              "text": "Chardham Yatra Tour Package",
+              "url": "https://www.eazetours.com/packages/chardham-pilgrimage-tour-package-india"
+            }
+          ],
+          "title": "Best For:",
+          "bullet_points": [
+            "Yoga practitioners",
+            "Spiritual seekers",
+            "Wellness travelers",
+            "Seniors"
+          ],
+          "image": "/images/blogs/main_image/TravelStyle6.png",
+          "subheadings": [
+            {
+              "title": "Highlights Typically Include:",
+              "bullet_points": [
+                "Yoga retreats in Rishikesh, Mysore, Kerala",
+                "Meditation programs in monasteries & ashrams",
+                "Visits to sacred sites (Varanasi, Rameswaram, Amritsar, Bodh Gaya)",
+                "Pilgrimage circuits like the {{LINK:chardham:Chardham Yatra Tour Package}}",
+                "Ayurvedic healing and spa therapies",
+                "Temple darshans and cultural rituals"
+              ],
+              "links": [
+                {
+                  "key": "chardham",
+                  "text": "Chardham Yatra Tour Package",
+                  "url": "https://www.eazetours.com/packages/chardham-pilgrimage-tour-package-india"
+                }
+              ]
+            },
+            {
+              "title": "Why Choose This Style:",
+              "content": "Perfect for travelers seeking relaxation, reflection, or a spiritual awakening."
+            }
+          ]
+        },
+        {
+          "heading": "7. Wildlife & Safari Tours",
+          "content": "India’s biodiversity is a paradise for wildlife lovers. With a variety of {{LINK:wildlife:India wildlife tour packages}}, travelers can encounter tigers, elephants, rhinos, and exotic birds across diverse ecosystems.",
+          "links": [
+            {
+              "key": "wildlife",
+              "text": "India wildlife tour packages",
+              "url": "https://www.eazetours.com/packages/wildlife-safari-tour-package-india"
+            }
+          ],
+          "title": "Best For:",
+          "bullet_points": [
+            "Wildlife photographers",
+            "Bird watchers",
+            "Nature explorers",
+            "Families"
+          ],
+          "image": "/images/blogs/main_image/TravelStyle5.png",
+          "subheadings": [
+            {
+              "title": "Popular Destinations Include:",
+              "bullet_points": [
+                "Ranthambore National Park (Tigers)",
+                "Jim Corbett National Park",
+                "Kaziranga National Park (Rhinos)",
+                "Gir National Park (Asiatic Lions)",
+                "Periyar Wildlife Sanctuary (Elephants, Birds)"
+              ]
+            },
+            {
+              "title": "Why Choose This Style:",
+              "content": "These tours deliver thrilling safari experiences with expert naturalists and comfortable jungle lodges."
+            }
+          ]
+        },
+        {
+          "heading": "8. Solo Travel Itineraries",
+          "image": "",
+          "subheadings": [
+            {
+              "title": "",
+              "content": "India is increasingly popular among solo travelers. These packages provide safe, flexible, and self-paced experiences with the option to join group departures or enjoy private tours."
+            },
+            {
+              "title": "Best For:",
+              "bullet_points": [
+                "Backpackers",
+                "Digital nomads",
+                "Self-explorers"
+              ]
+            },
+            {
+              "title": "Highlights Typically Include:",
+              "bullet_points": [
+                "Boutique stays in safe areas",
+                "Local experiences like cooking classes or craft workshops",
+                "Guided tours with reliable drivers",
+                "Flexible schedules and customizable stops",
+                "Community-based tourism"
+              ]
+            },
+            {
+              "title": "Why Choose This Style:",
+              "content": "Solo travel itineraries offer independence while ensuring security and smooth planning."
+            }
+          ]
+        },
+        {
+          "heading": "What’s Included in Each Type of Package",
+          "image": "",
+          "content": "While inclusions vary depending on the travel style, most India tour packages provide:",
+          "subheadings": [
+            {
+              "title": "While inclusions vary depending on the travel style, most India tour packages provide:",
+              "bullet_points": [
+                "Accommodation – Ranging from budget hotels to luxury resorts, boutique stays, or heritage properties.",
+                "Transportation – Private car transfers, domestic flights, trains, or chauffeur-driven vehicles.",
+                "Sightseeing & Activities – Guided tours, entry tickets, local experiences, workshops, safaris, or treks.",
+                "Cuisine Experiences – Breakfast included; optional food tours, cooking classes, or fine-dining experiences.",
+                "Expert Guides – English-speaking local guides or tour leaders, depending on the package.",
+                "24/7 Support – On-ground assistance for seamless travel.",
+                "Custom Add-ons – Spa sessions, adventure sports, luxury cruises, festival experiences, etc."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "How to Choose Your Ideal Travel Style",
+          "image": "",
+          "subheadings": [
+            {
+              "title": "With so many options, here’s how to narrow it down:",
+              "bullet_points": [
+                "Define Your Purpose of Travel – Adventure, Relaxation, Culture",
+                "Consider Your Pace – Slow, Fast, or Mixed itineraries",
+                "Set Your Budget – Luxury vs mid-range vs budget-friendly",
+                "Pick Your Regions of Interest – North, South, East, West India",
+                "Think About Who You’re Traveling With – Family, partner, solo, friends",
+                "Decide Your Preferred Experiences – Safari, Trek, Spa, Cooking classes, Local markets, Festivals"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "How Eaze Tours Customizes Trips Based on Preferences",
+          "image": "",
+          "content": "At Eaze Tours, personalization is at the heart of every itinerary. We don’t believe in one-size-fits-all tours—your journey should reflect you.",
+          "subheadings": [
+            {
+              "title": "How We Tailor Your Trip:",
+              "bullet_points": [
+                "Personal Travel Consultation – We understand your preferences, interests, pace, comfort level, and budget.",
+                "Customized Itinerary Planning – Routes, sightseeing, and experiences curated exclusively for your style.",
+                "Flexible Add-ons – Festival tours, spa sessions, adventure sports, food trails, photography walks—added based on your interests.",
+                "Handpicked Stays – From boutique hotels to luxury palaces, chosen to match your personality.",
+                "Safety & Comfort First – Trusted guides, reliable chauffeurs, and verified accommodations.",
+                "Transparent Pricing – No hidden fees, clearly detailed inclusions."
+              ]
+            },
+            {
+              "title": "",
+              "content": "Whether you're dreaming of a romantic houseboat in Kerala, a thrilling safari in Ranthambore, a peaceful yoga retreat in Rishikesh, or a heritage exploration across Rajasthan-the Eaze Tours team makes it effortless and memorable."
+            }
+          ]
+        },
+        {
+          "heading": "Tell Us Your Travel Style - Get a Tailor-Made Itinerary",
+          "subheadings": [
+            {
+              "title": "Your dream trip to India starts with one question:",
+              "content": "What’s your travel style?\n\nShare your preferences with us, and Eaze Tours will create a custom, carefully crafted itinerary, perfectly aligned with your interests, time, and budget.\n\nReady to explore India your way? Tell us your travel style and get your dream itinerary today!"
+            }
+          ]
+        }
+      ],
+      "conclusion": {
+        "heading": "",
+        "content": ""
+      }
     },
-    {
-      "question": "2. How do I choose the right India tour package for my travel style?",
-      "answer": "Define your purpose of travel, budget, pace, preferred destinations, and group type. These factors help you select the perfect travel style."
-    },
-    {
-      "question": "3. Are India tour packages customizable?",
-      "answer": "Yes. Most tour operators, including Eaze Tours, offer fully customizable itineraries based on your interests, comfort level, and timeframe."
-    },
-    {
-      "question": "4. What is typically included in India tour packages?",
-      "answer": "Packages generally include accommodation, transportation, guided sightseeing, activities, entry tickets, expert guides, and 24/7 support."
-    },
-    {
-      "question": "5. Which India tour package is best for first-time travelers?",
-      "answer": "Cultural heritage tours, Golden Triangle itineraries, or balanced family-friendly tours are great introductions to India’s culture, history, and landscapes."
-    }
-  ]
-},
+    "faq": [
+      {
+        "question": "1. What are the most popular types of India tour packages?",
+        "answer": "Popular categories include cultural heritage tours, luxury trips, adventure packages, wildlife safaris, honeymoons, family tours, and spiritual journeys."
+      },
+      {
+        "question": "2. How do I choose the right India tour package for my travel style?",
+        "answer": "Define your purpose of travel, budget, pace, preferred destinations, and group type. These factors help you select the perfect travel style."
+      },
+      {
+        "question": "3. Are India tour packages customizable?",
+        "answer": "Yes. Most tour operators, including Eaze Tours, offer fully customizable itineraries based on your interests, comfort level, and timeframe."
+      },
+      {
+        "question": "4. What is typically included in India tour packages?",
+        "answer": "Packages generally include accommodation, transportation, guided sightseeing, activities, entry tickets, expert guides, and 24/7 support.."
+      },
+      {
+        "question": "5. Which India tour package is best for first-time travelers?",
+        "answer": "Cultural heritage tours, Golden Triangle itineraries, or balanced family-friendly tours are great introductions to India’s culture, history, and landscapes."
+      }
+    ]
+  },
   {
     "url": "rajasthan-forts-palaces-tour",
     "title": "Rajasthan Forts & Palaces Tour: A Culture Lover's Guide",
     "page_heading": "A Culture Lover’s Guide to Rajasthan’s Forts & Palaces",
     "description": "Explore Rajasthan's epic forts and luxurious palaces with Eaze Tours' exclusive guide. Book the ultimate luxury Forts & Palaces of India tour today!",
-  "image": "/images/blogs/main_image/rajasthan-forts.jpg",
-  "feature_image": "/images/blogs/feature_image/rajasthan-forts-palaces.jpg",
+    "image": "/images/blogs/main_image/rajasthan-forts.jpg",
+    "feature_image": "/images/blogs/feature_image/rajasthan-forts-palaces.jpg",
     "structure": {
       "introduction": {
         "content": "If walls could talk, those in Rajasthan would narrate epics. The ‘Land of Kings’ is more than just a destination; it is a profound journey through India’s majestic history. For the discerning culture lover, the towering forts and opulent palaces of this desert state are not mere monuments—they are vibrant storybooks etched in sandstone and marble. At Eaze Tours, we understand that a truly great cultural tour is about immersion, not just sightseeing, and nowhere is this truer than amidst the royal heritage of Rajasthan."
@@ -397,7 +842,8 @@
         {
           "heading": "Experience the Grandeur with India’s Premier Luxury Travel Agency",
           "content": "At Eaze Tours, we believe that cultural exploration should never compromise comfort. Our role is to elevate your travel experience by handling every detail, from securing luxury heritage accommodations (sometimes within the palace grounds themselves!) to arranging expert-led local guides. When you’re focused on the history, we are focused on your ease."
-        },{
+        },
+        {
           "heading": "",
           "content": "As India's premier {{LINK:luxury_agency:luxury travel agency}}, our expertise lies in bespoke itineraries. We ensure seamless ground transportation, premium hotel bookings, and authentic, high-end cultural engagements that the average traveler simply cannot access. We take the stress out of planning so you can fully immerse yourself in the culture and beauty of Rajasthan.",
           "links": [
@@ -430,9 +876,9 @@
         }
       ],
       "conclusion": {
-          "heading": "",
-          "content": "The majesty of Rajasthan awaits. Allow Eaze Tours to be the key that unlocks its epic history for you, transforming your cultural curiosity into the royal adventure of a lifetime."
-        }
+        "heading": "",
+        "content": "The majesty of Rajasthan awaits. Allow Eaze Tours to be the key that unlocks its epic history for you, transforming your cultural curiosity into the royal adventure of a lifetime."
+      }
     },
     "faq": [
       {
@@ -622,7 +1068,6 @@
         },
         {
           "heading": "Preparation tips:",
-
           "bullet_points": [
             "1. Start 2–3 months ahead with regular cardio (running, cycling, swimming).",
             "2. Add strength training for legs and core.",
