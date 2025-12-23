@@ -1,121 +1,228 @@
 [
   {
-  "url": "peak-adventure-discover-the-best-trekking-routes-in-the-himalayas-with-eaze-tours",
-  "title": "Guide des Meilleurs Treks de l’Himalaya | Aventures Eaze Tours",
-  "description": "Découvrez les meilleures routes de trekking de l’Himalaya avec Eaze Tours, du Markha Valley au Camp de Base de l’Everest, accompagnés par des guides locaux experts.",
-  "image": "/images/blogs/main_image/Discover_the_Best_Trekking_Routes.jpg",
-  "feature_image": "/images/blogs/feature_image/Peak_Adventure.jpg",
-  "page_heading": "Aventure en Altitude : Découvrez les Meilleures Routes de Trekking de l’Himalaya avec Eaze Tours",
-  "structure": {
-    "introduction": {
-      "heading": "",
-      "content": [
-        "L’Himalaya n’est pas seulement une chaîne de montagnes ; c’est un univers de silence spirituel, de défi physique et de beauté naturelle exceptionnelle. Pour les amateurs d’aventure, cette région est le terrain de jeu ultime, avec des sentiers traversant d’anciens royaumes, des déserts d’altitude et les traces des légendes de l’alpinisme.",
-        "Chez Eaze Tours, nous n’organisons pas seulement des voyages ; nous créons des expériences qui changent une vie. Forts de nombreuses années d’expertise logistique dans l’Himalaya, nous savons que le choix du bon itinéraire est la clé du succès. Du « Petit Tibet » du Ladakh aux géants emblématiques du Népal, voici notre guide professionnel des meilleurs treks de l’Himalaya."
-      ]
-    },
-    "main_sections": [
-      {
-        "heading": "Trek de la Vallée de Markha : Un Chef-d’Œuvre du Ladakh",
-        "content": [
-          "Si vous recherchez un trek alliant paysages sauvages et immersion culturelle profonde, le {{LINK:markha_valley:Markha Valley Trekking Tour}} est notre recommandation principale. Situé dans le parc national de Hemis, ce trek est souvent appelé le « tea-house trek » du Ladakh.",
-          "Ce qui rend la vallée de Markha unique, c’est son contraste saisissant. Vous franchirez des cols élevés comme Ganda La (4 961 m) et Kongmaru La (5 200 m), avant de descendre vers des oasis verdoyantes parsemées de champs d’orge et de maisons traditionnelles blanchies à la chaux. Soyez attentif à la faune rare, notamment le léopard des neiges et le mouton bleu.",
-          "L’équipe d’Eaze Tours veille à une acclimatation soigneuse à Leh, garantissant une base solide pour un trek sûr et exaltant dans ce désert d’altitude."
-        ],
-        "links": [
-          {
-            "key": "markha_valley",
-            "text": "Markha Valley Trekking Tour",
-            "url": "https://www.eazetours.com/packages/markha-trek-leh-travel-package"
-          }
-        ]
-      },
-      {
-        "heading": "Camp de Base de l’Everest : Le Pèlerinage Ultime des Trekkeurs",
-        "content": [
-          "Se tenir au pied du plus haut sommet du monde est un rêve pour tout randonneur. Notre {{LINK:everest_base:Everest Base Camp Trek Package}} vous conduit au cœur de la région du Khumbu. Ce n’est pas une simple marche, mais une véritable odyssée à travers la culture sherpa, des monastères anciens comme Tengboche et l’impressionnant glacier du Khumbu.",
-          "L’aventure débute par un vol palpitant vers Lukla, suivi d’une ascension progressive via Namche Bazaar, la porte animée du Haut Himalaya. Le moment fort est l’arrivée au camp de base à 5 364 mètres et le lever du soleil depuis Kala Patthar. Nos guides professionnels s’occupent des permis, de la logistique et de la sécurité."
-        ],
-        "links": [
-          {
-            "key": "everest_base",
-            "text": "Everest Base Camp Trek Package",
-            "url": "https://www.eazetours.com/packages/everest-base-camp-trek-package"
-          }
-        ]
-      },
-      {
-        "heading": "Manque de Temps ? Optez pour l’Everest Short Trek",
-        "content": [
-          "Nous savons que tout le monde ne peut pas consacrer trois semaines à une expédition himalayenne. C’est pourquoi nous avons conçu le {{LINK:everest_short:Everest Short Trek}}, une version condensée du célèbre itinéraire de l’Everest.",
-          "Ce trek offre des vues spectaculaires sur l’Everest, le Lhotse et l’Ama Dablam depuis l’Everest View Hotel et les crêtes environnantes, capturant l’essence même de la région en un temps réduit."
-        ],
-        "links": [
-          {
-            "key": "everest_short",
-            "text": "Everest Short Trek",
-            "url": "https://www.eazetours.com/packages/everest-short-trek-package"
-          }
-        ]
-      },
-      {
-        "heading": "Pourquoi Trekker avec les Professionnels d’Eaze Tours ?",
-        "content": "Le trekking en haute altitude exige plus que de bonnes chaussures ; il nécessite une connaissance locale, des protocoles de sécurité stricts et une véritable passion pour la montagne. Chez Eaze Tours, nous sommes bien plus qu’une agence de voyage.",
-        "bullet_points": [
-          "**La Sécurité Avant Tout :** Itinéraires avec acclimatation intégrée et guides formés à la sécurité en montagne.",
-          "**Expériences Sur Mesure :** Du confort des tea-houses aux treks de camping les plus exigeants.",
-          "**Expertise Locale :** Des racines profondes dans l’Himalaya pour des rencontres culturelles authentiques."
-        ]
-      },
-      {
+    "url": "sri-lanka-tour-guide-a-journey-through-culture-wildlife-coastal-beauty",
+    "title": "Guide de voyage Sri Lanka : Culture, Faune et Littoral",
+    "description": "Explorez le Sri Lanka avec Eaze Tours. Des ruines de Sigiriya aux safaris de Yala, découvrez les meilleurs forfaits touristiques pour un séjour inoubliable sur l'île.",
+    "image": "/images/blogs/main_image/Sri_Lanka_Tour_Guide.webp",
+    "feature_image": "/images/blogs/feature_image/Sri_Lanka_Tour.webp",
+    "page_heading": "Guide de voyage Sri Lanka : Un Voyage à travers la Culture, la Faune et la Beauté Côtière",
+    "structure": {
+      "introduction": {
         "heading": "",
-        "content": "Nous vous invitons à consulter les avis de nos clients et à découvrir notre engagement envers l’excellence sur notre profil Eaze Tours {{LINK:map:Google Business Profile}}.",
-        "links": [
-          {
-            "key": "map",
-            "text": "Google Business Profile",
-            "url": "https://share.google/2EaWOQiND2APE29ew"
-          }
-        ]
+        "content": ""
+      },
+      "main_sections": [
+        {
+          "heading": "",
+          "content": [
+            "Rêvez-vous d'une escapade insulaire où l'histoire ancienne rencontre la nature sauvage et les rivages dorés ? Le Sri Lanka, souvent appelé la 'Perle de l'océan Indien', est une destination qui capture le cœur de chaque voyageur. Des plantations de thé brumeuses des hautes terres centrales aux majestueux éléphants de Minneriya et aux eaux turquoises de Mirissa, cette île offre une intensité d'expérience que peu d'autres endroits peuvent égaler.",
+            "Chez Eaze Tours, nous sommes spécialisés dans la transformation de ces rêves en réalités sans heurts. En tant qu'agence de voyage de luxe de premier plan, nous ne réservons pas seulement des voyages ; nous organisons des expériences qui résonnent avec votre style de voyage personnel. Que vous soyez passionné d'histoire, amoureux de la nature ou adepte du soleil, notre équipe d'experts veille à ce que votre odyssée sri-lankaise soit tout simplement extraordinaire."
+          ],
+          "links": [
+            {
+              "key": "luxury_travel",
+              "text": "agence de voyage de luxe",
+              "url": "https://www.eazetours.com/"
+            }
+          ]
+        },
+        {
+          "heading": "Découvrez le Cœur Culturel de l'Île",
+          "content": [
+            "L'histoire du Sri Lanka est gravée dans sa pierre. Tout circuit complet commence dans le 'Triangle Culturel', où les vestiges d'anciens royaumes témoignent d'une civilisation sophistiquée.",
+            "Lorsque vous réservez le Meilleur Forfait Touristique Sri Lanka, vous ne visitez pas seulement des sites ; vous faites un pas dans le temps. Imaginez-vous gravissant la forteresse rocheuse de Sigiriya – une colonne massive de roche de 200 mètres de haut, surmontée des ruines d'un ancien palais. En montant, les fresques des 'Jeunes Filles des Nuages' et les énormes pattes de lion à l'entrée vous coupent le souffle.",
+            "Au-delà de Sigiriya, la ville sacrée de Kandy offre une retraite spirituelle. Abritant le Temple de la Relique de la Dent Sacrée, Kandy est l'âme culturelle de la nation. Chez Eaze Tours, nous recommandons d'assister à la cérémonie Pooja du soir, où le parfum des fleurs de lotus et le son des tambours traditionnels créent une atmosphère de profonde sérénité."
+          ]
+        },
+        {
+          "heading": "Dans la Nature Sauvage : Rencontres Majestueuses avec la Faune",
+          "content": [
+            "Le Sri Lanka est l'un des meilleurs endroits d'Asie pour les amateurs de faune. Malgré sa petite taille, l'île possède une incroyable biodiversité. Aucune visite n'est complète sans un safari dans le parc national de Yala, célèbre pour avoir l'une des densités de léopards les plus élevées au monde.",
+            "Pour ceux qui recherchent un spectacle unique, le 'Rassemblement d'Éléphants' dans le parc national de Minneriya est incontournable. Voir des centaines d'éléphants sauvages se rassembler autour de l'ancien réservoir est une expérience humble. Nos guides chez Eaze Tours sont des experts pour planifier ces visites afin que vous ayez le meilleur point de vue pour la photographie et l'observation, tout en maintenant une distance respectueuse de ces créatures majestueuses."
+          ]
+        },
+        {
+          "heading": "Beauté Côtière : Soleil, Surf et Sérénité",
+          "content": [
+            "Après l'histoire du nord et la nature sauvage, le littoral sri-lankais offre la conclusion parfaite. Les plages du sud et de l'ouest sont réputées dans le monde entier pour leur beauté. Des pêcheurs sur échasses de Weligama au charme colonial du fort de Galle, la côte est un mélange de détente et d'exploration.",
+            "Les plages de Bentota et Hikkaduwa offrent des sables immaculés et des eaux cristallines, parfaites pour les sports nautiques ou simplement pour se détendre avec un cocktail en main. En tant qu'agence de voyage de luxe, nous sélectionnons soigneusement des resorts en bord de mer offrant des prestations de classe mondiale, garantissant que votre séjour côtier soit défini par le confort et l'élégance."
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir le Meilleur Forfait Touristique Sri Lanka avec Eaze Tours ?",
+          "content": [
+            "Planifier un voyage international peut être accablant, mais ce n'est pas une fatalité. Nous avons conçu notre Forfait Sri Lanka 4 Nuits 5 Jours pour couvrir les points forts absolus de l'île sans se sentir pressé.",
+            "Nous comprenons que les voyageurs modernes cherchent plus que le simple tourisme ; ils cherchent une connexion. Notre expertise locale nous permet de fournir un accès 'privilégié' – qu'il s'agisse d'une séance privée de dégustation de thé à Nuwara Eliya ou d'une visite culinaire organisée à Colombo. Nous sommes fiers de notre souci du détail, du transport de luxe au support 24h/24 et 7j/7."
+          ],
+          "links": [
+            {
+              "key": "srilanka_tour",
+              "text": "Forfait Sri Lanka 4 Nuits 5 Jours",
+              "url": "https://www.eazetours.com/packages/srilanka-tour-package-4-nights-5-days"
+            }
+          ]
+        },
+        {
+          "heading": "Planifiez votre Évasion dès Aujourd'hui",
+          "content": [
+            "Le Sri Lanka est une terre de sourires, d'épices et de paysages spectaculaires. C'est une destination qui récompense les curieux et revigore les fatigués. Êtes-vous prêt à explorer la larme de l'Inde avec les experts ?",
+            "Consultez nos derniers avis et restez informé avec notre communauté de voyage sur notre Profil Google Business Eaze Tours.",
+            "Laissez Eaze Tours être votre passerelle vers le paradis. Contactez-nous dès aujourd'hui pour personnaliser votre itinéraire et découvrez pourquoi nous proposons le Meilleur Forfait Touristique Sri Lanka pour les voyageurs exigeants. Votre aventure insulaire vous attend !"
+          ],
+          "links": [
+            {
+              "key": "map",
+              "text": "Profil Google Business Eaze Tours",
+              "url": "https://share.google/2EaWOQiND2APE29ew"
+            }
+          ]
+        }
+      ],
+      "conclusion": {
+        "heading": "",
+        "content": ""
+      }
+    },
+    "faq": [
+      {
+        "question": "1. Quelle est la meilleure période pour visiter le Sri Lanka ?",
+        "answer": "Le Sri Lanka est une destination à visiter toute l'année, mais la meilleure période dépend de la côte que vous visitez. Pour les côtes Ouest et Sud (et les régions montagneuses), de décembre à mars est idéal. Si vous vous dirigez vers la côte Est, le meilleur climat est d'avril à septembre."
       },
       {
-        "heading": "Se Préparer pour Votre Voyage dans l’Himalaya",
-        "content": [
-          "Avant de prendre le sentier, une bonne préparation est essentielle. Un entraînement axé sur l’endurance cardiovasculaire et la force des jambes rendra le trek bien plus agréable. Un équipement adapté est également indispensable face au climat imprévisible de l’Himalaya.",
-          "Que vous choisissiez les cols élevés du trek de la vallée de Markha ou le chemin légendaire du camp de base de l’Everest, l’Himalaya promet une transformation intérieure profonde.",
-          "Êtes-vous prêt à vous tenir parmi les géants ? Contactez dès aujourd’hui les experts d’Eaze Tours et commençons à planifier votre prochaine grande aventure. Votre histoire himalayenne commence ici."
-        ]
+        "question": "2. Ai-je besoin d'un visa pour voyager au Sri Lanka ?",
+        "answer": "Oui, la plupart des voyageurs internationaux ont besoin d'une Autorisation de Voyage Électronique (ETA) ou d'un visa pour entrer au Sri Lanka. Cela peut généralement être demandé en ligne avant votre arrivée. Nous vous recommandons de vérifier les dernières directives gouvernementales ou de consulter notre équipe lors de la réservation."
+      },
+      {
+        "question": "3. Le forfait 4 Nuits 5 Jours est-il suffisant pour voir l'île ?",
+        "answer": "Bien que le Sri Lanka ait beaucoup à offrir, notre Forfait Sri Lanka 4 Nuits 5 Jours est soigneusement conçu pour couvrir les principaux points forts comme le Triangle Culturel, Kandy et la côte sud. Il est parfait pour les voyageurs ayant un temps limité qui souhaitent une expérience équilibrée et de haute qualité."
+      },
+      {
+        "question": "4. Que dois-je emporter pour un tour au Sri Lanka ?",
+        "answer": "Comme l'itinéraire couvre à la fois des plages tropicales et des hautes terres brumeuses, nous recommandons un mélange de vêtements légers en coton et une couche chaude pour Nuwara Eliya. N'oubliez pas une tenue modeste (couvrant les épaules et les genoux) pour visiter les temples sacrés comme le Temple de la Dent."
+      },
+      {
+        "question": "5. Le Sri Lanka est-il une destination sûre pour les safaris animaliers ?",
+        "answer": "Absolument. Chez Eaze Tours, nous priorisons la sécurité en utilisant des guides naturalistes expérimentés et des véhicules 4x4 robustes. Que vous observiez des léopards à Yala ou le rassemblement d'éléphants à Minneriya, nous garantissons une distance sûre et respectueuse des animaux."
       }
-    ],
-    "conclusion": {
-      "heading": "",
-      "content": ""
-    }
+    ]
   },
-  "faq": [
-    {
-      "question": "1. Quel est le meilleur trek de l’Himalaya pour les débutants ?",
-      "answer": "Le trek de la vallée de Markha est idéal pour les débutants en bonne condition physique, avec des montées progressives."
+  {
+    "url": "peak-adventure-discover-the-best-trekking-routes-in-the-himalayas-with-eaze-tours",
+    "title": "Guide des Meilleurs Treks de l’Himalaya | Aventures Eaze Tours",
+    "description": "Découvrez les meilleures routes de trekking de l’Himalaya avec Eaze Tours, du Markha Valley au Camp de Base de l’Everest, accompagnés par des guides locaux experts.",
+    "image": "/images/blogs/main_image/Discover_the_Best_Trekking_Routes.jpg",
+    "feature_image": "/images/blogs/feature_image/Peak_Adventure.jpg",
+    "page_heading": "Aventure en Altitude : Découvrez les Meilleures Routes de Trekking de l’Himalaya avec Eaze Tours",
+    "structure": {
+      "introduction": {
+        "heading": "",
+        "content": [
+          "L’Himalaya n’est pas seulement une chaîne de montagnes ; c’est un univers de silence spirituel, de défi physique et de beauté naturelle exceptionnelle. Pour les amateurs d’aventure, cette région est le terrain de jeu ultime, avec des sentiers traversant d’anciens royaumes, des déserts d’altitude et les traces des légendes de l’alpinisme.",
+          "Chez Eaze Tours, nous n’organisons pas seulement des voyages ; nous créons des expériences qui changent une vie. Forts de nombreuses années d’expertise logistique dans l’Himalaya, nous savons que le choix du bon itinéraire est la clé du succès. Du « Petit Tibet » du Ladakh aux géants emblématiques du Népal, voici notre guide professionnel des meilleurs treks de l’Himalaya."
+        ]
+      },
+      "main_sections": [
+        {
+          "heading": "Trek de la Vallée de Markha : Un Chef-d’Œuvre du Ladakh",
+          "content": [
+            "Si vous recherchez un trek alliant paysages sauvages et immersion culturelle profonde, le {{LINK:markha_valley:Markha Valley Trekking Tour}} est notre recommandation principale. Situé dans le parc national de Hemis, ce trek est souvent appelé le « tea-house trek » du Ladakh.",
+            "Ce qui rend la vallée de Markha unique, c’est son contraste saisissant. Vous franchirez des cols élevés comme Ganda La (4 961 m) et Kongmaru La (5 200 m), avant de descendre vers des oasis verdoyantes parsemées de champs d’orge et de maisons traditionnelles blanchies à la chaux. Soyez attentif à la faune rare, notamment le léopard des neiges et le mouton bleu.",
+            "L’équipe d’Eaze Tours veille à une acclimatation soigneuse à Leh, garantissant une base solide pour un trek sûr et exaltant dans ce désert d’altitude."
+          ],
+          "links": [
+            {
+              "key": "markha_valley",
+              "text": "Markha Valley Trekking Tour",
+              "url": "https://www.eazetours.com/packages/markha-trek-leh-travel-package"
+            }
+          ]
+        },
+        {
+          "heading": "Camp de Base de l’Everest : Le Pèlerinage Ultime des Trekkeurs",
+          "content": [
+            "Se tenir au pied du plus haut sommet du monde est un rêve pour tout randonneur. Notre {{LINK:everest_base:Everest Base Camp Trek Package}} vous conduit au cœur de la région du Khumbu. Ce n’est pas une simple marche, mais une véritable odyssée à travers la culture sherpa, des monastères anciens comme Tengboche et l’impressionnant glacier du Khumbu.",
+            "L’aventure débute par un vol palpitant vers Lukla, suivi d’une ascension progressive via Namche Bazaar, la porte animée du Haut Himalaya. Le moment fort est l’arrivée au camp de base à 5 364 mètres et le lever du soleil depuis Kala Patthar. Nos guides professionnels s’occupent des permis, de la logistique et de la sécurité."
+          ],
+          "links": [
+            {
+              "key": "everest_base",
+              "text": "Everest Base Camp Trek Package",
+              "url": "https://www.eazetours.com/packages/everest-base-camp-trek-package"
+            }
+          ]
+        },
+        {
+          "heading": "Manque de Temps ? Optez pour l’Everest Short Trek",
+          "content": [
+            "Nous savons que tout le monde ne peut pas consacrer trois semaines à une expédition himalayenne. C’est pourquoi nous avons conçu le {{LINK:everest_short:Everest Short Trek}}, une version condensée du célèbre itinéraire de l’Everest.",
+            "Ce trek offre des vues spectaculaires sur l’Everest, le Lhotse et l’Ama Dablam depuis l’Everest View Hotel et les crêtes environnantes, capturant l’essence même de la région en un temps réduit."
+          ],
+          "links": [
+            {
+              "key": "everest_short",
+              "text": "Everest Short Trek",
+              "url": "https://www.eazetours.com/packages/everest-short-trek-package"
+            }
+          ]
+        },
+        {
+          "heading": "Pourquoi Trekker avec les Professionnels d’Eaze Tours ?",
+          "content": "Le trekking en haute altitude exige plus que de bonnes chaussures ; il nécessite une connaissance locale, des protocoles de sécurité stricts et une véritable passion pour la montagne. Chez Eaze Tours, nous sommes bien plus qu’une agence de voyage.",
+          "bullet_points": [
+            "**La Sécurité Avant Tout :** Itinéraires avec acclimatation intégrée et guides formés à la sécurité en montagne.",
+            "**Expériences Sur Mesure :** Du confort des tea-houses aux treks de camping les plus exigeants.",
+            "**Expertise Locale :** Des racines profondes dans l’Himalaya pour des rencontres culturelles authentiques."
+          ]
+        },
+        {
+          "heading": "",
+          "content": "Nous vous invitons à consulter les avis de nos clients et à découvrir notre engagement envers l’excellence sur notre profil Eaze Tours {{LINK:map:Google Business Profile}}.",
+          "links": [
+            {
+              "key": "map",
+              "text": "Google Business Profile",
+              "url": "https://share.google/2EaWOQiND2APE29ew"
+            }
+          ]
+        },
+        {
+          "heading": "Se Préparer pour Votre Voyage dans l’Himalaya",
+          "content": [
+            "Avant de prendre le sentier, une bonne préparation est essentielle. Un entraînement axé sur l’endurance cardiovasculaire et la force des jambes rendra le trek bien plus agréable. Un équipement adapté est également indispensable face au climat imprévisible de l’Himalaya.",
+            "Que vous choisissiez les cols élevés du trek de la vallée de Markha ou le chemin légendaire du camp de base de l’Everest, l’Himalaya promet une transformation intérieure profonde.",
+            "Êtes-vous prêt à vous tenir parmi les géants ? Contactez dès aujourd’hui les experts d’Eaze Tours et commençons à planifier votre prochaine grande aventure. Votre histoire himalayenne commence ici."
+          ]
+        }
+      ],
+      "conclusion": {
+        "heading": "",
+        "content": ""
+      }
     },
-    {
-      "question": "2. Quelle est la difficulté du trek du camp de base de l’Everest ?",
-      "answer": "Il est modérément difficile à cause de l’altitude, mais ne nécessite pas d’escalade technique."
-    },
-    {
-      "question": "3. Quelle est la meilleure période pour trekker dans l’Himalaya ?",
-      "answer": "Le printemps (mars–mai) et l’automne (septembre–novembre) offrent les meilleures conditions."
-    },
-    {
-      "question": "4. Puis-je faire un trek de l’Everest avec peu de temps ?",
-      "answer": "Oui, l’Everest Short Trek est conçu pour les voyageurs pressés."
-    },
-    {
-      "question": "5. Pourquoi choisir Eaze Tours pour le trekking himalayen ?",
-      "answer": "Eaze Tours propose des guides experts, des itinéraires personnalisés, une sécurité renforcée et des expériences locales authentiques."
-    }
-  ]
-},
-{
+    "faq": [
+      {
+        "question": "1. Quel est le meilleur trek de l’Himalaya pour les débutants ?",
+        "answer": "Le trek de la vallée de Markha est idéal pour les débutants en bonne condition physique, avec des montées progressives."
+      },
+      {
+        "question": "2. Quelle est la difficulté du trek du camp de base de l’Everest ?",
+        "answer": "Il est modérément difficile à cause de l’altitude, mais ne nécessite pas d’escalade technique."
+      },
+      {
+        "question": "3. Quelle est la meilleure période pour trekker dans l’Himalaya ?",
+        "answer": "Le printemps (mars–mai) et l’automne (septembre–novembre) offrent les meilleures conditions."
+      },
+      {
+        "question": "4. Puis-je faire un trek de l’Everest avec peu de temps ?",
+        "answer": "Oui, l’Everest Short Trek est conçu pour les voyageurs pressés."
+      },
+      {
+        "question": "5. Pourquoi choisir Eaze Tours pour le trekking himalayen ?",
+        "answer": "Eaze Tours propose des guides experts, des itinéraires personnalisés, une sécurité renforcée et des expériences locales authentiques."
+      }
+    ]
+  },
+  {
     "url": "romantic-honeymoon-destinations-in-india",
     "title": "Destinations Romantiques et Lune de Miel en Inde pour les Couples",
     "description": "Découvrez les destinations de lune de miel les plus romantiques en Inde, de Manali et Kerala à Goa et Andaman, parfaites pour les couples.",
