@@ -47,9 +47,26 @@ import gallery_41 from "../public/images/gallery/41.jpg";
 import gallery_42 from "../public/images/gallery/42.jpg";
 import gallery_43 from "../public/images/gallery/43.jpg";
 import gallery_44 from "../public/images/gallery/44.jpg";
+import gallery_45 from "../public/images/gallery/45.jpg";
+import gallery_46 from "../public/images/gallery/46.jpg";
+import gallery_47 from "../public/images/gallery/47.jpg";
+import gallery_48 from "../public/images/gallery/48.jpg";
+import gallery_49 from "../public/images/gallery/49.jpg";
+import gallery_50 from "../public/images/gallery/50.jpg";
+import gallery_51 from "../public/images/gallery/51.jpg";
+import gallery_52 from "../public/images/gallery/52.jpg";
 
 // Use StaticImageData type for images
 const gallery_images: StaticImageData[] = [
+  gallery_45,
+  gallery_46,
+  gallery_47,
+  gallery_48,
+  gallery_49,
+  gallery_50,
+  gallery_51,
+  gallery_52,
+  gallery_44,
   gallery_31,
   gallery_32,
   gallery_33,
@@ -63,7 +80,6 @@ const gallery_images: StaticImageData[] = [
   gallery_41,
   gallery_42,
   gallery_43,
-  gallery_44,
   gallery_1,
   gallery_2,
   gallery_3,
@@ -139,24 +155,22 @@ export default function GalleryComponent() {
       </div>
 
       <div className="mt-[10px] mx-8 mb-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-3">
           {gallery_images.map((gallery_image, index) => (
             <div
-              className="group relative overflow-hidden rounded-lg shadow-xl transition-all transform hover:scale-105 hover:shadow-2xl cursor-pointer"
               key={index}
-              onClick={() => openLightbox(gallery_image, index)} // Pass the StaticImageData and its index
+              className="break-inside-avoid group relative overflow-hidden rounded-[3px] shadow-xl cursor-pointer transition-transform hover:scale-[1.02]"
+              onClick={() => openLightbox(gallery_image, index)}
             >
-              <div className="relative w-full h-72 md:h-80 lg:h-96">
-                <Image
-                  className="object-cover w-full h-full transition-transform transform group-hover:scale-110"
-                  src={gallery_image}
-                  alt={`Gallery Image ${index + 1}`}
-                  layout="fill"
-                />
-              </div>
+              <Image
+                src={gallery_image}
+                alt={`Gallery Image ${index + 1}`}
+                className="w-full h-auto rounded-[3px] transition-transform group-hover:scale-105"
+              />
             </div>
           ))}
         </div>
+
 
         {/* Lightbox Modal */}
         {isOpen && currentImage && (
