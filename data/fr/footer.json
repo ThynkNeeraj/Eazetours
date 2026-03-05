@@ -1,0 +1,34 @@
+{
+  "about": "Eaze Tours est une société de voyage de premier plan en Inde, proposant des forfaits touristiques personnalisés qui mettent en valeur le riche patrimoine culturel, la faune et les divers paysages du sous-continent indien.",
+  "sections": {
+    "topDestinations": "Destinations Populaires",
+    "usefulLinks": "Liens Utiles",
+    "packages": "Forfaits Populaires",
+    "destinations": "Destinations Populaires"
+  },
+  "packages": {
+    "fortsAndPalaces": "Forts et Palais de l'Inde",
+    "luxuryTour": "Forfait Voyage de Luxe",
+    "tribalTour": "Forfait Voyage Tribal Inde",
+    "keralaTour": "Forfait Voyage Kerala",
+    "ayurvedaTour": "Voyage Ayurvédique en Inde",
+    "chardhamTour": "Forfait Voyage Chardham Inde",
+    "tigerSafari": "Forfait Safari Tigre",
+    "bestToursFromUSA": "Meilleurs Voyages en Inde depuis USA",
+    "wildlifeTour": "Forfait Observation de la Faune",
+    "trekkingTour": "Forfait Randonnée en Inde",
+    "southIndiaTour": "Forfait Voyage Inde du Sud",
+    "honeymoonTour": "Forfait Voyage de Noces Inde"
+  },
+  "destinations": {
+    "delhi": "Circuits à Delhi",
+    "jaipur": "Circuits à Jaipur",
+    "agra": "Circuits à Agra",
+    "varanasi": "Circuits à Varanasi",
+    "goa": "Circuits à Goa"
+  },
+  "contact": {
+    "title": "Contactez-nous"
+  },
+  "copyright": "Tous droits réservés"
+}
