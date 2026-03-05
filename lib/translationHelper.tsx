@@ -18,6 +18,10 @@ import english_packages from "../data/en/packages.json";
 // import spanish_packages from "../data/es/packages.json";
 // import german_packages from "../data/de/packages.json";
 // import french_packages from "../data/fr/packages.json";
+import english_footer from "../data/en/footer.json";
+import spanish_footer from "../data/es/footer.json";
+import german_footer from "../data/de/footer.json";
+import french_footer from "../data/fr/footer.json";
 
 export const getLandingTranslations = (locale: string) => {
   if (locale === "en") {
@@ -87,4 +91,18 @@ export const getPackagesTranslations = (locale: string) => {
   // }
 
   return english_packages;
+};
+
+export const getFooterTranslations = (locale: string) => {
+  if (locale === "en") {
+    return english_footer;
+  } else if (locale === "es") {
+    return spanish_footer;
+  } else if (locale === "de") {
+    return german_footer;
+  } else if (locale === "fr") {
+    return french_footer;
+  }
+
+  return english_footer;
 };
