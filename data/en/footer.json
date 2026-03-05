@@ -1,0 +1,34 @@
+{
+  "about": "Eaze Tours is a premier travel company in India, offering customized tour packages that showcase the rich cultural heritage, wildlife, and diverse landscapes of the Indian subcontinent.",
+  "sections": {
+    "topDestinations": "Top Destinations",
+    "usefulLinks": "Useful Links",
+    "packages": "Popular Packages",
+    "destinations": "Popular Destinations"
+  },
+  "packages": {
+    "fortsAndPalaces": "Fort and Palaces of India",
+    "luxuryTour": "Luxury Tour Package",
+    "tribalTour": "Tribal Tour Package India",
+    "keralaTour": "Kerala Tour Package",
+    "ayurvedaTour": "Ayurveda Tour in India",
+    "chardhamTour": "Chardham Tour Package India",
+    "tigerSafari": "Tiger Safari Tour Package",
+    "bestToursFromUSA": "Best Tours to India from USA",
+    "wildlifeTour": "Wildlife Tour Package",
+    "trekkingTour": "Trekking Tour Package in India",
+    "southIndiaTour": "South India Tour Package",
+    "honeymoonTour": "Honeymoon Tour Package India"
+  },
+  "destinations": {
+    "delhi": "Delhi Tours",
+    "jaipur": "Jaipur Tours",
+    "agra": "Agra Tours",
+    "varanasi": "Varanasi Tours",
+    "goa": "Goa Tours"
+  },
+  "contact": {
+    "title": "Contact Us"
+  },
+  "copyright": "All Rights Reserved"
+}
