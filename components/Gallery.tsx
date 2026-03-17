@@ -105,7 +105,7 @@ import gallery_100 from "../public/images/gallery/100.jpeg";
 import gallery_101 from "../public/images/gallery/101.jpeg";
 import gallery_102 from "../public/images/gallery/102.jpeg";
 
-// Define interfaces for gallery items
+// Define interfaces
 interface ImageItem {
   type: 'image';
   src: StaticImageData;
@@ -116,21 +116,18 @@ interface VideoItem {
   type: 'video';
   src: string;
   id: string;
-  aspectRatio: string;
-  size: 'normal' | 'large'; // Add size property to distinguish between 3:4 and 3:2 videos
+  aspectRatio: string;   // e.g., "3 / 4" or "3 / 2"
 }
 
-// Union type
 type GalleryItem = ImageItem | VideoItem;
 
-// Create gallery array with all your images
+// imageItems array (note: duplicate id 'img-53' appears twice – consider fixing for uniqueness)
 const imageItems: ImageItem[] = [
   { type: 'image', src: gallery_98, id: 'img-98' },
   { type: 'image', src: gallery_99, id: 'img-99' },
   { type: 'image', src: gallery_100, id: 'img-100' },
   { type: 'image', src: gallery_101, id: 'img-101' },
   { type: 'image', src: gallery_102, id: 'img-102' },
-  { type: 'image', src: gallery_53, id: 'img-53' },
   { type: 'image', src: gallery_53, id: 'img-53' },
   { type: 'image', src: gallery_54, id: 'img-54' },
   { type: 'image', src: gallery_55, id: 'img-55' },
@@ -228,71 +225,148 @@ const imageItems: ImageItem[] = [
   { type: 'image', src: gallery_30, id: 'img-30' },
 ];
 
-// Add videos at the beginning of the gallery with different aspect ratios
+// videoItems array
 const videoItems: VideoItem[] = [
-  {
-    type: 'video',
-    src: '/video/Tours/1.mp4',
-    id: 'video-1',
-    aspectRatio: "3 / 4",
-    size: 'normal'
-  },
-  {
-    type: 'video',
-    src: '/video/Tours/2.mp4',
-    id: 'video-2',
-    aspectRatio: "3 / 4",
-    size: 'normal'
-  },
-  {
-    type: 'video',
-    src: '/video/Tours/3.mp4',
-    id: 'video-3',
-    aspectRatio: "3 / 4",
-    size: 'normal'
-  },
-  {
-    type: 'video',
-    src: '/video/Tours/4.mp4',
-    id: 'video-4',
-    aspectRatio: "3 / 4",
-    size: 'normal'
-  },
-  {
-    type: 'video',
-    src: '/video/Tours/5.mp4',
-    id: 'video-5',
-    aspectRatio: "3 / 4",
-    size: 'normal'
-  },
-  {
-    type: 'video',
-    src: '/video/Tours/6.mp4',
-    id: 'video-6',
-    aspectRatio: "3 / 4",
-    size: 'normal'
-  },
-  {
-    type: 'video',
-    src: '/video/Tours/7.mp4',
-    id: 'video-7',
-    aspectRatio: "3 / 2",
-    size: 'large'
-  },
-  {
-    type: 'video',
-    src: '/video/Tours/8.mp4',
-    id: 'video-8',
-    aspectRatio: "3 / 2",
-    size: 'large'
-  },
+  { type: 'video', src: '/video/Tours/1.mp4', id: 'video-1', aspectRatio: "3 / 4" },
+  { type: 'video', src: '/video/Tours/2.mp4', id: 'video-2', aspectRatio: "3 / 4" },
+  { type: 'video', src: '/video/Tours/3.mp4', id: 'video-3', aspectRatio: "3 / 4" },
+  { type: 'video', src: '/video/Tours/4.mp4', id: 'video-4', aspectRatio: "3 / 4" },
+  { type: 'video', src: '/video/Tours/5.mp4', id: 'video-5', aspectRatio: "3 / 4" },
+  { type: 'video', src: '/video/Tours/6.mp4', id: 'video-6', aspectRatio: "3 / 4" },
+  { type: 'video', src: '/video/Tours/7.mp4', id: 'video-7', aspectRatio: "3 / 2" },
+  { type: 'video', src: '/video/Tours/8.mp4', id: 'video-8', aspectRatio: "3 / 2" },
 ];
+
+// ----- MANUAL ORDERING SETUP -----
+// Build a map for quick lookup by id
+const itemsMap = new Map<string, GalleryItem>();
+[...videoItems, ...imageItems].forEach(item => itemsMap.set(item.id, item));
+
+// Define the exact order you want.
+// Initially this matches the old order (videos first, then images as they appear in imageItems).
+// Edit this array to rearrange items. Place a video's id right after any image id to set its position.
+const orderedIds = [
+  // Videos (in original order)
+  'video-1',
+  'video-2',
+  'img-98',
+  'img-99',
+  'img-101',
+  'img-102',
+  'img-53',
+  'img-54',
+  'img-55',
+  'img-56',
+  'img-57',
+  'img-58',
+  'img-41',
+  'img-42',
+  'img-43',
+  'img-1',
+  'img-2',
+  'img-3',
+  'img-4',
+  'img-5',
+  'img-6',
+  'img-7',
+  'img-8',
+  'img-10',
+  'img-11',
+  'img-12',
+  'img-13',
+  'img-59',
+  'img-60',
+  'img-61',
+  'img-79',
+  'img-80',
+  'img-81',
+  'img-82',
+  'img-83',
+  'img-84',
+  'img-85',
+  'video-6',
+  'img-87',
+  'video-7',
+  'img-88',
+  'video-8',
+  'img-86',
+  'img-89',
+  'img-90',
+  'img-91',
+  'img-92',
+  'img-93',
+  'img-94',
+  'img-95',
+  'img-96',
+  'img-97',
+  'img-45',
+  'img-46',
+  'img-47',
+  'img-48',
+  'img-49',
+  'img-50',
+  'img-51',
+  'img-52',
+  'img-44',
+  'img-31',
+  'img-37',
+  'img-32',
+  'img-33',
+  'img-64',
+  'img-38',
+  'img-34',
+  'img-35',
+  'video-3',
+  'img-100',
+  'video-4',
+  'video-5',
+  'img-62',
+  'img-65',
+  'img-66',
+  'img-67',
+  'img-68',
+  'img-69',
+  'img-70',
+  'img-71',
+  'img-72',
+  'img-73',
+  'img-74',
+  'img-75',
+  'img-76',
+  'img-77',
+  'img-78',
+  'img-14',
+  'img-15',
+  'img-16',
+  'img-17',
+  'img-39',
+  'img-40',
+  'img-18',
+  'img-36',
+  'img-19',
+  'img-20',
+  'img-21',
+  'img-22',
+  'img-23',
+  'img-24',
+  'img-25',
+  'img-26',
+  'img-27',
+  'img-28',
+  'img-29',
+  'img-30',
+];
+
+// Generate galleryItems in the exact order specified above
+const galleryItems: GalleryItem[] = orderedIds
+  .map(id => itemsMap.get(id))
+  .filter((item): item is GalleryItem => item !== undefined);
+// ----- END MANUAL ORDERING -----
 
 export default function GalleryComponent() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentItem, setCurrentItem] = useState<GalleryItem | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [playingVideos, setPlayingVideos] = useState<{ [key: string]: boolean }>({});
   const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
 
   // Pause video when closing lightbox or navigating
@@ -304,27 +378,6 @@ export default function GalleryComponent() {
       }
     }
   }, [isOpen, currentItem]);
-
-  const handlePlay = (itemId: string) => {
-    const videoElement = videoRefs.current[itemId];
-    if (videoElement) {
-      if (playingVideos[itemId]) {
-        videoElement.pause();
-      } else {
-        videoElement.play();
-        // Pause all other videos
-        Object.keys(videoRefs.current).forEach(key => {
-          if (key !== itemId && videoRefs.current[key]) {
-            videoRefs.current[key]?.pause();
-          }
-        });
-      }
-      setPlayingVideos(prev => ({
-        ...prev,
-        [itemId]: !prev[itemId]
-      }));
-    }
-  };
 
   const openLightbox = (item: GalleryItem, index: number) => {
     setCurrentItem(item);
@@ -339,45 +392,34 @@ export default function GalleryComponent() {
   };
 
   const nextItem = () => {
-    // Pause video if current item is video
     if (currentItem?.type === 'video' && videoRefs.current[currentItem.id]) {
       videoRefs.current[currentItem.id]?.pause();
     }
-    const nextIndex = (currentIndex + 1) % allItems.length;
-    setCurrentItem(allItems[nextIndex]);
+    const nextIndex = (currentIndex + 1) % galleryItems.length;
+    setCurrentItem(galleryItems[nextIndex]);
     setCurrentIndex(nextIndex);
   };
 
   const prevItem = () => {
-    // Pause video if current item is video
     if (currentItem?.type === 'video' && videoRefs.current[currentItem.id]) {
       videoRefs.current[currentItem.id]?.pause();
     }
-    const prevIndex = (currentIndex - 1 + allItems.length) % allItems.length;
-    setCurrentItem(allItems[prevIndex]);
+    const prevIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    setCurrentItem(galleryItems[prevIndex]);
     setCurrentIndex(prevIndex);
   };
 
-  // Handle keyboard navigation
+  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
-
-      if (e.key === 'Escape') {
-        closeLightbox();
-      } else if (e.key === 'ArrowRight') {
-        nextItem();
-      } else if (e.key === 'ArrowLeft') {
-        prevItem();
-      }
+      if (e.key === 'Escape') closeLightbox();
+      else if (e.key === 'ArrowRight') nextItem();
+      else if (e.key === 'ArrowLeft') prevItem();
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen]);
-
-  // Combine all items for lightbox navigation
-  const allItems: GalleryItem[] = [...videoItems, ...imageItems];
 
   return (
     <div>
@@ -391,167 +433,83 @@ export default function GalleryComponent() {
         <h2 className="text-[42px] font-semibold text-black text-left">Gallery</h2>
       </div>
 
-      {/* Videos Section */}
-      {videoItems.length > 0 && (
-        <div className="mx-8 mb-16">
-          <h3 className="text-2xl font-semibold mb-6">Videos</h3>
-
-          {/* Regular videos - 3:4 aspect ratio, 3 per row */}
-          {videoItems.filter(item => item.size === 'normal').length > 0 && (
-            <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-                {videoItems
-                  .filter(item => item.size === 'normal')
-                  .map((item, index) => (
-                    <div
-                      key={item.id}
-                      className="relative rounded-2xl overflow-hidden shadow-lg group transition-transform transform hover:scale-105 cursor-pointer bg-black"
-                      style={{ aspectRatio: item.aspectRatio }}
-                      onClick={() => openLightbox(item, index)} // Changed: open lightbox instead of playing inline
-                    >
-                      <video
-                        ref={el => {
-                          videoRefs.current[item.id] = el;
-                        }}
-                        className="absolute top-0 left-0 w-full h-full rounded-2xl object-cover"
-                        preload="metadata"
-                        playsInline
-                        muted // Added muted for autoplay preview
-                        loop // Added loop for preview
-                        onMouseEnter={(e) => e.currentTarget.play()} // Optional: play on hover
-                        onMouseLeave={(e) => {
-                          e.currentTarget.pause();
-                          e.currentTarget.currentTime = 0;
-                        }} // Optional: pause on hover leave
-                      >
-                        <source src={item.src} type="video/mp4" />
-                      </video>
-
-                      {/* Play Button Overlay - always show to indicate video */}
-                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 z-10">
-                        <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
-                          <svg
-                            className="w-8 h-8 text-[#025C7A]"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            </>
-          )}
-
-          {/* Large videos - 3:2 aspect ratio, 2 per row */}
-          {videoItems.filter(item => item.size === 'large').length > 0 && (
-            <>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {videoItems
-                  .filter(item => item.size === 'large')
-                  .map((item, index) => (
-                    <div
-                      key={item.id}
-                      className="relative rounded-2xl overflow-hidden shadow-lg group transition-transform transform hover:scale-105 cursor-pointer bg-black"
-                      style={{ aspectRatio: item.aspectRatio }}
-                      onClick={() => openLightbox(item, videoItems.filter(i => i.size === 'normal').length + index)} // Fixed index calculation
-                    >
-                      <video
-                        ref={el => {
-                          videoRefs.current[item.id] = el;
-                        }}
-                        className="absolute top-0 left-0 w-full h-full rounded-2xl object-cover"
-                        preload="metadata"
-                        playsInline
-                        muted // Added muted for autoplay preview
-                        loop // Added loop for preview
-                        onMouseEnter={(e) => e.currentTarget.play()} // Optional: play on hover
-                        onMouseLeave={(e) => {
-                          e.currentTarget.pause();
-                          e.currentTarget.currentTime = 0;
-                        }} // Optional: pause on hover leave
-                      >
-                        <source src={item.src} type="video/mp4" />
-                      </video>
-
-                      {/* Play Button Overlay - always show to indicate video */}
-                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 z-10">
-                        <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
-                          <svg
-                            className="w-8 h-8 text-[#025C7A]"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            </>
-          )}
-        </div>
-      )}
-
-      {/* Images Section - Masonry Layout */}
+      {/* Unified masonry grid for both images and videos */}
       <div className="mx-8 mb-12">
-        <h3 className="text-2xl font-semibold mb-6">Images</h3>
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-3">
-          {imageItems.map((item, index) => (
+          {galleryItems.map((item, index) => (
             <div
               key={item.id}
               className="break-inside-avoid group relative overflow-hidden rounded-[3px] shadow-xl cursor-pointer transition-transform hover:scale-[1.02]"
-              onClick={() => openLightbox(item, videoItems.length + index)}
+              onClick={() => openLightbox(item, index)}
             >
-              <Image
-                src={item.src}
-                alt={`Gallery Image ${index + 1}`}
-                className="w-full h-auto rounded-[3px] transition-transform group-hover:scale-105"
-                quality={90}
-              />
+              {item.type === 'image' ? (
+                <Image
+                  src={item.src}
+                  alt={`Gallery Image ${index + 1}`}
+                  className="w-full h-auto rounded-[3px] transition-transform group-hover:scale-105"
+                  quality={90}
+                />
+              ) : (
+                // Video container with fixed aspect ratio
+                <div className="relative bg-black" style={{ aspectRatio: item.aspectRatio }}>
+                  <video
+                    className="absolute top-0 left-0 w-full h-full rounded-[3px] object-cover"
+                    preload="metadata"
+                    playsInline
+                    muted
+                    loop
+                    onMouseEnter={(e) => e.currentTarget.play()}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.pause();
+                      e.currentTarget.currentTime = 0;
+                    }}
+                  >
+                    <source src={item.src} type="video/mp4" />
+                  </video>
+                  {/* Play button overlay – purely visual, click opens lightbox */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 z-10">
+                    <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                      <svg
+                        className="w-8 h-8 text-[#025C7A]"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox */}
       {isOpen && currentItem && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex justify-center items-center">
           <div className="relative w-full h-full flex justify-center items-center">
-            {/* Close button */}
             <button
               onClick={closeLightbox}
               className="absolute top-5 right-5 text-white text-5xl hover:text-gray-300 z-50 w-12 h-12 flex items-center justify-center bg-black bg-opacity-50 rounded-full"
-              aria-label="Close"
             >
               &times;
             </button>
-
-            {/* Navigation Arrows */}
             <button
               onClick={prevItem}
               className="absolute left-5 top-1/2 transform -translate-y-1/2 text-white text-5xl hover:text-gray-300 z-50 w-12 h-12 flex items-center justify-center bg-black bg-opacity-50 rounded-full"
-              aria-label="Previous"
             >
               &larr;
             </button>
             <button
               onClick={nextItem}
               className="absolute right-5 top-1/2 transform -translate-y-1/2 text-white text-5xl hover:text-gray-300 z-50 w-12 h-12 flex items-center justify-center bg-black bg-opacity-50 rounded-full"
-              aria-label="Next"
             >
               &rarr;
             </button>
-
-            {/* Counter */}
             <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 text-white text-lg bg-black bg-opacity-50 px-4 py-2 rounded-full">
-              {currentIndex + 1} / {allItems.length}
+              {currentIndex + 1} / {galleryItems.length}
             </div>
-
-            {/* Content */}
             <div className="max-w-7xl max-h-[90vh] mx-auto px-12">
               {currentItem.type === 'image' ? (
                 <Image
@@ -565,9 +523,7 @@ export default function GalleryComponent() {
               ) : (
                 <video
                   ref={el => {
-                    if (currentItem) {
-                      videoRefs.current[currentItem.id] = el;
-                    }
+                    videoRefs.current[currentItem.id] = el;
                   }}
                   src={currentItem.src}
                   className="max-h-[90vh] max-w-full"
