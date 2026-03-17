@@ -392,7 +392,6 @@ export default function GalleryComponent() {
       </div>
 
       {/* Videos Section */}
-      // Videos Section
       {videoItems.length > 0 && (
         <div className="mx-8 mb-16">
           <h3 className="text-2xl font-semibold mb-6">Videos</h3>
