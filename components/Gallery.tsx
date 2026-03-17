@@ -55,9 +55,96 @@ import gallery_49 from "../public/images/gallery/49.jpg";
 import gallery_50 from "../public/images/gallery/50.jpg";
 import gallery_51 from "../public/images/gallery/51.jpg";
 import gallery_52 from "../public/images/gallery/52.jpg";
+import gallery_53 from "../public/images/gallery/53.jpeg";
+import gallery_54 from "../public/images/gallery/54.jpeg";
+import gallery_55 from "../public/images/gallery/55.jpeg";
+import gallery_56 from "../public/images/gallery/56.jpeg";
+import gallery_57 from "../public/images/gallery/57.jpeg";
+import gallery_58 from "../public/images/gallery/58.jpeg";
+import gallery_59 from "../public/images/gallery/59.jpeg";
+import gallery_60 from "../public/images/gallery/60.jpeg";
+import gallery_61 from "../public/images/gallery/61.jpeg";
+import gallery_62 from "../public/images/gallery/62.jpeg";
+import gallery_64 from "../public/images/gallery/64.jpeg";
+import gallery_65 from "../public/images/gallery/65.jpeg";
+import gallery_66 from "../public/images/gallery/66.jpeg";
+import gallery_67 from "../public/images/gallery/67.jpeg";
+import gallery_68 from "../public/images/gallery/68.jpeg";
+import gallery_69 from "../public/images/gallery/69.jpeg";
+import gallery_70 from "../public/images/gallery/70.jpeg";
+import gallery_71 from "../public/images/gallery/71.jpeg";
+import gallery_72 from "../public/images/gallery/72.jpeg";
+import gallery_73 from "../public/images/gallery/73.jpeg";
+import gallery_74 from "../public/images/gallery/74.jpeg";
+import gallery_75 from "../public/images/gallery/75.jpeg";
+import gallery_76 from "../public/images/gallery/76.jpeg";
+import gallery_77 from "../public/images/gallery/77.jpeg";
+import gallery_78 from "../public/images/gallery/78.jpeg";
+import gallery_79 from "../public/images/gallery/79.jpeg";
+import gallery_80 from "../public/images/gallery/80.jpeg";
+import gallery_81 from "../public/images/gallery/81.jpeg";
+import gallery_82 from "../public/images/gallery/82.jpeg";
+import gallery_83 from "../public/images/gallery/83.jpeg";
+import gallery_84 from "../public/images/gallery/84.jpeg";
+import gallery_85 from "../public/images/gallery/85.jpeg";
+import gallery_86 from "../public/images/gallery/86.jpeg";
+import gallery_87 from "../public/images/gallery/87.jpeg";
+import gallery_88 from "../public/images/gallery/88.jpeg";
+import gallery_89 from "../public/images/gallery/89.jpeg";
+import gallery_90 from "../public/images/gallery/90.jpeg";
+import gallery_91 from "../public/images/gallery/91.jpeg";
+import gallery_92 from "../public/images/gallery/92.jpeg";
+import gallery_93 from "../public/images/gallery/93.jpeg";
+import gallery_94 from "../public/images/gallery/94.jpeg";
+import gallery_95 from "../public/images/gallery/95.jpeg";
+import gallery_96 from "../public/images/gallery/96.jpeg";
+import gallery_97 from "../public/images/gallery/97.jpeg";
 
 // Use StaticImageData type for images
 const gallery_images: StaticImageData[] = [
+  gallery_53,
+  gallery_54,
+  gallery_55,
+  gallery_56,
+  gallery_57,
+  gallery_58,
+  gallery_41,
+  gallery_42,
+  gallery_43,
+  gallery_1,
+  gallery_2,
+  gallery_3,
+  gallery_4,
+  gallery_5,
+  gallery_6,
+  gallery_7,
+  gallery_8,
+  gallery_10,
+  gallery_11,
+  gallery_12,
+  gallery_13,
+  gallery_59,
+  gallery_60,
+  gallery_61,
+  gallery_79,
+  gallery_80,
+  gallery_81,
+  gallery_82,
+  gallery_83,
+  gallery_84,
+  gallery_85,
+  gallery_86,
+  gallery_87,
+  gallery_88,
+  gallery_89,
+  gallery_90,
+  gallery_91,
+  gallery_92,
+  gallery_93,
+  gallery_94,
+  gallery_95,
+  gallery_96,
+  gallery_97,
   gallery_45,
   gallery_46,
   gallery_47,
@@ -75,27 +162,28 @@ const gallery_images: StaticImageData[] = [
   gallery_36,
   gallery_37,
   gallery_38,
-  gallery_39,
-  gallery_40,
-  gallery_41,
-  gallery_42,
-  gallery_43,
-  gallery_1,
-  gallery_2,
-  gallery_3,
-  gallery_4,
-  gallery_5,
-  gallery_6,
-  gallery_7,
-  gallery_8,
-  gallery_10,
-  gallery_11,
-  gallery_12,
-  gallery_13,
+  gallery_62,
+  gallery_64,
+  gallery_65,
+  gallery_66,
+  gallery_67,
+  gallery_68,
+  gallery_69,
+  gallery_70,
+  gallery_71,
+  gallery_72,
+  gallery_73,
+  gallery_74,
+  gallery_75,
+  gallery_76,
+  gallery_77,
+  gallery_78,
   gallery_14,
   gallery_15,
   gallery_16,
   gallery_17,
+  gallery_39,
+  gallery_40,
   gallery_18,
   gallery_19,
   gallery_20,
