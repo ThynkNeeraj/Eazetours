@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
@@ -99,203 +99,488 @@ import gallery_94 from "../public/images/gallery/94.jpeg";
 import gallery_95 from "../public/images/gallery/95.jpeg";
 import gallery_96 from "../public/images/gallery/96.jpeg";
 import gallery_97 from "../public/images/gallery/97.jpeg";
+import gallery_98 from "../public/images/gallery/98.jpeg";
+import gallery_99 from "../public/images/gallery/99.jpeg";
+import gallery_100 from "../public/images/gallery/100.jpeg";
+import gallery_101 from "../public/images/gallery/101.jpeg";
+import gallery_102 from "../public/images/gallery/102.jpeg";
 
-// Use StaticImageData type for images
-const gallery_images: StaticImageData[] = [
-  gallery_53,
-  gallery_54,
-  gallery_55,
-  gallery_56,
-  gallery_57,
-  gallery_58,
-  gallery_41,
-  gallery_42,
-  gallery_43,
-  gallery_1,
-  gallery_2,
-  gallery_3,
-  gallery_4,
-  gallery_5,
-  gallery_6,
-  gallery_7,
-  gallery_8,
-  gallery_10,
-  gallery_11,
-  gallery_12,
-  gallery_13,
-  gallery_59,
-  gallery_60,
-  gallery_61,
-  gallery_79,
-  gallery_80,
-  gallery_81,
-  gallery_82,
-  gallery_83,
-  gallery_84,
-  gallery_85,
-  gallery_86,
-  gallery_87,
-  gallery_88,
-  gallery_89,
-  gallery_90,
-  gallery_91,
-  gallery_92,
-  gallery_93,
-  gallery_94,
-  gallery_95,
-  gallery_96,
-  gallery_97,
-  gallery_45,
-  gallery_46,
-  gallery_47,
-  gallery_48,
-  gallery_49,
-  gallery_50,
-  gallery_51,
-  gallery_52,
-  gallery_44,
-  gallery_31,
-  gallery_32,
-  gallery_33,
-  gallery_34,
-  gallery_35,
-  gallery_36,
-  gallery_37,
-  gallery_38,
-  gallery_62,
-  gallery_64,
-  gallery_65,
-  gallery_66,
-  gallery_67,
-  gallery_68,
-  gallery_69,
-  gallery_70,
-  gallery_71,
-  gallery_72,
-  gallery_73,
-  gallery_74,
-  gallery_75,
-  gallery_76,
-  gallery_77,
-  gallery_78,
-  gallery_14,
-  gallery_15,
-  gallery_16,
-  gallery_17,
-  gallery_39,
-  gallery_40,
-  gallery_18,
-  gallery_19,
-  gallery_20,
-  gallery_21,
-  gallery_22,
-  gallery_23,
-  gallery_24,
-  gallery_25,
-  gallery_26,
-  gallery_27,
-  gallery_28,
-  gallery_29,
-  gallery_30,
+// Define interfaces for gallery items
+interface ImageItem {
+  type: 'image';
+  src: StaticImageData;
+  id: string;
+}
+
+interface VideoItem {
+  type: 'video';
+  src: string;
+  id: string;
+  aspectRatio: string;
+  size: 'normal' | 'large'; // Add size property to distinguish between 3:4 and 3:2 videos
+}
+
+// Union type
+type GalleryItem = ImageItem | VideoItem;
+
+// Create gallery array with all your images
+const imageItems: ImageItem[] = [
+  { type: 'image', src: gallery_98, id: 'img-98' },
+  { type: 'image', src: gallery_99, id: 'img-99' },
+  { type: 'image', src: gallery_100, id: 'img-100' },
+  { type: 'image', src: gallery_101, id: 'img-101' },
+  { type: 'image', src: gallery_102, id: 'img-102' },
+  { type: 'image', src: gallery_53, id: 'img-53' },
+  { type: 'image', src: gallery_53, id: 'img-53' },
+  { type: 'image', src: gallery_54, id: 'img-54' },
+  { type: 'image', src: gallery_55, id: 'img-55' },
+  { type: 'image', src: gallery_56, id: 'img-56' },
+  { type: 'image', src: gallery_57, id: 'img-57' },
+  { type: 'image', src: gallery_58, id: 'img-58' },
+  { type: 'image', src: gallery_41, id: 'img-41' },
+  { type: 'image', src: gallery_42, id: 'img-42' },
+  { type: 'image', src: gallery_43, id: 'img-43' },
+  { type: 'image', src: gallery_1, id: 'img-1' },
+  { type: 'image', src: gallery_2, id: 'img-2' },
+  { type: 'image', src: gallery_3, id: 'img-3' },
+  { type: 'image', src: gallery_4, id: 'img-4' },
+  { type: 'image', src: gallery_5, id: 'img-5' },
+  { type: 'image', src: gallery_6, id: 'img-6' },
+  { type: 'image', src: gallery_7, id: 'img-7' },
+  { type: 'image', src: gallery_8, id: 'img-8' },
+  { type: 'image', src: gallery_10, id: 'img-10' },
+  { type: 'image', src: gallery_11, id: 'img-11' },
+  { type: 'image', src: gallery_12, id: 'img-12' },
+  { type: 'image', src: gallery_13, id: 'img-13' },
+  { type: 'image', src: gallery_59, id: 'img-59' },
+  { type: 'image', src: gallery_60, id: 'img-60' },
+  { type: 'image', src: gallery_61, id: 'img-61' },
+  { type: 'image', src: gallery_79, id: 'img-79' },
+  { type: 'image', src: gallery_80, id: 'img-80' },
+  { type: 'image', src: gallery_81, id: 'img-81' },
+  { type: 'image', src: gallery_82, id: 'img-82' },
+  { type: 'image', src: gallery_83, id: 'img-83' },
+  { type: 'image', src: gallery_84, id: 'img-84' },
+  { type: 'image', src: gallery_85, id: 'img-85' },
+  { type: 'image', src: gallery_86, id: 'img-86' },
+  { type: 'image', src: gallery_87, id: 'img-87' },
+  { type: 'image', src: gallery_88, id: 'img-88' },
+  { type: 'image', src: gallery_89, id: 'img-89' },
+  { type: 'image', src: gallery_90, id: 'img-90' },
+  { type: 'image', src: gallery_91, id: 'img-91' },
+  { type: 'image', src: gallery_92, id: 'img-92' },
+  { type: 'image', src: gallery_93, id: 'img-93' },
+  { type: 'image', src: gallery_94, id: 'img-94' },
+  { type: 'image', src: gallery_95, id: 'img-95' },
+  { type: 'image', src: gallery_96, id: 'img-96' },
+  { type: 'image', src: gallery_97, id: 'img-97' },
+  { type: 'image', src: gallery_45, id: 'img-45' },
+  { type: 'image', src: gallery_46, id: 'img-46' },
+  { type: 'image', src: gallery_47, id: 'img-47' },
+  { type: 'image', src: gallery_48, id: 'img-48' },
+  { type: 'image', src: gallery_49, id: 'img-49' },
+  { type: 'image', src: gallery_50, id: 'img-50' },
+  { type: 'image', src: gallery_51, id: 'img-51' },
+  { type: 'image', src: gallery_52, id: 'img-52' },
+  { type: 'image', src: gallery_44, id: 'img-44' },
+  { type: 'image', src: gallery_31, id: 'img-31' },
+  { type: 'image', src: gallery_32, id: 'img-32' },
+  { type: 'image', src: gallery_33, id: 'img-33' },
+  { type: 'image', src: gallery_34, id: 'img-34' },
+  { type: 'image', src: gallery_35, id: 'img-35' },
+  { type: 'image', src: gallery_36, id: 'img-36' },
+  { type: 'image', src: gallery_37, id: 'img-37' },
+  { type: 'image', src: gallery_38, id: 'img-38' },
+  { type: 'image', src: gallery_62, id: 'img-62' },
+  { type: 'image', src: gallery_64, id: 'img-64' },
+  { type: 'image', src: gallery_65, id: 'img-65' },
+  { type: 'image', src: gallery_66, id: 'img-66' },
+  { type: 'image', src: gallery_67, id: 'img-67' },
+  { type: 'image', src: gallery_68, id: 'img-68' },
+  { type: 'image', src: gallery_69, id: 'img-69' },
+  { type: 'image', src: gallery_70, id: 'img-70' },
+  { type: 'image', src: gallery_71, id: 'img-71' },
+  { type: 'image', src: gallery_72, id: 'img-72' },
+  { type: 'image', src: gallery_73, id: 'img-73' },
+  { type: 'image', src: gallery_74, id: 'img-74' },
+  { type: 'image', src: gallery_75, id: 'img-75' },
+  { type: 'image', src: gallery_76, id: 'img-76' },
+  { type: 'image', src: gallery_77, id: 'img-77' },
+  { type: 'image', src: gallery_78, id: 'img-78' },
+  { type: 'image', src: gallery_14, id: 'img-14' },
+  { type: 'image', src: gallery_15, id: 'img-15' },
+  { type: 'image', src: gallery_16, id: 'img-16' },
+  { type: 'image', src: gallery_17, id: 'img-17' },
+  { type: 'image', src: gallery_39, id: 'img-39' },
+  { type: 'image', src: gallery_40, id: 'img-40' },
+  { type: 'image', src: gallery_18, id: 'img-18' },
+  { type: 'image', src: gallery_19, id: 'img-19' },
+  { type: 'image', src: gallery_20, id: 'img-20' },
+  { type: 'image', src: gallery_21, id: 'img-21' },
+  { type: 'image', src: gallery_22, id: 'img-22' },
+  { type: 'image', src: gallery_23, id: 'img-23' },
+  { type: 'image', src: gallery_24, id: 'img-24' },
+  { type: 'image', src: gallery_25, id: 'img-25' },
+  { type: 'image', src: gallery_26, id: 'img-26' },
+  { type: 'image', src: gallery_27, id: 'img-27' },
+  { type: 'image', src: gallery_28, id: 'img-28' },
+  { type: 'image', src: gallery_29, id: 'img-29' },
+  { type: 'image', src: gallery_30, id: 'img-30' },
+];
+
+// Add videos at the beginning of the gallery with different aspect ratios
+const videoItems: VideoItem[] = [
+  {
+    type: 'video',
+    src: '/video/Tours/1.mp4',
+    id: 'video-1',
+    aspectRatio: "3 / 4",
+    size: 'normal'
+  },
+  {
+    type: 'video',
+    src: '/video/Tours/2.mp4',
+    id: 'video-2',
+    aspectRatio: "3 / 4",
+    size: 'normal'
+  },
+  {
+    type: 'video',
+    src: '/video/Tours/3.mp4',
+    id: 'video-3',
+    aspectRatio: "3 / 4",
+    size: 'normal'
+  },
+  {
+    type: 'video',
+    src: '/video/Tours/4.mp4',
+    id: 'video-4',
+    aspectRatio: "3 / 4",
+    size: 'normal'
+  },
+  {
+    type: 'video',
+    src: '/video/Tours/5.mp4',
+    id: 'video-5',
+    aspectRatio: "3 / 4",
+    size: 'normal'
+  },
+  {
+    type: 'video',
+    src: '/video/Tours/6.mp4',
+    id: 'video-6',
+    aspectRatio: "3 / 4",
+    size: 'normal'
+  },
+  {
+    type: 'video',
+    src: '/video/Tours/7.mp4',
+    id: 'video-7',
+    aspectRatio: "3 / 2",
+    size: 'large'
+  },
+  {
+    type: 'video',
+    src: '/video/Tours/8.mp4',
+    id: 'video-8',
+    aspectRatio: "3 / 2",
+    size: 'large'
+  },
 ];
 
 export default function GalleryComponent() {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState<StaticImageData | null>(null);
+  const [currentItem, setCurrentItem] = useState<GalleryItem | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [playingVideos, setPlayingVideos] = useState<{ [key: string]: boolean }>({});
+  const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
 
-  const openLightbox = (image: StaticImageData, index: number) => {
-    setCurrentImage(image);
+  // Pause video when closing lightbox or navigating
+  useEffect(() => {
+    if (!isOpen && currentItem?.type === 'video') {
+      const videoElement = videoRefs.current[currentItem.id];
+      if (videoElement) {
+        videoElement.pause();
+      }
+    }
+  }, [isOpen, currentItem]);
+
+  const handlePlay = (itemId: string) => {
+    const videoElement = videoRefs.current[itemId];
+    if (videoElement) {
+      if (playingVideos[itemId]) {
+        videoElement.pause();
+      } else {
+        videoElement.play();
+        // Pause all other videos
+        Object.keys(videoRefs.current).forEach(key => {
+          if (key !== itemId && videoRefs.current[key]) {
+            videoRefs.current[key]?.pause();
+          }
+        });
+      }
+      setPlayingVideos(prev => ({
+        ...prev,
+        [itemId]: !prev[itemId]
+      }));
+    }
+  };
+
+  const openLightbox = (item: GalleryItem, index: number) => {
+    setCurrentItem(item);
     setCurrentIndex(index);
     setIsOpen(true);
   };
 
   const closeLightbox = () => {
     setIsOpen(false);
-    setCurrentImage(null);
+    setCurrentItem(null);
     setCurrentIndex(0);
   };
 
-  const nextImage = () => {
-    const nextIndex = (currentIndex + 1) % gallery_images.length;
-    setCurrentImage(gallery_images[nextIndex]);
+  const nextItem = () => {
+    // Pause video if current item is video
+    if (currentItem?.type === 'video' && videoRefs.current[currentItem.id]) {
+      videoRefs.current[currentItem.id]?.pause();
+    }
+    const nextIndex = (currentIndex + 1) % allItems.length;
+    setCurrentItem(allItems[nextIndex]);
     setCurrentIndex(nextIndex);
   };
 
-  const prevImage = () => {
-    const prevIndex = (currentIndex - 1 + gallery_images.length) % gallery_images.length;
-    setCurrentImage(gallery_images[prevIndex]);
+  const prevItem = () => {
+    // Pause video if current item is video
+    if (currentItem?.type === 'video' && videoRefs.current[currentItem.id]) {
+      videoRefs.current[currentItem.id]?.pause();
+    }
+    const prevIndex = (currentIndex - 1 + allItems.length) % allItems.length;
+    setCurrentItem(allItems[prevIndex]);
     setCurrentIndex(prevIndex);
   };
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isOpen) return;
+
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowRight') {
+        nextItem();
+      } else if (e.key === 'ArrowLeft') {
+        prevItem();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
+
+  // Combine all items for lightbox navigation
+  const allItems: GalleryItem[] = [...videoItems, ...imageItems];
 
   return (
     <div>
       <div className="mt-[135px] sm:mt-[165px] mx-8 mb-12">
         <p className="text-[14px] text-gray-700 mt-4">
           <span className="text-[#ccc] hover:text-[#035C7A]">
-            <Link href="/" passHref>
-              Home
-            </Link>
+            <Link href="/">Home</Link>
           </span>{" "}
           / Gallery
         </p>
         <h2 className="text-[42px] font-semibold text-black text-left">Gallery</h2>
       </div>
 
-      <div className="mt-[10px] mx-8 mb-12">
+      {/* Videos Section */}
+      // Videos Section
+      {videoItems.length > 0 && (
+        <div className="mx-8 mb-16">
+          <h3 className="text-2xl font-semibold mb-6">Videos</h3>
+
+          {/* Regular videos - 3:4 aspect ratio, 3 per row */}
+          {videoItems.filter(item => item.size === 'normal').length > 0 && (
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                {videoItems
+                  .filter(item => item.size === 'normal')
+                  .map((item, index) => (
+                    <div
+                      key={item.id}
+                      className="relative rounded-2xl overflow-hidden shadow-lg group transition-transform transform hover:scale-105 cursor-pointer bg-black"
+                      style={{ aspectRatio: item.aspectRatio }}
+                      onClick={() => openLightbox(item, index)} // Changed: open lightbox instead of playing inline
+                    >
+                      <video
+                        ref={el => {
+                          videoRefs.current[item.id] = el;
+                        }}
+                        className="absolute top-0 left-0 w-full h-full rounded-2xl object-cover"
+                        preload="metadata"
+                        playsInline
+                        muted // Added muted for autoplay preview
+                        loop // Added loop for preview
+                        onMouseEnter={(e) => e.currentTarget.play()} // Optional: play on hover
+                        onMouseLeave={(e) => {
+                          e.currentTarget.pause();
+                          e.currentTarget.currentTime = 0;
+                        }} // Optional: pause on hover leave
+                      >
+                        <source src={item.src} type="video/mp4" />
+                      </video>
+
+                      {/* Play Button Overlay - always show to indicate video */}
+                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 z-10">
+                        <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                          <svg
+                            className="w-8 h-8 text-[#025C7A]"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </>
+          )}
+
+          {/* Large videos - 3:2 aspect ratio, 2 per row */}
+          {videoItems.filter(item => item.size === 'large').length > 0 && (
+            <>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {videoItems
+                  .filter(item => item.size === 'large')
+                  .map((item, index) => (
+                    <div
+                      key={item.id}
+                      className="relative rounded-2xl overflow-hidden shadow-lg group transition-transform transform hover:scale-105 cursor-pointer bg-black"
+                      style={{ aspectRatio: item.aspectRatio }}
+                      onClick={() => openLightbox(item, videoItems.filter(i => i.size === 'normal').length + index)} // Fixed index calculation
+                    >
+                      <video
+                        ref={el => {
+                          videoRefs.current[item.id] = el;
+                        }}
+                        className="absolute top-0 left-0 w-full h-full rounded-2xl object-cover"
+                        preload="metadata"
+                        playsInline
+                        muted // Added muted for autoplay preview
+                        loop // Added loop for preview
+                        onMouseEnter={(e) => e.currentTarget.play()} // Optional: play on hover
+                        onMouseLeave={(e) => {
+                          e.currentTarget.pause();
+                          e.currentTarget.currentTime = 0;
+                        }} // Optional: pause on hover leave
+                      >
+                        <source src={item.src} type="video/mp4" />
+                      </video>
+
+                      {/* Play Button Overlay - always show to indicate video */}
+                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 z-10">
+                        <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                          <svg
+                            className="w-8 h-8 text-[#025C7A]"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </>
+          )}
+        </div>
+      )}
+
+      {/* Images Section - Masonry Layout */}
+      <div className="mx-8 mb-12">
+        <h3 className="text-2xl font-semibold mb-6">Images</h3>
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-3">
-          {gallery_images.map((gallery_image, index) => (
+          {imageItems.map((item, index) => (
             <div
-              key={index}
+              key={item.id}
               className="break-inside-avoid group relative overflow-hidden rounded-[3px] shadow-xl cursor-pointer transition-transform hover:scale-[1.02]"
-              onClick={() => openLightbox(gallery_image, index)}
+              onClick={() => openLightbox(item, videoItems.length + index)}
             >
               <Image
-                src={gallery_image}
+                src={item.src}
                 alt={`Gallery Image ${index + 1}`}
                 className="w-full h-auto rounded-[3px] transition-transform group-hover:scale-105"
+                quality={90}
               />
             </div>
           ))}
         </div>
+      </div>
 
+      {/* Lightbox Modal */}
+      {isOpen && currentItem && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex justify-center items-center">
+          <div className="relative w-full h-full flex justify-center items-center">
+            {/* Close button */}
+            <button
+              onClick={closeLightbox}
+              className="absolute top-5 right-5 text-white text-5xl hover:text-gray-300 z-50 w-12 h-12 flex items-center justify-center bg-black bg-opacity-50 rounded-full"
+              aria-label="Close"
+            >
+              &times;
+            </button>
 
-        {/* Lightbox Modal */}
-        {isOpen && currentImage && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-75 flex justify-center items-center">
-            <div className="relative">
-              <button
-                onClick={closeLightbox}
-                className="absolute top-0 right-0 text-white text-4xl px-3 pt-0 pb-2 bg-transparent hover:bg-gray-700 rounded-full"
-              >
-                &times;
-              </button>
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevItem}
+              className="absolute left-5 top-1/2 transform -translate-y-1/2 text-white text-5xl hover:text-gray-300 z-50 w-12 h-12 flex items-center justify-center bg-black bg-opacity-50 rounded-full"
+              aria-label="Previous"
+            >
+              &larr;
+            </button>
+            <button
+              onClick={nextItem}
+              className="absolute right-5 top-1/2 transform -translate-y-1/2 text-white text-5xl hover:text-gray-300 z-50 w-12 h-12 flex items-center justify-center bg-black bg-opacity-50 rounded-full"
+              aria-label="Next"
+            >
+              &rarr;
+            </button>
 
-              {/* Navigation Arrows */}
-              <button
-                onClick={prevImage}
-                className="absolute left-5 top-1/2 transform -translate-y-1/2 text-white text-4xl bg-transparent hover:bg-gray-700 rounded-full px-2 pt-0 pb-1"
-              >
-                &larr;
-              </button>
-              <button
-                onClick={nextImage}
-                className="absolute right-5 top-1/2 transform -translate-y-1/2 text-white text-4xl bg-transparent hover:bg-gray-700 rounded-full px-2 pt-0 pb-1"
-              >
-                &rarr;
-              </button>
+            {/* Counter */}
+            <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 text-white text-lg bg-black bg-opacity-50 px-4 py-2 rounded-full">
+              {currentIndex + 1} / {allItems.length}
+            </div>
 
-              <Image
-                className="object-contain max-h-screen max-w-screen"
-                src={currentImage}
-                alt="Lightbox Image"
-                width={1200}
-                height={800}
-              />
+            {/* Content */}
+            <div className="max-w-7xl max-h-[90vh] mx-auto px-12">
+              {currentItem.type === 'image' ? (
+                <Image
+                  className="object-contain max-h-[90vh] max-w-full"
+                  src={currentItem.src}
+                  alt={`Gallery Image ${currentIndex + 1}`}
+                  width={1200}
+                  height={800}
+                  priority
+                />
+              ) : (
+                <video
+                  ref={el => {
+                    if (currentItem) {
+                      videoRefs.current[currentItem.id] = el;
+                    }
+                  }}
+                  src={currentItem.src}
+                  className="max-h-[90vh] max-w-full"
+                  controls
+                  autoPlay
+                  playsInline
+                />
+              )}
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
