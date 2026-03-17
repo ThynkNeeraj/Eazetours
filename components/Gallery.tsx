@@ -283,13 +283,14 @@ const orderedIds = [
   'img-82',
   'img-83',
   'img-84',
-  'img-85',
+  'img-29',
   'img-101',
   'video-6',
   'img-95',
   'video-2',
   'img-88',
   'img-86',
+  'img-85',
   'img-89',
   'img-90',
   'img-91',
@@ -353,7 +354,6 @@ const orderedIds = [
   'img-26',
   'img-27',
   'img-28',
-  'img-29',
   'img-30',
 ];
 
