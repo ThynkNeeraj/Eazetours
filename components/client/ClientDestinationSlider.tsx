@@ -36,6 +36,8 @@ const ClientDestinationSlider = ({
     }
   };
 
+
+
   const handleNextInfoBox = () => {
     if (currentIndex < totalBoxes - visibleBoxes) {
       setCurrentIndex(prevIndex => prevIndex + 1);
@@ -159,7 +161,7 @@ const ClientDestinationSlider = ({
       </div>
 
       <div className="text-center my-12">
-        <a href="/packages">
+        <a href={ctaLink}>
           <button className="px-8 py-4 mt-8 mb-12 border-2 border-[#025C7A] bg-white text-[#025C7A] rounded-full hover:bg-[#025C7A] hover:text-white transition-all duration-300">
             {ctaText}
           </button>
