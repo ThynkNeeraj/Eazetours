@@ -12,41 +12,51 @@ const DestinationsSection = ({ locale = "en" }: DestinationsSectionProps) => {
   const translations: ITranslations = getLandingTranslations(locale);
   const { destinations, tripIdeas } = translations.landing;
 
+  // Helper function to add locale prefix to URLs
+  const getLocalizedUrl = (path: string) => {
+    // If locale is 'en', don't add prefix (or add empty string based on your routing)
+    if (locale === 'en') {
+      return path;
+    }
+    // Add locale prefix for non-English languages
+    return `/${locale}${path}`;
+  };
+
   const destinationSlides = [
     {
       id: 1,
       title: destinations.locations.india.title,
       content: destinations.locations.india.content,
       bg: "/images/india.png",
-      ctaLink: "/packages",
+      ctaLink: getLocalizedUrl("/packages"),
     },
     {
       id: 2,
       title: destinations.locations.nepal.title,
       content: destinations.locations.nepal.content,
       bg: "/images/nepal.png",
-      ctaLink: "/packages?tab=nepal",
+      ctaLink: getLocalizedUrl("/packages?tab=nepal"),
     },
     {
       id: 3,
       title: destinations.locations.bhutan.title,
       content: destinations.locations.bhutan.content,
       bg: "/images/bhutan.png",
-      ctaLink: "packages?tab=bhutan",
+      ctaLink: getLocalizedUrl("/packages?tab=bhutan"),
     },
     {
       id: 4,
       title: destinations.locations.sriLanka.title,
       content: destinations.locations.sriLanka.content,
       bg: "/images/SRI_LANKA.webp",
-      ctaLink: "packages?tab=srilanka",
+      ctaLink: getLocalizedUrl("/packages?tab=srilanka"),
     },
     {
       id: 5,
       title: destinations.locations.maldives.title,
       content: destinations.locations.maldives.content,
       bg: "/images/maldives.png",
-      ctaLink: "/packages?tab=maldives",
+      ctaLink: getLocalizedUrl("/packages?tab=maldives"),
     },
   ];
 
@@ -58,11 +68,11 @@ const DestinationsSection = ({ locale = "en" }: DestinationsSectionProps) => {
           slides={destinationSlides}
           ctaText={destinations.cta}
           ctaButtonText={destinations.ctaButton}
-          ctaLink={destinations.ctaButton}
+          ctaLink={getLocalizedUrl("/packages")} // FIXED: Pass the URL, not the button text
         />
       </div>
 
-      {/* Trip Ideas Section */}
+      {/* Rest of your component remains the same */}
       <div className="my-12 max-w-screen-xl mx-auto">
         <h2
           className="text-2xl font-semibold text-black text-center lg:text-left mx-2"
@@ -91,7 +101,7 @@ const DestinationsSection = ({ locale = "en" }: DestinationsSectionProps) => {
               <p className="mb-4 sm:w-[75%] w-[80%] font-urbanist">
                 {tripIdeas.indiaTrip.description}
               </p>
-              <a href="/packages/royal-rajasthan-tour-package-india">
+              <a href={getLocalizedUrl("/packages/royal-rajasthan-tour-package-india")}>
                 <button className="px-4 py-4 font-normal sm:font-bold bg-white text-[#025C7A] rounded-full hover:bg-[#025C7A] hover:text-[#fff] transition-all duration-300 min-w-[175px]">
                   {tripIdeas.indiaTrip.cta}
                 </button>
@@ -118,7 +128,7 @@ const DestinationsSection = ({ locale = "en" }: DestinationsSectionProps) => {
               <p className="mb-4 sm:w-[75%] w-[80%] font-urbanist">
                 {tripIdeas.amritsarTrip.description}
               </p>
-              <a href="/packages/north-india-temple-tour-package-india">
+              <a href={getLocalizedUrl("/packages/north-india-temple-tour-package-india")}>
                 <button className="px-4 py-4 font-normal sm:font-bold bg-white text-[#025C7A] rounded-full hover:bg-[#025C7A] hover:text-[#fff] transition-all duration-300 min-w-[175px]">
                   {tripIdeas.amritsarTrip.cta}
                 </button>
