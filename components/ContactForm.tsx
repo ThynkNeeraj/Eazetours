@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-// Extended Country options with flag + code
+// Extended Country options with flag + code (unchanged)
 const countryOptions = [
   { code: "+1", flag: "🇺🇸", name: "United States" },
   { code: "+44", flag: "🇬🇧", name: "United Kingdom" },
@@ -53,6 +53,7 @@ const countryOptions = [
   { code: "+65", flag: "🇸🇬", name: "Singapore" },
 ];
 
+// Tour types remain the same (could also be translated if needed, but keeping as-is for now)
 const tourTypes = [
   "Adventure Tours",
   "Cultural Tours",
@@ -68,14 +69,134 @@ const tourTypes = [
   "Custom Tour",
 ];
 
-export default function ContactForm() {
+interface ContactFormProps {
+  locale?: string; // 'en', 'de', 'es', 'fr' – defaults to 'en'
+}
+
+export default function ContactForm({ locale = "en" }: ContactFormProps) {
   const router = useRouter();
   const today = new Date().toISOString().split("T")[0];
-const handleChange = (
+
+  // Translation dictionary
+  const translations = {
+    en: {
+      title: "Write to us!",
+      subtitle: "Want to enquire about a tour or your next vacation? Fill out the form and we’ll get back to you with a tailor-made itinerary.",
+      namePlaceholder: "Full Name",
+      cityPlaceholder: "Your City",
+      emailPlaceholder: "Email Address",
+      phonePlaceholder: "Mobile Number",
+      destinationPlaceholder: "Destination",
+      datePlaceholder: "Date of Travel",
+      peoplePlaceholder: "No. of Travelers",
+      tourTypePlaceholder: "Select Tour Type",
+      messagePlaceholder: "Message (optional)",
+      submitButton: "Send",
+      toastMessage: "We have received your query! Redirecting...",
+      errorNameRequired: "Name is required.",
+      errorCityRequired: "City is required.",
+      errorEmailRequired: "Email is required.",
+      errorEmailInvalid: "Invalid email address.",
+      errorPhoneRequired: "Phone number is required.",
+      errorPhoneInvalid: "Invalid phone number.",
+      errorDestinationRequired: "Destination is required.",
+      errorDateRequired: "Select a travel date.",
+      errorPeopleRequired: "Enter number of travelers.",
+      errorTourTypeRequired: "Select a tour type.",
+      errorCustomMessageRequired: "Please describe your custom tour request.",
+      errorLettersOnly: "Only letters are allowed.",
+    },
+    de: {
+      title: "Schreiben Sie uns!",
+      subtitle: "Möchten Sie eine Tour oder Ihren nächsten Urlaub anfragen? Füllen Sie das Formular aus und wir melden uns mit einem maßgeschneiderten Reiseplan bei Ihnen.",
+      namePlaceholder: "Vollständiger Name",
+      cityPlaceholder: "Ihre Stadt",
+      emailPlaceholder: "E-Mail-Adresse",
+      phonePlaceholder: "Mobilnummer",
+      destinationPlaceholder: "Reiseziel",
+      datePlaceholder: "Reisedatum",
+      peoplePlaceholder: "Anzahl der Reisenden",
+      tourTypePlaceholder: "Tourart auswählen",
+      messagePlaceholder: "Nachricht (optional)",
+      submitButton: "Senden",
+      toastMessage: "Wir haben Ihre Anfrage erhalten! Weiterleitung...",
+      errorNameRequired: "Name ist erforderlich.",
+      errorCityRequired: "Stadt ist erforderlich.",
+      errorEmailRequired: "E-Mail ist erforderlich.",
+      errorEmailInvalid: "Ungültige E-Mail-Adresse.",
+      errorPhoneRequired: "Telefonnummer ist erforderlich.",
+      errorPhoneInvalid: "Ungültige Telefonnummer.",
+      errorDestinationRequired: "Reiseziel ist erforderlich.",
+      errorDateRequired: "Wählen Sie ein Reisedatum.",
+      errorPeopleRequired: "Geben Sie die Anzahl der Reisenden ein.",
+      errorTourTypeRequired: "Wählen Sie eine Tourart.",
+      errorCustomMessageRequired: "Bitte beschreiben Sie Ihre individuelle Touranfrage.",
+      errorLettersOnly: "Nur Buchstaben sind erlaubt.",
+    },
+    es: {
+      title: "¡Escríbanos!",
+      subtitle: "¿Quiere consultar sobre un tour o sus próximas vacaciones? Complete el formulario y le responderemos con un itinerario personalizado.",
+      namePlaceholder: "Nombre completo",
+      cityPlaceholder: "Su ciudad",
+      emailPlaceholder: "Correo electrónico",
+      phonePlaceholder: "Número de móvil",
+      destinationPlaceholder: "Destino",
+      datePlaceholder: "Fecha de viaje",
+      peoplePlaceholder: "Número de viajeros",
+      tourTypePlaceholder: "Seleccione tipo de tour",
+      messagePlaceholder: "Mensaje (opcional)",
+      submitButton: "Enviar",
+      toastMessage: "¡Hemos recibido su consulta! Redirigiendo...",
+      errorNameRequired: "El nombre es obligatorio.",
+      errorCityRequired: "La ciudad es obligatoria.",
+      errorEmailRequired: "El correo electrónico es obligatorio.",
+      errorEmailInvalid: "Correo electrónico inválido.",
+      errorPhoneRequired: "El número de teléfono es obligatorio.",
+      errorPhoneInvalid: "Número de teléfono inválido.",
+      errorDestinationRequired: "El destino es obligatorio.",
+      errorDateRequired: "Seleccione una fecha de viaje.",
+      errorPeopleRequired: "Ingrese el número de viajeros.",
+      errorTourTypeRequired: "Seleccione un tipo de tour.",
+      errorCustomMessageRequired: "Por favor, describa su solicitud de tour personalizado.",
+      errorLettersOnly: "Solo se permiten letras.",
+    },
+    fr: {
+      title: "Écrivez-nous!",
+      subtitle: "Vous souhaitez vous renseigner sur un voyage ou vos prochaines vacances? Remplissez le formulaire et nous vous répondrons avec un itinéraire sur mesure.",
+      namePlaceholder: "Nom complet",
+      cityPlaceholder: "Votre ville",
+      emailPlaceholder: "Adresse e-mail",
+      phonePlaceholder: "Numéro de mobile",
+      destinationPlaceholder: "Destination",
+      datePlaceholder: "Date de voyage",
+      peoplePlaceholder: "Nombre de voyageurs",
+      tourTypePlaceholder: "Sélectionnez le type de voyage",
+      messagePlaceholder: "Message (optionnel)",
+      submitButton: "Envoyer",
+      toastMessage: "Nous avons reçu votre demande! Redirection...",
+      errorNameRequired: "Le nom est requis.",
+      errorCityRequired: "La ville est requise.",
+      errorEmailRequired: "L'e-mail est requis.",
+      errorEmailInvalid: "Adresse e-mail invalide.",
+      errorPhoneRequired: "Le numéro de téléphone est requis.",
+      errorPhoneInvalid: "Numéro de téléphone invalide.",
+      errorDestinationRequired: "La destination est requise.",
+      errorDateRequired: "Sélectionnez une date de voyage.",
+      errorPeopleRequired: "Entrez le nombre de voyageurs.",
+      errorTourTypeRequired: "Sélectionnez un type de voyage.",
+      errorCustomMessageRequired: "Veuillez décrire votre demande de voyage personnalisé.",
+      errorLettersOnly: "Seules les lettres sont autorisées.",
+    },
+  };
+
+  const t = translations[locale as keyof typeof translations] || translations.en;
+
+  const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const [formData, setFormData] = useState({
     name: "",
     city: "",
@@ -117,19 +238,18 @@ const handleChange = (
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
 
-    if (!formData.name.trim()) newErrors.name = "Name is required.";
-    if (!formData.city.trim()) newErrors.city = "City is required.";
-    if (!formData.email.trim()) newErrors.email = "Email is required.";
-    else if (!validateEmail(formData.email)) newErrors.email = "Invalid email address.";
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required.";
-    else if (!validatePhone(formData.phone)) newErrors.phone = "Invalid phone number.";
-    if (!formData.destination.trim()) newErrors.destination = "Destination is required.";
-    if (!formData.dateOfTravel.trim()) newErrors.dateOfTravel = "Select a travel date.";
-    if (!formData.dateOfTravel.trim()) newErrors.dateOfTravel = "Select a date.";
-    if (!formData.people.trim()) newErrors.people = "Enter number of travelers.";
-    if (!formData.tourType.trim()) newErrors.tourType = "Select a tour type.";
+    if (!formData.name.trim()) newErrors.name = t.errorNameRequired;
+    if (!formData.city.trim()) newErrors.city = t.errorCityRequired;
+    if (!formData.email.trim()) newErrors.email = t.errorEmailRequired;
+    else if (!validateEmail(formData.email)) newErrors.email = t.errorEmailInvalid;
+    if (!formData.phone.trim()) newErrors.phone = t.errorPhoneRequired;
+    else if (!validatePhone(formData.phone)) newErrors.phone = t.errorPhoneInvalid;
+    if (!formData.destination.trim()) newErrors.destination = t.errorDestinationRequired;
+    if (!formData.dateOfTravel.trim()) newErrors.dateOfTravel = t.errorDateRequired;
+    if (!formData.people.trim()) newErrors.people = t.errorPeopleRequired;
+    if (!formData.tourType.trim()) newErrors.tourType = t.errorTourTypeRequired;
     if (formData.tourType === "Custom Tour" && !formData.message.trim())
-      newErrors.message = "Please describe your custom tour request.";
+      newErrors.message = t.errorCustomMessageRequired;
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -185,7 +305,7 @@ const handleChange = (
         <div className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500">
           <div className="alert alert-success shadow-lg">
             <div>
-              <span>We have received your query! Redirecting...</span>
+              <span>{t.toastMessage}</span>
             </div>
           </div>
         </div>
@@ -193,21 +313,18 @@ const handleChange = (
 
       <div className="card bg-base-100 w-full mx-auto shadow-2xl my-10 flex-1">
         <div className="text-center mt-5">
-          <h3 className="text-3xl font-bold">Write to us!</h3>
-          <p className="p-6">
-            Want to enquire about a tour or your next vacation? Fill out the form and we’ll get back
-            to you with a tailor-made itinerary.
-          </p>
+          <h3 className="text-3xl font-bold">{t.title}</h3>
+          <p className="p-6">{t.subtitle}</p>
         </div>
 
         <form className="card-body" onSubmit={onSubmit} noValidate>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Full Name (text only + accent friendly + red border feedback) */}
+            {/* Full Name */}
             <div>
               <input
                 type="text"
                 name="name"
-                placeholder="Full Name"
+                placeholder={t.namePlaceholder}
                 value={formData.name}
                 onChange={(e) => {
                   const value = e.target.value;
@@ -219,7 +336,7 @@ const handleChange = (
                 }`}
               />
               {/[^a-zA-ZÀ-ž\s'-]/.test(formData.name) && (
-                <p className="text-red-500 text-sm mt-1">Only letters are allowed.</p>
+                <p className="text-red-500 text-sm mt-1">{t.errorLettersOnly}</p>
               )}
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
@@ -229,7 +346,7 @@ const handleChange = (
               <input
                 type="text"
                 name="city"
-                placeholder="Your City"
+                placeholder={t.cityPlaceholder}
                 value={formData.city}
                 onChange={(e) => {
                   const value = e.target.value;
@@ -241,7 +358,7 @@ const handleChange = (
                 }`}
               />
               {/[^a-zA-ZÀ-ž\s'-]/.test(formData.city) && (
-                <p className="text-red-500 text-sm mt-1">Only letters are allowed.</p>
+                <p className="text-red-500 text-sm mt-1">{t.errorLettersOnly}</p>
               )}
               {errors.city && <p className="text-red-500 text-sm mt-1">{errors.city}</p>}
             </div>
@@ -251,7 +368,7 @@ const handleChange = (
               <input
                 type="email"
                 name="email"
-                placeholder="Email Address"
+                placeholder={t.emailPlaceholder}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="input input-bordered w-full border-gray-300"
@@ -278,7 +395,7 @@ const handleChange = (
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Mobile Number"
+                  placeholder={t.phonePlaceholder}
                   value={formData.phone}
                   onChange={(e) => {
                     const numericValue = e.target.value.replace(/\D/g, "");
@@ -297,7 +414,7 @@ const handleChange = (
               <input
                 type="text"
                 name="destination"
-                placeholder="Destination"
+                placeholder={t.destinationPlaceholder}
                 value={formData.destination}
                 onChange={(e) => {
                   const value = e.target.value;
@@ -309,7 +426,7 @@ const handleChange = (
                 }`}
               />
               {/[^a-zA-ZÀ-ž\s'-]/.test(formData.destination) && (
-                <p className="text-red-500 text-sm mt-1">Only letters are allowed.</p>
+                <p className="text-red-500 text-sm mt-1">{t.errorLettersOnly}</p>
               )}
               {errors.destination && (
                 <p className="text-red-500 text-sm mt-1">{errors.destination}</p>
@@ -324,26 +441,25 @@ const handleChange = (
                 value={formData.dateOfTravel}
                 onChange={handleChange}
                 onClick={(e) => {
-                  const input = e.currentTarget; // store ref before async
-                  input.blur(); // prevent blue selection highlight
-
+                  const input = e.currentTarget;
+                  input.blur();
                   requestAnimationFrame(() => {
-                    // use stored element safely
                     if (typeof input.showPicker === "function") {
                       input.showPicker();
                     } else {
-                      input.focus(); // fallback for Safari/Firefox
+                      input.focus();
                     }
                   });
                 }}
                 min={today}
-                className={`input input-bordered w-full border-gray-300 placeholder-gray-400 ${formData.dateOfTravel ? "text-black" : "text-transparent"
-                  }`}
+                className={`input input-bordered w-full border-gray-300 placeholder-gray-400 ${
+                  formData.dateOfTravel ? "text-black" : "text-transparent"
+                }`}
                 required
               />
               {!formData.dateOfTravel && (
                 <span className="absolute left-3 top-2.5 text-gray-400 pointer-events-none">
-                  Date of Travel
+                  {t.datePlaceholder}
                 </span>
               )}
             </div>
@@ -353,7 +469,7 @@ const handleChange = (
               <input
                 type="number"
                 name="people"
-                placeholder="No. of Travelers"
+                placeholder={t.peoplePlaceholder}
                 value={formData.people}
                 onChange={(e) => setFormData({ ...formData, people: e.target.value })}
                 className="input input-bordered w-full border-gray-300"
@@ -369,7 +485,7 @@ const handleChange = (
                 onChange={(e) => setFormData({ ...formData, tourType: e.target.value })}
                 className="select select-bordered w-full border-gray-300"
               >
-                <option value="">Select Tour Type</option>
+                <option value="">{t.tourTypePlaceholder}</option>
                 {tourTypes.map((type) => (
                   <option key={type} value={type}>
                     {type}
@@ -384,7 +500,7 @@ const handleChange = (
           <div className="mt-4">
             <textarea
               name="message"
-              placeholder="Message (optional)"
+              placeholder={t.messagePlaceholder}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               className="textarea textarea-bordered w-full border-gray-300"
@@ -396,7 +512,7 @@ const handleChange = (
             type="submit"
             className="btn bg-[#025C7A] rounded-[41px] text-white px-8 mt-4 hover:bg-[#6E9753] transition-all duration-300"
           >
-            Send
+            {t.submitButton}
           </button>
         </form>
       </div>
