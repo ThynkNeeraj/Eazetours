@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { getLandingTranslations } from "../../lib/translationHelper";
+import { getLandingTranslations, getPackagesTranslations } from "../../lib/translationHelper";
 import { ITranslations, IPackageDetailDataType } from "../../types/Common";
 import PackageSummaryCard from "../PackageSummaryCard";
-import packageData from "../../data/en/packages.json";
 import Link from "next/link";
 import PackageForm from "../PackageForm";
 
@@ -20,8 +19,11 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ locale = "en" }) => {
   const translations: ITranslations = getLandingTranslations(locale);
   const { popularPackages, destinations } = translations.landing;
 
-  // Filter packages
-  const packagesList = packageData.filter(pkg =>
+  // Get translated package data - FIXED: Use the translated data, not hardcoded English
+  const allPackages = getPackagesTranslations(locale);
+  
+  // Filter packages using translated data
+  const packagesList = allPackages.filter(pkg =>
     [1, 7, 9, 16, 2, 28, 25, 29].includes(pkg.Id)
   );
 
@@ -57,11 +59,12 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ locale = "en" }) => {
 
       {/* Packages Grid */}
       <div className="flex justify-center items-center max-w-screen-xl mx-0 sm:mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
           {packagesList.map((tourPackage: IPackageDetailDataType) => (
             <PackageSummaryCard
               key={tourPackage.Id}
               tourPackage={tourPackage}
+              locale={locale}
               onSale={[9, 16].includes(tourPackage.Id)}
               onEnquire={() => onEnquire(tourPackage.Name)}
             />
@@ -78,7 +81,7 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ locale = "en" }) => {
         </Link>
       </div>
 
-      {/* ===== Popup Modal (Wider & Responsive) ===== */}
+      {/* ===== Popup Modal ===== */}
       {isFormOpen && selectedPackage && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-4 sm:px-8">
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl relative p-0 overflow-auto max-h-[100vh] scrollbar-hide">
@@ -92,7 +95,7 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ locale = "en" }) => {
 
             {/* Form */}
             <div className="max-h-[100vh] overflow-y-auto">
-              <PackageForm selectedPackage={selectedPackage} />
+              <PackageForm selectedPackage={selectedPackage} locale={locale}/>
             </div>
           </div>
         </div>
