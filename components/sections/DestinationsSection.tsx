@@ -94,7 +94,7 @@ const DestinationsSection = ({ locale = "en" }: DestinationsSectionProps) => {
           ></div>
 
           <div className="absolute inset-0 flex flex-col items-between justify-center text-white text-left p-6">
-            <h3 className="text-[32px] font-semibold mb-2 sm:w-[70%] w-[80%] font-urbanist">
+            <h3 className="text-[32px] font-semibold mb-2 sm:w-[70%] w-[80%] font-urbanist leading-[1.2em]">
               {tripIdeas.indiaTrip.heading}
             </h3>
             <div>
@@ -121,7 +121,7 @@ const DestinationsSection = ({ locale = "en" }: DestinationsSectionProps) => {
           ></div>
 
           <div className="absolute inset-0 flex flex-col items-between justify-center text-white text-left p-6">
-            <h3 className="text-[32px] font-semibold mb-2 sm:w-[70%] w-[80%] font-urbanist">
+            <h3 className="text-[32px] font-semibold mb-2 sm:w-[70%] w-[80%] font-urbanist leading-[1.2em]">
               {tripIdeas.amritsarTrip.heading}
             </h3>
             <div>
