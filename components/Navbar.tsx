@@ -82,7 +82,7 @@ const NavBar: React.FC<{ locale: string }> = ({ locale }) => {
                   </a>
                 </span>
 
-                <span className="flex items-center gap-2">
+                <span className="items-center gap-2 hidden lg:flex">
                   <i className="fas fa-envelope text-[18px]" />
                   <span className="flex flex-wrap">
                     <a
@@ -172,8 +172,8 @@ const NavBar: React.FC<{ locale: string }> = ({ locale }) => {
             </Link>
           </div>
 
-          {/* Mobile Hamburger */}
-          <div className="md:hidden flex items-center pr-3 relative z-50">
+          {/* Mobile Hamburger - visible only on screens <= 1024px */}
+          <div className="hidden max-[1024px]:flex items-center pr-3 relative z-50">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-inherit"
@@ -186,14 +186,14 @@ const NavBar: React.FC<{ locale: string }> = ({ locale }) => {
             </button>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="navbar-center md:flex flex-grow hidden">
+          {/* Desktop Navigation - visible only on screens > 1024px */}
+          <div className="hidden min-[1025px]:flex flex-grow">
             <div className="flex items-center justify-center gap-2">
               {navLinks.map((link, index) => (
                 <Link key={index} href={link.href} passHref>
                   <button
                     onClick={() => handleLinkClick(link.href)}
-                    className={`btn btn-ghost btn-sm rounded-btn ${
+                    className={`btn btn-ghost btn-sm rounded-btn text-nowrap ${
                       activePage === link.href
                         ? "text-[#6E9753]"
                         : isHomePage && !isScrolled
@@ -208,9 +208,9 @@ const NavBar: React.FC<{ locale: string }> = ({ locale }) => {
             </div>
           </div>
 
-          {/* Mobile Sidebar */}
+          {/* Mobile Sidebar - visible only on screens <= 1024px */}
           <div
-            className={`md:hidden fixed top-0 right-0 w-3/4 bg-white h-screen z-40 shadow-lg transform transition-transform duration-300 ${
+            className={`max-[1024px]:block hidden min-[1025px]:hidden fixed top-0 right-0 w-3/4 bg-white h-screen z-40 shadow-lg transform transition-transform duration-300 ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -249,8 +249,8 @@ const NavBar: React.FC<{ locale: string }> = ({ locale }) => {
             </div>
           </div>
 
-          {/* Contact Button (Desktop) */}
-          <div className="navbar-end md:flex px-4 hidden">
+          {/* Contact Button (Desktop) - visible only on screens > 1024px */}
+          <div className="navbar-end min-[1025px]:flex px-4 hidden">
             <Link href={`${prefix}/contact`} passHref>
               <button
                 onClick={handleContactClick}
