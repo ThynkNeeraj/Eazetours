@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { IBlogDataType } from "../types/Common";
-import { getLandingTranslations, getBlogTranslations } from "../lib/translationHelper";
+import { getLandingTranslations } from "../lib/translationHelper";
 import { ITranslations } from "../types/Common";
 
 interface IBlogProp {
@@ -13,7 +13,8 @@ function BlogSummaryCard({ blog, locale }: IBlogProp) {
   // Fetch translations for the current locale
   const translations: ITranslations = getLandingTranslations(locale);
   const { blogs } = translations;
-
+  const company = blog.company || blogs.blogCard.company;
+  const location = blog.location || blogs.blogCard.location;
   const getPackageHref = (Urlb: string) => {
     // Include locale only for non-English
     if (locale === 'en') {
@@ -31,9 +32,9 @@ function BlogSummaryCard({ blog, locale }: IBlogProp) {
         ></div>
         <div className="w-full px-4 py-10 flex flex-col justify-center gap-2 sm:gap-5">
           <div className="flex items-start space-x-2">
-            <p className="text-[16px] text-[#666666BF]">Admin</p>
+            <p className="text-[16px] text-[#666666BF]">{company}</p>
             <ul className="list-disc pl-5 space-y-2 text-[16px] text-[#666666BF] marker:text-[#025C7A]">
-              <li>India</li>
+              <li>{location}</li>
             </ul>
           </div>
 
