@@ -21,7 +21,7 @@ const HeroSection = ({ locale = "en" }: HeroSectionProps) => {
       </div>
 
       {/* Info Boxes Section */}
-      <div className="info-container flex justify-center gap-12 my-[70px] max-w-[1200px] mx-auto flex-wrap lg:flex-nowrap">
+      <div className="info-container flex justify-center gap-12 my-[70px] max-w-[1200px] mx-auto lg:mx-8 flex-wrap lg:flex-nowrap">
         {/* Box 1 */}
         <div className="info-box p-0 rounded-lg w-72 flex flex-col items-center">
           <Image src="/images/info_icon_1.png" alt="Info Icon 1" width={77} height={77} />
