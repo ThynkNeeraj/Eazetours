@@ -3,15 +3,51 @@ import TestimonialVideoSection from "../../../components/client/TestimonialVideo
 import { Metadata } from "next";
 import { getTestimonialsTranslations } from "../../../lib/translationHelper";
 
-export const metadata: Metadata = {
-  title: "Client Testimonials - Eaze Tours: Best Travel Agency India",
-  description:
-    "Read authentic reviews from satisfied travelers who shared their memorable experiences with Eaze Tours, highlighting quality service and unforgettable trips.",
+// Metadata needs to be generated dynamically based on language
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const { lang } = params;
+  
+  const metadataTranslations = {
+    en: {
+      title: "Client Testimonials - Eaze Tours: Best Travel Agency India",
+      description: "Read authentic reviews from satisfied travelers who shared their memorable experiences with Eaze Tours, highlighting quality service and unforgettable trips.",
+    },
+    de: {
+      title: "Kundenbewertungen - Eaze Tours: Beste Reiseagentur Indien",
+      description: "Lesen Sie authentische Bewertungen zufriedener Reisender, die ihre unvergesslichen Erfahrungen mit Eaze Tours geteilt haben - qualitativ hochwertiger Service und unvergessliche Reisen.",
+    },
+    es: {
+      title: "Testimonios de Clientes - Eaze Tours: Mejor Agencia de Viajes India",
+      description: "Lea reseñas auténticas de viajeros satisfechos que compartieron sus experiencias memorables con Eaze Tours, destacando un servicio de calidad y viajes inolvidables.",
+    },
+    fr: {
+      title: "Témoignages Clients - Eaze Tours: Meilleure Agence de Voyage Inde",
+      description: "Lisez les avis authentiques de voyageurs satisfaits qui ont partagé leurs expériences mémorables avec Eaze Tours, mettant en avant un service de qualité et des voyages inoubliables.",
+    },
+  };
+
+  const currentMetadata = metadataTranslations[lang as keyof typeof metadataTranslations] || metadataTranslations.en;
+
+  return {
+    title: currentMetadata.title,
+    description: currentMetadata.description,
+  };
+}
+
+// Heading translations
+const headingTranslations = {
+  en: "We let our customers talk for us.",
+  de: "Wir lassen unsere Kunden für uns sprechen.",
+  es: "Dejamos que nuestros clientes hablen por nosotros.",
+  fr: "Nous laissons nos clients parler pour nous.",
 };
 
 export default function Testimonials({ params }: { params: { lang: string } }) {
   const { lang } = params;
   const testimonials = getTestimonialsTranslations(lang);
+  
+  // Get the translated heading based on current language
+  const translatedHeading = headingTranslations[lang as keyof typeof headingTranslations] || headingTranslations.en;
 
   return (
     <div>
@@ -23,9 +59,9 @@ export default function Testimonials({ params }: { params: { lang: string } }) {
         <div className="absolute inset-0 bg-black/30 z-0"></div>
 
         {/* Content */}
-        <div className="relative z-10 w-[900px] py-8 pt-[150px] text-left">
-          <h2 className="text-white text-[56px] mb-4 font-semibold leading-[1.2em]">
-            We let our customers talk for us.
+        <div className="relative z-10 w-[900px] py-8 pt-[210px] text-left">
+          <h2 className="text-white text-[38px] sm:text-[56px] mb-4 font-semibold leading-[1.2em]">
+            {translatedHeading}
           </h2>
           {/* Input Field and Subscribe Button */}
         </div>
