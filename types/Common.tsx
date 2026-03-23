@@ -122,6 +122,8 @@ interface IBlogDataType {
   title: string;
   description: string;
   image: string;
+  company?: string; 
+  location?: string; 
   feature_image: string;
   page_heading: string;
   structure: IBlogStructure;
