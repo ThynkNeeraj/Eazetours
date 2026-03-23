@@ -15,9 +15,9 @@ import spanish_testimonials from "../data/es/testimonials.json";
 import german_testimonials from "../data/de/testimonials.json";
 import french_testimonials from "../data/fr/testimonials.json";
 import english_packages from "../data/en/packages.json";
-// import spanish_packages from "../data/es/packages.json";
-// import german_packages from "../data/de/packages.json";
-// import french_packages from "../data/fr/packages.json";
+import spanish_packages from "../data/es/packages.json";
+import german_packages from "../data/de/packages.json";
+import french_packages from "../data/fr/packages.json";
 import english_footer from "../data/en/footer.json";
 import spanish_footer from "../data/es/footer.json";
 import german_footer from "../data/de/footer.json";
@@ -80,15 +80,15 @@ export const getTestimonialsTranslations = (locale: string) => {
 };
 
 export const getPackagesTranslations = (locale: string) => {
-  // if (locale === "en") {
-  //   return english_packages;
-  // } else if (locale === "es") {
-  //   return spanish_packages;
-  // } else if (locale === "de") {
-  //   return german_packages;
-  // } else if (locale === "fr") {
-  //   return french_packages;
-  // }
+  if (locale === "en") {
+    return english_packages;
+  } else if (locale === "es") {
+    return spanish_packages;
+  } else if (locale === "de") {
+    return german_packages;
+  } else if (locale === "fr") {
+    return french_packages;
+  }
 
   return english_packages;
 };
