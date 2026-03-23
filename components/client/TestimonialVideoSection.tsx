@@ -33,6 +33,12 @@ const localeBasedVideoData: Record<string, VideoData[]> = {
       videoUrl: "/video/en/Eazetour_review_3.mp4",
       thumbnail: "/images/thumbnail_3.png",
     },
+    {
+      id: 4,
+      title: "Amazing Journey with Eaze Tours",
+      videoUrl: "/video/en/Eazetour_review_4.mp4",
+      thumbnail: "/images/thumbnail_4.png",
+    },
   ],
   es: [
     {
@@ -52,6 +58,12 @@ const localeBasedVideoData: Record<string, VideoData[]> = {
       title: "Recomiendo mucho sus paquetes",
       videoUrl: "/video/es/Eazetour_review_3.mp4",
       thumbnail: "/images/thumbnail_3.png",
+    },
+    {
+      id: 4,
+      title: "Viaje increíble con Eaze Tours",
+      videoUrl: "/video/es/Eazetour_review_4.mp4",
+      thumbnail: "/images/thumbnail_4.png",
     },
   ],
   fr: [
@@ -73,6 +85,12 @@ const localeBasedVideoData: Record<string, VideoData[]> = {
       videoUrl: "/video/fr/Eazetour_review_3.mp4",
       thumbnail: "/images/thumbnail_3.png",
     },
+    {
+      id: 4,
+      title: "Voyage incroyable avec Eaze Tours",
+      videoUrl: "/video/fr/Eazetour_review_4.mp4",
+      thumbnail: "/images/thumbnail_4.png",
+    },
   ],
   de: [
     {
@@ -92,6 +110,12 @@ const localeBasedVideoData: Record<string, VideoData[]> = {
       title: "Sehr zu empfehlen!",
       videoUrl: "/video/de/Eazetour_review_3.mp4",
       thumbnail: "/images/thumbnail_3.png",
+    },
+    {
+      id: 4,
+      title: "Unglaubliche Reise mit Eaze Tours",
+      videoUrl: "/video/de/Eazetour_review_4.mp4",
+      thumbnail: "/images/thumbnail_4.png",
     },
   ],
 };
@@ -158,7 +182,7 @@ export default function TestimonialVideoSection({ currentLocale }: TestimonialVi
   return (
     <div className="flex justify-center mt-8 mb-8 px-4">
       <div className="w-full max-w-screen-xl px-6 lg:px-7">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {videoData.map((video, index) => (
             <div
               key={video.id}
@@ -198,6 +222,7 @@ export default function TestimonialVideoSection({ currentLocale }: TestimonialVi
                   </div>
                 )}
               </div>
+              
             </div>
           ))}
         </div>
