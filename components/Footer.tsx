@@ -235,7 +235,7 @@ function Footer({ locale }: { locale: string }) {
                 </p>
               </div>
             </div>
-            <div className="flex items-start space-x-2">
+            <div className="flex items-start space-x-2 w-[50%] lg:w-[100%]">
               <i className="fa fa-map-marker-alt text-lg -mt-1" />
               <p className="text-sm">
                 <a
