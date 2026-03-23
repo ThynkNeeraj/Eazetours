@@ -22,7 +22,7 @@ export default function AboutUs({ locale }: { locale: string }) {
         href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap"
         rel="stylesheet"
       />
-      <div className="mt-[135px] sm:mt-[165px] max-w-[1280px] mx-8 mb-12">
+      <div className="mt-[165px] sm:mt-[165px] max-w-[1280px] mx-8 mb-12">
         <p className="text-[14px] text-gray-700 mt-4">
           <span className="font-[urbanist] text-[#ccc] hover:text-[#035C7A]">
             <Link href="/" passHref>
@@ -90,8 +90,8 @@ export default function AboutUs({ locale }: { locale: string }) {
         </div>
       </div>
 
-      <div className="bg-[#025C7A] flex flex-col sm:flex-row py-[70px] text-[#fff] justify-center items-center">
-        <div className="sm:w-[50%] mx-8">
+      <div className="bg-[#025C7A] flex lg:flex-row gap-8 lg:gap-0 flex-col py-[70px] text-[#fff] justify-center items-center">
+        <div className="w-auto xl:w-[50%] mx-8">
           <h3 className="text-[32px] sm:text-[50px] font-bold mb-4 capitalize font-[urbanist] leading-[1.2em]">
             {aboutUsData.dreamDestinationSection.title}
           </h3>
@@ -100,7 +100,7 @@ export default function AboutUs({ locale }: { locale: string }) {
           </p>
         </div>
 
-        <div className="sm:w-[50%] mx-8 pt-[30px] sm:pt-[0px]">
+        <div className="w-auto xl:w-[50%] mx-8 pt-[30px] sm:pt-[0px]">
           <h3 className="text-[32px] sm:text-[38px] font-semibold mb-6 capitalize font-[urbanist] leading-[1.2em] hidden sm:block">
             {aboutUsData.dreamDestinationSection.whyChooseUsTitle}
           </h3>
@@ -137,7 +137,7 @@ export default function AboutUs({ locale }: { locale: string }) {
         </div>
       </div>
 
-      <div className="mt-[78px] mx-8 mb-12 sm:w-[45%] sm:mx-auto">
+      <div className="mt-[78px] mx-8 mb-12 xl:w-[45%] xl:mx-auto">
         <h2 className="text-[32px] sm:text-[42px] font-semibold capitalize text-black text-left sm:text-center leading-[1.2em] mb-4">
           {aboutUsData.unforgettableExperiences.title}
         </h2>
@@ -202,7 +202,7 @@ export default function AboutUs({ locale }: { locale: string }) {
 
       <div className="flex flex-col py-[100px] text-[#fff] bg-[#025C7A] justify-center items-center">
         <div className="mx-auto mb-12">
-          <h2 className="text-[32px] sm:text-[42px] font-semibold capitalize text-left sm:text-center leading-[1.2em] mb-4 sm:mx-auto sm:w-[45%] mx-8">
+          <h2 className="text-[32px] sm:text-[42px] font-semibold capitalize text-left sm:text-center leading-[1.2em] mx-8 mb-12 xl:w-[45%] xl:mx-auto">
             {aboutUsData.trustedExperts.title}
           </h2>
           <p className="text-md mt-1 text-left sm:text-center font-[urbanist] font-semibold sm:w-[90%] mx-8 sm:mx-auto">
