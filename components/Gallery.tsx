@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
+import { useParams } from "next/navigation";
 
 import gallery_1 from "../public/images/gallery/1.jpg";
 import gallery_2 from "../public/images/gallery/2.jpg";
@@ -52,7 +53,6 @@ import gallery_46 from "../public/images/gallery/46.jpg";
 import gallery_47 from "../public/images/gallery/47.jpg";
 import gallery_48 from "../public/images/gallery/48.jpg";
 import gallery_49 from "../public/images/gallery/49.jpg";
-import gallery_50 from "../public/images/gallery/50.jpg";
 import gallery_51 from "../public/images/gallery/51.jpg";
 import gallery_52 from "../public/images/gallery/52.jpg";
 import gallery_53 from "../public/images/gallery/53.jpeg";
@@ -95,15 +95,30 @@ import gallery_90 from "../public/images/gallery/90.jpeg";
 import gallery_91 from "../public/images/gallery/91.jpeg";
 import gallery_92 from "../public/images/gallery/92.jpeg";
 import gallery_93 from "../public/images/gallery/93.jpeg";
-import gallery_94 from "../public/images/gallery/94.jpeg";
-import gallery_95 from "../public/images/gallery/95.jpeg";
-import gallery_96 from "../public/images/gallery/96.jpeg";
-import gallery_97 from "../public/images/gallery/97.jpeg";
-import gallery_98 from "../public/images/gallery/98.jpeg";
-import gallery_99 from "../public/images/gallery/99.jpeg";
-import gallery_100 from "../public/images/gallery/100.jpeg";
-import gallery_101 from "../public/images/gallery/101.jpeg";
-import gallery_102 from "../public/images/gallery/102.jpeg";
+
+// Add translations for heading and breadcrumb
+const pageTranslations = {
+  en: {
+    home: "Home",
+    gallery: "Gallery",
+    pageTitle: "Gallery",
+  },
+  de: {
+    home: "Startseite",
+    gallery: "Galerie",
+    pageTitle: "Galerie",
+  },
+  es: {
+    home: "Inicio",
+    gallery: "Galería",
+    pageTitle: "Galería",
+  },
+  fr: {
+    home: "Accueil",
+    gallery: "Galerie",
+    pageTitle: "Galerie",
+  },
+};
 
 // Define interfaces
 interface ImageItem {
@@ -117,17 +132,13 @@ interface VideoItem {
   src: string;
   id: string;
   aspectRatio: string;   // e.g., "3 / 4" or "3 / 2"
+  thumbnail?: string;     // Optional custom thumbnail path
 }
 
 type GalleryItem = ImageItem | VideoItem;
 
-// imageItems array (note: duplicate id 'img-53' appears twice – consider fixing for uniqueness)
+// imageItems array
 const imageItems: ImageItem[] = [
-  { type: 'image', src: gallery_98, id: 'img-98' },
-  { type: 'image', src: gallery_99, id: 'img-99' },
-  { type: 'image', src: gallery_100, id: 'img-100' },
-  { type: 'image', src: gallery_101, id: 'img-101' },
-  { type: 'image', src: gallery_102, id: 'img-102' },
   { type: 'image', src: gallery_53, id: 'img-53' },
   { type: 'image', src: gallery_54, id: 'img-54' },
   { type: 'image', src: gallery_55, id: 'img-55' },
@@ -167,16 +178,11 @@ const imageItems: ImageItem[] = [
   { type: 'image', src: gallery_91, id: 'img-91' },
   { type: 'image', src: gallery_92, id: 'img-92' },
   { type: 'image', src: gallery_93, id: 'img-93' },
-  { type: 'image', src: gallery_94, id: 'img-94' },
-  { type: 'image', src: gallery_95, id: 'img-95' },
-  { type: 'image', src: gallery_96, id: 'img-96' },
-  { type: 'image', src: gallery_97, id: 'img-97' },
   { type: 'image', src: gallery_45, id: 'img-45' },
   { type: 'image', src: gallery_46, id: 'img-46' },
   { type: 'image', src: gallery_47, id: 'img-47' },
   { type: 'image', src: gallery_48, id: 'img-48' },
   { type: 'image', src: gallery_49, id: 'img-49' },
-  { type: 'image', src: gallery_50, id: 'img-50' },
   { type: 'image', src: gallery_51, id: 'img-51' },
   { type: 'image', src: gallery_52, id: 'img-52' },
   { type: 'image', src: gallery_44, id: 'img-44' },
@@ -192,7 +198,6 @@ const imageItems: ImageItem[] = [
   { type: 'image', src: gallery_64, id: 'img-64' },
   { type: 'image', src: gallery_65, id: 'img-65' },
   { type: 'image', src: gallery_66, id: 'img-66' },
-  { type: 'image', src: gallery_67, id: 'img-67' },
   { type: 'image', src: gallery_68, id: 'img-68' },
   { type: 'image', src: gallery_69, id: 'img-69' },
   { type: 'image', src: gallery_70, id: 'img-70' },
@@ -225,16 +230,16 @@ const imageItems: ImageItem[] = [
   { type: 'image', src: gallery_30, id: 'img-30' },
 ];
 
-// videoItems array
+// videoItems array with custom thumbnail for video 1
 const videoItems: VideoItem[] = [
-  { type: 'video', src: '/video/Tours/1.mp4', id: 'video-1', aspectRatio: "3 / 4" },
+  { 
+    type: 'video', 
+    src: '/video/Tours/1.mp4', 
+    id: 'video-1', 
+    aspectRatio: "3 / 4",
+    thumbnail: '/video/Tours/1-thumbnail.webp' // Custom thumbnail for video 1
+  },
   { type: 'video', src: '/video/Tours/2.mp4', id: 'video-2', aspectRatio: "3 / 4" },
-  { type: 'video', src: '/video/Tours/3.mp4', id: 'video-3', aspectRatio: "3 / 4" },
-  { type: 'video', src: '/video/Tours/4.mp4', id: 'video-4', aspectRatio: "3 / 4" },
-  { type: 'video', src: '/video/Tours/5.mp4', id: 'video-5', aspectRatio: "3 / 4" },
-  { type: 'video', src: '/video/Tours/6.mp4', id: 'video-6', aspectRatio: "3 / 4" },
-  { type: 'video', src: '/video/Tours/7.mp4', id: 'video-7', aspectRatio: "3 / 2" },
-  { type: 'video', src: '/video/Tours/8.mp4', id: 'video-8', aspectRatio: "3 / 2" },
 ];
 
 // ----- MANUAL ORDERING SETUP -----
@@ -243,118 +248,100 @@ const itemsMap = new Map<string, GalleryItem>();
 [...videoItems, ...imageItems].forEach(item => itemsMap.set(item.id, item));
 
 // Define the exact order you want.
-// Initially this matches the old order (videos first, then images as they appear in imageItems).
-// Edit this array to rearrange items. Place a video's id right after any image id to set its position.
 const orderedIds = [
-  // Videos (in original order)
   'video-1',
-  'img-102',
-  'video-5',
-  'img-99',
-  'img-53',
-  'video-8',
-  'img-98',
-  'img-54',
-  'img-55',
-  'img-56',
-  'img-57',
-  'img-58',
-  'img-41',
-  'img-42',
-  'img-43',
-  'img-1',
-  'img-2',
-  'img-3',
-  'img-4',
-  'img-5',
-  'img-6',
-  'img-7',
-  'img-8',
-  'img-10',
-  'img-11',
-  'img-12',
-  'img-13',
-  'img-59',
-  'img-60',
-  'img-61',
-  'img-79',
-  'img-80',
-  'img-81',
-  'img-82',
-  'img-83',
-  'img-84',
-  'img-29',
-  'img-101',
-  'video-6',
-  'img-95',
-  'video-2',
+  'img-93',
+  'img-92',
+  'img-91',
+  'img-90',
+  'img-89',
   'img-88',
+  'img-87',
   'img-86',
   'img-85',
-  'img-89',
-  'img-90',
-  'img-91',
-  'img-92',
-  'img-93',
-  'img-94',
-  'img-87',
-  'img-96',
-  'img-97',
-  'img-45',
-  'img-46',
-  'img-47',
-  'img-48',
-  'img-49',
-  'img-50',
-  'img-51',
-  'img-52',
-  'img-44',
-  'img-31',
-  'img-37',
-  'img-32',
-  'img-33',
-  'img-64',
-  'img-38',
-  'img-34',
-  'video-3',
-  'img-65',
-  'video-4',
-  'img-62',
-  'img-71',
-  'video-7',
-  'img-100',
-  'img-66',
-  'img-67',
-  'img-68',
-  'img-69',
-  'img-70',
-  'img-72',
-  'img-73',
-  'img-74',
-  'img-75',
-  'img-76',
+  'img-84',
+  'img-83',
+  'img-82',
+  'img-81',
   'img-77',
-  'img-78',
-  'img-14',
-  'img-15',
-  'img-16',
+  'img-52',
+  'img-51',
+  'img-50',
   'img-17',
-  'img-39',
-  'img-40',
-  'img-18',
-  'img-36',
-  'img-19',
-  'img-20',
-  'img-21',
-  'img-35',
-  'img-22',
-  'img-23',
-  'img-24',
-  'img-25',
-  'img-26',
-  'img-27',
-  'img-28',
+  'img-16',
+  'img-15',
+  'img-14',
+  'img-13',
+  'img-12',
+  'img-11',
+  'img-10',
+  'img-9',
+  'img-8',
+  'img-7',
+  'img-6',
+  'img-5',
+  'img-4',
+  'img-3',
+  'img-2',
+  'img-1',
+  'img-76',
+  'video-2',
+  'img-75',
+  'img-74',
+  'img-73',
+  'img-72',
+  'img-71',
+  'img-70',
+  'img-69',
+  'img-68',
+  'img-67',
+  'img-66',
+  'img-65',
+  'img-62',
+  'img-64',
+  'img-34',
+  'img-33',
+  'img-32',
+  'img-31',
   'img-30',
+  'img-29',
+  'img-28',
+  'img-27',
+  'img-26',
+  'img-25',
+  'img-24',
+  'img-23',
+  'img-22',
+  'img-21',
+  'img-20',
+  'img-19',
+  'img-18',
+  'img-61',
+  'img-60',
+  'img-59',
+  'img-58',
+  'img-57',
+  'img-56',
+  'img-55',
+  'img-54',
+  'img-53',
+  'img-79',
+  'img-78',
+  'img-80',
+  'img-49',
+  'img-48',
+  'img-47',
+  'img-46',
+  'img-45',
+  'img-44',
+  'img-43',
+  'img-42',
+  'img-41',
+  'img-40',
+  'img-39',
+  'img-38',
+  'img-37',
+  'img-36',
 ];
 
 // Generate galleryItems in the exact order specified above
@@ -364,6 +351,12 @@ const galleryItems: GalleryItem[] = orderedIds
 // ----- END MANUAL ORDERING -----
 
 export default function GalleryComponent() {
+  const params = useParams();
+  const lang = params?.lang as string || 'en';
+  
+  // Get translations based on current language
+  const translations = pageTranslations[lang as keyof typeof pageTranslations] || pageTranslations.en;
+
   const [isOpen, setIsOpen] = useState(false);
   const [currentItem, setCurrentItem] = useState<GalleryItem | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -423,14 +416,14 @@ export default function GalleryComponent() {
 
   return (
     <div>
-      <div className="mt-[135px] sm:mt-[165px] mx-8 mb-12">
+      <div className="mt-[165px] sm:mt-[165px] mx-8 mb-12">
         <p className="text-[14px] text-gray-700 mt-4">
           <span className="text-[#ccc] hover:text-[#035C7A]">
-            <Link href="/">Home</Link>
+            <Link href={`/${lang === 'en' ? '' : lang}`}>{translations.home}</Link>
           </span>{" "}
-          / Gallery
+          / {translations.gallery}
         </p>
-        <h2 className="text-[42px] font-semibold text-black text-left">Gallery</h2>
+        <h2 className="text-[42px] font-semibold text-black text-left">{translations.pageTitle}</h2>
       </div>
 
       {/* Unified masonry grid for both images and videos */}
@@ -458,6 +451,7 @@ export default function GalleryComponent() {
                     playsInline
                     muted
                     loop
+                    poster={item.thumbnail} // Custom thumbnail for video
                     onMouseEnter={(e) => e.currentTarget.play()}
                     onMouseLeave={(e) => {
                       e.currentTarget.pause();
@@ -530,6 +524,7 @@ export default function GalleryComponent() {
                   controls
                   autoPlay
                   playsInline
+                  poster={currentItem.thumbnail} // Also show thumbnail in lightbox before play
                 />
               )}
             </div>
