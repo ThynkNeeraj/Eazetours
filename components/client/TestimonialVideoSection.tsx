@@ -37,7 +37,7 @@ const localeBasedVideoData: Record<string, VideoData[]> = {
       id: 4,
       title: "Amazing Journey with Eaze Tours",
       videoUrl: "/video/en/Eazetour_review_4.mp4",
-      thumbnail: "/images/thumbnail_4.PNG",
+      thumbnail: "/images/thumbnail_4.jpg",
     },
   ],
   es: [
@@ -63,7 +63,7 @@ const localeBasedVideoData: Record<string, VideoData[]> = {
       id: 4,
       title: "Viaje increíble con Eaze Tours",
       videoUrl: "/video/es/Eazetour_review_4.mp4",
-      thumbnail: "/images/thumbnail_4.PNG",
+      thumbnail: "/images/thumbnail_4.jpg",
     },
   ],
   fr: [
@@ -89,7 +89,7 @@ const localeBasedVideoData: Record<string, VideoData[]> = {
       id: 4,
       title: "Voyage incroyable avec Eaze Tours",
       videoUrl: "/video/fr/Eazetour_review_4.mp4",
-      thumbnail: "/images/thumbnail_4.PNG",
+      thumbnail: "/images/thumbnail_4.jpg",
     },
   ],
   de: [
@@ -115,7 +115,7 @@ const localeBasedVideoData: Record<string, VideoData[]> = {
       id: 4,
       title: "Unglaubliche Reise mit Eaze Tours",
       videoUrl: "/video/de/Eazetour_review_4.mp4",
-      thumbnail: "/images/thumbnail_4.PNG",
+      thumbnail: "/images/thumbnail_4.jpg",
     },
   ],
 };
