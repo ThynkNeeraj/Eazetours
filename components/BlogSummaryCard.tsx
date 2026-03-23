@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { IBlogDataType } from "../types/Common";
+import { getLandingTranslations, getBlogTranslations } from "../lib/translationHelper";
+import { ITranslations } from "../types/Common";
 
 interface IBlogProp {
   blog: IBlogDataType;
@@ -8,7 +10,15 @@ interface IBlogProp {
 }
 
 function BlogSummaryCard({ blog, locale }: IBlogProp) {
+  // Fetch translations for the current locale
+  const translations: ITranslations = getLandingTranslations(locale);
+  const { blogs } = translations;
+
   const getPackageHref = (Urlb: string) => {
+    // Include locale only for non-English
+    if (locale === 'en') {
+      return `/blog/${Urlb}`;
+    }
     return `/${locale}/blog/${Urlb}`;
   };
 
@@ -36,7 +46,7 @@ function BlogSummaryCard({ blog, locale }: IBlogProp) {
             <div className="flex items-start space-x-2">
               <p className="text-md text-[#04000B]">
                 <Link href={getPackageHref(blog.url)} passHref>
-                  Continue Reading
+                  {blogs.blogCard.continueReading}
                 </Link>
               </p>
               <i className="fa fa-arrow-right text-lg text-[#025C7A] -mt-1" />
