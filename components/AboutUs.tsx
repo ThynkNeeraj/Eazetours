@@ -137,7 +137,7 @@ export default function AboutUs({ locale }: { locale: string }) {
         </div>
       </div>
 
-      <div className="mt-[78px] mx-8 mb-12 xl:w-[45%] xl:mx-auto">
+      <div className="mt-[78px] mx-8 mb-12 xl:w-[55%] xl:mx-auto">
         <h2 className="text-[32px] sm:text-[42px] font-semibold capitalize text-black text-left sm:text-center leading-[1.2em] mb-4">
           {aboutUsData.unforgettableExperiences.title}
         </h2>
@@ -152,7 +152,7 @@ export default function AboutUs({ locale }: { locale: string }) {
           {/* Content */}
           <div className="relative p-6 z-10 text-white">
             <Image src="/images/info_icon_2.png" alt="Info Icon 1" width={77} height={77} />
-            <h3 className="text-[32px] font-semibold mb-2 sm:w-[60%] w-[80%] font-[urbanist]">
+            <h3 className="text-[32px] font-semibold mb-2 sm:w-[80%] w-[80%] font-[urbanist]">
               {aboutUsData.visionMission.vision.title}
             </h3>
             <div>
@@ -178,7 +178,7 @@ export default function AboutUs({ locale }: { locale: string }) {
           {/* Content */}
           <div className="relative p-6 z-10 text-white">
             <Image src="/images/info_icon_1.png" alt="Info Icon 1" width={77} height={77} />
-            <h3 className="text-[32px] font-semibold mb-2 sm:w-[60%] w-[80%] font-[urbanist]">
+            <h3 className="text-[32px] font-semibold mb-2 sm:w-[80%] w-[80%] font-[urbanist]">
               {aboutUsData.visionMission.mission.title}
             </h3>
             <div>
