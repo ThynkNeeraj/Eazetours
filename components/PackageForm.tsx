@@ -54,10 +54,89 @@ const countryCodes = [
 
 interface TravelEnquiryFormProps {
   selectedPackage: string; // Package name must be passed
+  locale?: string; // 'en', 'de', 'es', 'fr' – defaults to 'en'
 }
 
-export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryFormProps) {
+export default function TravelEnquiryForm({ selectedPackage, locale = "en" }: TravelEnquiryFormProps) {
   const router = useRouter();
+
+  // Translation dictionary
+  const translations = {
+    en: {
+      formTitle: "Travel Enquiry",
+      formSubtitle: "Fill in your travel details and we’ll get back to you soon.",
+      namePlaceholder: "Your Name",
+      emailPlaceholder: "Email ID",
+      phonePlaceholder: "Mobile Number",
+      cityPlaceholder: "Your City",
+      datePlaceholder: "Date of Travel",
+      travelersLabel: "Number of Travelers",
+      adultsLabel: "Adults",
+      childrenLabel: "Children",
+      infantsLabel: "Infants",
+      messagePlaceholder: "Message",
+      submitButton: "Send Enquiry",
+      toastMessage: "We have received your travel enquiry! Redirecting...",
+      detectingCountry: "Detecting...",
+      errorNoTravelers: "Please specify at least one traveler.",
+    },
+    de: {
+      formTitle: "Reiseanfrage",
+      formSubtitle: "Füllen Sie Ihre Reisedaten aus und wir werden uns bald bei Ihnen melden.",
+      namePlaceholder: "Ihr Name",
+      emailPlaceholder: "E-Mail-Adresse",
+      phonePlaceholder: "Mobilnummer",
+      cityPlaceholder: "Ihre Stadt",
+      datePlaceholder: "Reisedatum",
+      travelersLabel: "Anzahl der Reisenden",
+      adultsLabel: "Erwachsene",
+      childrenLabel: "Kinder",
+      infantsLabel: "Kleinkinder",
+      messagePlaceholder: "Nachricht",
+      submitButton: "Anfrage senden",
+      toastMessage: "Wir haben Ihre Reiseanfrage erhalten! Weiterleitung...",
+      detectingCountry: "Erkennung...",
+      errorNoTravelers: "Bitte geben Sie mindestens einen Reisenden an.",
+    },
+    es: {
+      formTitle: "Consulta de viaje",
+      formSubtitle: "Complete los detalles de su viaje y nos comunicaremos con usted pronto.",
+      namePlaceholder: "Su nombre",
+      emailPlaceholder: "Correo electrónico",
+      phonePlaceholder: "Número de móvil",
+      cityPlaceholder: "Su ciudad",
+      datePlaceholder: "Fecha de viaje",
+      travelersLabel: "Número de viajeros",
+      adultsLabel: "Adultos",
+      childrenLabel: "Niños",
+      infantsLabel: "Bebés",
+      messagePlaceholder: "Mensaje",
+      submitButton: "Enviar consulta",
+      toastMessage: "¡Hemos recibido su consulta de viaje! Redirigiendo...",
+      detectingCountry: "Detectando...",
+      errorNoTravelers: "Por favor, especifique al menos un viajero.",
+    },
+    fr: {
+      formTitle: "Demande de voyage",
+      formSubtitle: "Remplissez les détails de votre voyage et nous vous répondrons bientôt.",
+      namePlaceholder: "Votre nom",
+      emailPlaceholder: "Adresse e-mail",
+      phonePlaceholder: "Numéro de mobile",
+      cityPlaceholder: "Votre ville",
+      datePlaceholder: "Date de voyage",
+      travelersLabel: "Nombre de voyageurs",
+      adultsLabel: "Adultes",
+      childrenLabel: "Enfants",
+      infantsLabel: "Nourrissons",
+      messagePlaceholder: "Message",
+      submitButton: "Envoyer la demande",
+      toastMessage: "Nous avons reçu votre demande de voyage! Redirection...",
+      detectingCountry: "Détection...",
+      errorNoTravelers: "Veuillez spécifier au moins un voyageur.",
+    },
+  };
+
+  const t = translations[locale as keyof typeof translations] || translations.en;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -124,7 +203,7 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
 
     const totalTravelers = formData.adults + formData.children + formData.infants;
     if (totalTravelers === 0) {
-      alert("Please specify at least one traveler.");
+      alert(t.errorNoTravelers);
       return;
     }
 
@@ -174,7 +253,7 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
         <div className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500">
           <div className="alert alert-success shadow-lg">
             <div>
-              <span>We have received your travel enquiry! Redirecting...</span>
+              <span>{t.toastMessage}</span>
             </div>
           </div>
         </div>
@@ -182,10 +261,8 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
 
       <div className="card bg-base-100 max-w-[900px] mx-auto p-6 sm:p-8 border-2 shadow-lg overflow-auto scrollbar-hide">
         <div className="text-center mb-6">
-          <h3 className="text-3xl font-bold">Travel Enquiry</h3>
-          <p className="pt-3 text-gray-600">
-            Fill in your travel details and we’ll get back to you soon.
-          </p>
+          <h3 className="text-3xl font-bold">{t.formTitle}</h3>
+          <p className="pt-3 text-gray-600">{t.formSubtitle}</p>
         </div>
 
         <form className="space-y-5" onSubmit={onSubmit}>
@@ -203,7 +280,7 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
             <input
               type="text"
               name="name"
-              placeholder="Your Name"
+              placeholder={t.namePlaceholder}
               value={formData.name}
               onChange={(e) => {
                 // Allow only A–Z, a–z, space, apostrophe, and hyphen
@@ -214,12 +291,11 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
               required
             />
 
-
             {/* Email */}
             <input
               type="email"
               name="email"
-              placeholder="Email ID"
+              placeholder={t.emailPlaceholder}
               value={formData.email}
               onChange={handleChange}
               className="input input-bordered w-full border-gray-300"
@@ -236,7 +312,7 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
                 className="select border-none bg-gray-100 text-sm w-28 pr-0"
                 required
               >
-                {detectingCountry && <option>Detecting...</option>}
+                {detectingCountry && <option>{t.detectingCountry}</option>}
                 {countryCodes.map((c) => (
                   <option key={c.code} value={c.code}>
                     {c.flag} {c.code}
@@ -246,7 +322,7 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
               <input
                 type="tel"
                 name="phone"
-                placeholder="Mobile Number"
+                placeholder={t.phonePlaceholder}
                 value={formData.phone}
                 onChange={(e) => {
                   const numericValue = e.target.value.replace(/\D/g, "");
@@ -262,7 +338,7 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
             <input
               type="text"
               name="city"
-              placeholder="Your City"
+              placeholder={t.cityPlaceholder}
               value={formData.city}
               onChange={(e) => {
                 // Allows basic international characters (Latin accents)
@@ -273,7 +349,6 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
               required
             />
 
-
             <div className="relative">
               <input
                 type="date"
@@ -281,47 +356,48 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
                 value={formData.dateOfTravel}
                 onChange={handleChange}
                 onClick={(e) => {
-                  const input = e.currentTarget; // ✅ store ref before async
-                  input.blur(); // prevent blue selection highlight
-
+                  const input = e.currentTarget;
+                  input.blur();
                   requestAnimationFrame(() => {
-                    // ✅ use stored element safely
                     if (typeof input.showPicker === "function") {
                       input.showPicker();
                     } else {
-                      input.focus(); // fallback for Safari/Firefox
+                      input.focus();
                     }
                   });
                 }}
                 min={today}
-                className={`input input-bordered w-full border-gray-300 placeholder-gray-400 ${formData.dateOfTravel ? "text-black" : "text-transparent"
-                  }`}
+                className={`input input-bordered w-full border-gray-300 placeholder-gray-400 ${
+                  formData.dateOfTravel ? "text-black" : "text-transparent"
+                }`}
                 required
               />
               {!formData.dateOfTravel && (
                 <span className="absolute left-3 top-2.5 text-gray-400 pointer-events-none">
-                  Date of Travel
+                  {t.datePlaceholder}
                 </span>
               )}
             </div>
 
-
-
             {/* Travelers Section */}
             <div className="border border-gray-300 rounded-lg p-4">
               <label className="font-medium text-gray-700 mb-2 block">
-                Number of Travelers
+                {t.travelersLabel}
               </label>
               <div className="grid grid-cols-3 gap-3">
-                {["adults", "children", "infants"].map((type) => (
-                  <div key={type} className="flex flex-col items-center">
-                    <span className="capitalize text-sm">{type}</span>
+                {[
+                  { key: "adults", label: t.adultsLabel },
+                  { key: "children", label: t.childrenLabel },
+                  { key: "infants", label: t.infantsLabel },
+                ].map(({ key, label }) => (
+                  <div key={key} className="flex flex-col items-center">
+                    <span className="capitalize text-sm">{label}</span>
                     <div className="flex items-center gap-2">
                       <button
                         type="button"
                         onClick={() =>
                           handleTravelerChange(
-                            type as "adults" | "children" | "infants",
+                            key as "adults" | "children" | "infants",
                             false
                           )
                         }
@@ -330,13 +406,13 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
                         –
                       </button>
                       <span className="text-lg font-semibold w-6 text-center">
-                        {formData[type as keyof typeof formData]}
+                        {formData[key as keyof typeof formData]}
                       </span>
                       <button
                         type="button"
                         onClick={() =>
                           handleTravelerChange(
-                            type as "adults" | "children" | "infants",
+                            key as "adults" | "children" | "infants",
                             true
                           )
                         }
@@ -353,7 +429,7 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
             {/* Message */}
             <textarea
               name="message"
-              placeholder="Message"
+              placeholder={t.messagePlaceholder}
               value={formData.message}
               onChange={handleChange}
               className="textarea textarea-bordered textarea-lg w-full border-gray-300"
@@ -365,7 +441,7 @@ export default function TravelEnquiryForm({ selectedPackage }: TravelEnquiryForm
               type="submit"
               className="btn bg-[#025C7A] rounded-[41px] text-white px-10 mt-4 hover:bg-[#6E9753] transition-all duration-300 uppercase"
             >
-              Send Enquiry
+              {t.submitButton}
             </button>
           </div>
         </form>
