@@ -301,7 +301,6 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
 
         {/* FAQ */}
         {blog.faq && blog.faq.length > 0 && (
-
           <section className="mt-16">
             <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
               Frequently Asked Questions
@@ -329,7 +328,7 @@ export default function BlogDetail({ blogId, locale }: BlogDetailProps) {
                   {openFaqIndex === index && (
                     <div className="px-4 md:px-6 pb-4 md:pb-6 pt-2">
                       <p className="text-gray-600 leading-relaxed">
-                        {faqItem.answer}
+                        {renderContent(faqItem.answer)}
                       </p>
                     </div>
                   )}
