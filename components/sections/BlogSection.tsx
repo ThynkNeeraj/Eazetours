@@ -21,6 +21,10 @@ const BlogSection = ({ locale = "en" }: BlogSectionProps) => {
   const { blogs } = translations;
   
   const getPackageHref = (Urlb: string) => {
+    // Include locale only for non-English
+    if (locale === 'en') {
+      return `/blog/${Urlb}`;
+    }
     return `/${locale}/blog/${Urlb}`;
   };
 
@@ -42,7 +46,7 @@ const BlogSection = ({ locale = "en" }: BlogSectionProps) => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-5 justify-center items-center gap-0 max-w-screen-xl sm:mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-5 lg:sm:grid-cols-5 md:sm:grid-cols-3 justify-center items-center gap-0 max-w-screen-xl sm:mx-auto">
           {[isoimage, msmeimage, latoimage, sepcimage, mtfoimage].map((imgSrc, index) => (
             <div key={index} className="w-full aspect-square flex justify-center p-6 items-center">
               <Image
