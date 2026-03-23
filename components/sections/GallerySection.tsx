@@ -16,15 +16,25 @@ const GallerySection = ({ locale = "en" }: GallerySectionProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Helper function to add locale prefix to URLs
+  const getLocalizedUrl = (path: string) => {
+    // If locale is 'en', don't add prefix (or add empty string based on your routing)
+    if (locale === 'en') {
+      return path;
+    }
+    // Add locale prefix for non-English languages
+    return `/${locale}${path}`;
+  };
+
   const images = [
-    "/images/gallery/31.jpg",
     "/images/gallery/32.jpg",
     "/images/gallery/33.jpg",
     "/images/gallery/34.jpg",
     "/images/gallery/35.jpg",
     "/images/gallery/36.jpg",
     "/images/gallery/37.jpg",
-    "/images/gallery/38.jpg",
+    "/images/gallery/40.jpg",
+    "/images/gallery/43.jpg",
   ];
 
   const openModal = (index: number) => {
@@ -60,7 +70,7 @@ const GallerySection = ({ locale = "en" }: GallerySectionProps) => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mx-4 max-w-[1280px] sm:mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:sm:grid-cols-4 md:sm:grid-cols-3 gap-6 mx-4 max-w-[1280px] sm:mx-auto">
           {images.map((image, index) => (
             <div key={index} className="relative group">
               <Image
@@ -114,7 +124,7 @@ const GallerySection = ({ locale = "en" }: GallerySectionProps) => {
       </div>
 
       <div className="flex flex-col justify-center items-center mb-[80px] gap-4 mx-8 sm:mx-auto sm:flex-row">
-        <a href="/gallery">
+        <a href={getLocalizedUrl("/gallery")}>
           <button className="px-3 sm:px-8 h-[50px] border-2 border-[#025C7A] bg-white text-[#025C7A] rounded-full hover:bg-[#025C7A] hover:text-white transition-all duration-300">
             {gallery.cta.viewAll}
           </button>
