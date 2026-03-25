@@ -22,7 +22,7 @@ import { usePathname } from "next/navigation";
 import GoogleAnalytics from "../../components/GoogleAnalytics";
 import CookieConsentBanner from "../../components/CookieConsentBanner";
 import NavBar from "../../components/Navbar";
-import LandingNavBar from "../../components/LandingNavBar";
+// import LandingNavBar from "../../components/LandingNavBar";
 import Footer from "../../components/Footer";
 import CanonicalURL from "../../components/CanonicalURL";
 import GTMAnalytics from "../../components/gtmComponent";
@@ -121,6 +121,13 @@ export default function RootLayout({
             `,
           }}
         />
+
+        {/* Google reCAPTCHA V3 */}
+  <Script
+    id="recaptcha-v3"
+    strategy="afterInteractive"
+    src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+/>
 
         {/* Structured Data */}
         <Script

@@ -165,8 +165,8 @@ const LandingNavBar: React.FC<{ locale: string }> = ({ locale }) => {
             </Link>
           </div>
 
-          {/* Hamburger */}
-          <div className="lg:hidden flex items-center pr-3 relative z-50">
+          {/* Hamburger - visible only on screens <= 820px */}
+          <div className="hidden max-[820px]:flex items-center pr-3 relative z-50">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <i
                 className={`fas ${isMenuOpen ? "fa-times text-[#025C7A]" : "fa-bars text-[#6E9753]"} text-xl`}
@@ -174,8 +174,8 @@ const LandingNavBar: React.FC<{ locale: string }> = ({ locale }) => {
             </button>
           </div>
 
-          {/* Desktop Nav */}
-          <div className="navbar-center lg:flex flex-grow hidden">
+          {/* Desktop Nav - visible only on screens > 820px */}
+          <div className="hidden min-[821px]:flex flex-grow">
             <div className="flex items-center justify-center gap-2">
               {navLinks.map((link, index) => (
                 <Link key={index} href={link.href} passHref>
@@ -224,9 +224,11 @@ const LandingNavBar: React.FC<{ locale: string }> = ({ locale }) => {
             </div>
           )}
 
-          {/* Mobile Nav */}
+          {/* Mobile Nav Drawer - visible only on screens <= 820px */}
           <div
-            className={`lg:hidden fixed top-0 right-0 w-3/4 bg-white h-screen z-40 shadow-lg transform transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+            className={`max-[820px]:block hidden min-[821px]:hidden fixed top-0 right-0 w-3/4 bg-white h-screen z-40 shadow-lg transform transition-transform duration-300 ${
+              isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
           >
             <div className="flex flex-col absolute top-0 text-left items-start px-4 gap-4 py-16">
               {navLinks.map((link, index) => (

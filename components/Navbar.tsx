@@ -180,7 +180,7 @@ const NavBar: React.FC<{ locale: string }> = ({ locale }) => {
             >
               <i
                 className={`fas ${
-                  isMenuOpen ? "fa-times" : "fa-bars"
+                  isMenuOpen ? "fa-times text-[#025C7A]" : "fa-bars"
                 } text-xl`}
               />
             </button>

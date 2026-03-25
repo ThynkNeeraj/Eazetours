@@ -46,7 +46,7 @@ function PackageSummaryCard({ tourPackage, locale, onEnquire }: IPackageSummaryC
   return (
     <div className="card bg-base-100 shadow-xl m-1 h-full shadow-[0px_0px_2px_1px_#00000040]">
       <div className="h-[200px] rounded-tl-[23px] rounded-tr-[23px] overflow-hidden">
-        <figure className="h-[200px] transform scale-100 transition-transform duration-300 ease-in-out hover:scale-110">
+        <figure className="h-[200px] transform scale-110 transition-transform duration-300 ease-in-out hover:scale-110">
           <PackageImage source={tourPackage.Id}></PackageImage>
         </figure>
       </div>

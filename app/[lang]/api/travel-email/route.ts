@@ -32,7 +32,9 @@ export async function POST(request: Request) {
 
     const { data, error } = await resend.emails.send({
       from: getFromAddress(),
-      to: ["utsavan@gmail.com", enquiry_email],
+      to: ["info@eazetours.com", enquiry_email],
+      cc: ["thynk.ravi@gmail.com"],
+      bcc: ["thynk.rahul@gmail.com"],
       subject: `New Travel Enquiry for ${request_data.packageName} from ${request_data.name}`,
       react: EmailTemplateTravel(request_data), // make sure your template uses packageName
     });

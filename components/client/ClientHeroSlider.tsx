@@ -22,6 +22,12 @@ const ClientHeroSlider: React.FC<ClientHeroSliderProps> = ({ locale }) => {
   const [reloadCount, setReloadCount] = useState(0);
   const [containerHeight, setContainerHeight] = useState("750px sm:h-[100vh]");
 
+  // ✅ Ref to always have the latest videoSrc for comparison
+  const videoSrcRef = useRef(videoSrc);
+  useEffect(() => {
+    videoSrcRef.current = videoSrc;
+  }, [videoSrc]);
+
   const toggleAudio = () => {
     if (videoRef.current) {
       videoRef.current.muted = !isMuted;
@@ -47,11 +53,12 @@ const ClientHeroSlider: React.FC<ClientHeroSliderProps> = ({ locale }) => {
     }
   };
 
-  // Update video source and container height based on screen size and locale
+  // Update video source and container height on resize or locale change
   useEffect(() => {
     const updateVideoSrcAndHeight = () => {
       const newSrc = getVideoPath();
-      if (videoSrc !== newSrc) {
+      // ✅ Compare with the ref's current value (always up‑to‑date)
+      if (videoSrcRef.current !== newSrc) {
         setVideoSrc(newSrc);
         setVideoKey(prevKey => prevKey + 1);
         setReloadCount(prev => prev + 1);
@@ -59,27 +66,39 @@ const ClientHeroSlider: React.FC<ClientHeroSliderProps> = ({ locale }) => {
 
       // Set container height based on screen size
       if (window.innerWidth >= 768 && window.innerWidth <= 1024) {
-        setContainerHeight("70vh"); // 80% height for tablets
+        setContainerHeight("70vh");
       } else if (window.innerWidth > 1024) {
-        setContainerHeight("100vh"); // Full height for desktop
+        setContainerHeight("100vh");
       } else {
-        setContainerHeight("100vh"); // Fixed height for mobile
+        setContainerHeight("100vh");
       }
     };
 
+    // Run once on mount
     updateVideoSrcAndHeight();
-    window.addEventListener("resize", updateVideoSrcAndHeight);
-    return () => window.removeEventListener("resize", updateVideoSrcAndHeight);
-  }, [locale]);
 
-  // Auto-mute after 5 reloads
+    // Debounce resize handler (optional but recommended)
+    let timeoutId: NodeJS.Timeout;
+    const handleResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(updateVideoSrcAndHeight, 150);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(timeoutId);
+    };
+  }, [locale]); // only locale changes should re‑create the handler
+
+  // Auto‑mute after 5 reloads
   useEffect(() => {
     if (reloadCount >= 5) {
       setIsMuted(true);
     }
   }, [reloadCount]);
 
-  // Auto-mute when video goes out of view
+  // Auto‑mute when video goes out of view
   useEffect(() => {
     const handleScroll = () => {
       if (videoRef.current) {
@@ -90,7 +109,6 @@ const ClientHeroSlider: React.FC<ClientHeroSliderProps> = ({ locale }) => {
         }
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -113,7 +131,7 @@ const ClientHeroSlider: React.FC<ClientHeroSliderProps> = ({ locale }) => {
   return (
     <Swiper
       spaceBetween={30}
-      key={videoKey}
+      key={videoKey}           // still useful if you need to force Swiper re‑init on actual src change
       effect="fade"
       fadeEffect={{ crossFade: true }}
       loop={true}
