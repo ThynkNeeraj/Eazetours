@@ -249,99 +249,58 @@ const itemsMap = new Map<string, GalleryItem>();
 
 // Define the exact order you want.
 const orderedIds = [
-  'video-1',
-  'img-93',
-  'img-92',
-  'img-91',
-  'img-90',
-  'img-89',
-  'img-88',
-  'img-87',
-  'img-86',
-  'img-85',
-  'img-84',
-  'img-83',
-  'img-82',
-  'img-81',
-  'img-77',
-  'img-52',
-  'img-51',
-  'img-50',
-  'img-17',
-  'img-16',
-  'img-15',
-  'img-14',
-  'img-13',
-  'img-12',
-  'img-11',
-  'img-10',
-  'img-9',
-  'img-8',
-  'img-7',
-  'img-6',
-  'img-5',
-  'img-4',
-  'img-3',
-  'img-2',
-  'img-1',
-  'img-76',
+  'video-1', 
   'video-2',
-  'img-75',
-  'img-74',
-  'img-73',
-  'img-72',
-  'img-71',
-  'img-70',
-  'img-69',
-  'img-68',
-  'img-67',
-  'img-66',
-  'img-65',
-  'img-62',
-  'img-64',
-  'img-34',
-  'img-33',
-  'img-32',
-  'img-31',
-  'img-30',
-  'img-29',
-  'img-28',
-  'img-27',
-  'img-26',
-  'img-25',
-  'img-24',
-  'img-23',
-  'img-22',
-  'img-21',
-  'img-20',
-  'img-19',
-  'img-18',
-  'img-61',
-  'img-60',
+  'img-53', 
+  'img-54', 
+  'img-56', 
+  'img-57', 
+  'img-58', 
   'img-59',
-  'img-58',
-  'img-57',
-  'img-56',
-  'img-55',
-  'img-54',
-  'img-53',
+  'img-60', 
+  'img-61', 
+  'img-62', 
+  'img-64', 
+  'img-65', 
+  'img-66', 
+  'img-67', 
+  'img-68', 
+  'img-69',
+  'img-72', 
+  'img-74', 
+  'img-75', 
+  'img-76', 
+  'img-77', 
+  'img-78', 
   'img-79',
-  'img-78',
-  'img-80',
-  'img-49',
-  'img-48',
-  'img-47',
-  'img-46',
-  'img-45',
-  'img-44',
-  'img-43',
-  'img-42',
-  'img-41',
-  'img-40',
-  'img-39',
-  'img-38',
-  'img-37',
-  'img-36',
+  'img-80', 
+  'img-81', 
+  'img-82', 
+  'img-83', 
+  'img-84', 
+  'img-86', 
+  'img-88',
+  'img-90', 
+  'img-91', 
+  'img-93',
+  'img-1', 
+  'img-10', 
+  'img-9', 
+  'img-11', 
+  'img-12', 
+  'img-13', 
+  'img-14', 
+  'img-15', 
+  'img-16', 
+  'img-17', 
+  'img-18', 
+  'img-19',
+  'img-2', 
+  'img-20', 
+  'img-21', 'img-22', 'img-23', 'img-24', 'img-25', 'img-26', 'img-27', 'img-28', 'img-29',
+  'img-3', 'img-30', 'img-31', 'img-32', 'img-33', 'img-34', 'img-36', 'img-37', 'img-38', 'img-39',
+  'img-4', 'img-40', 'img-41', 'img-42', 'img-43', 'img-44', 'img-45', 'img-46', 'img-47', 'img-48', 'img-49',
+  'img-5', 'img-50', 'img-51', 'img-52', 'img-7', 'img-8'
 ];
 
 // Generate galleryItems in the exact order specified above
@@ -428,55 +387,56 @@ export default function GalleryComponent() {
 
       {/* Unified masonry grid for both images and videos */}
       <div className="mx-8 mb-12">
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-3">
-          {galleryItems.map((item, index) => (
-            <div
-              key={item.id}
-              className="break-inside-avoid group relative overflow-hidden rounded-[3px] shadow-xl cursor-pointer transition-transform hover:scale-[1.02]"
-              onClick={() => openLightbox(item, index)}
-            >
-              {item.type === 'image' ? (
-                <Image
-                  src={item.src}
-                  alt={`Gallery Image ${index + 1}`}
-                  className="w-full h-auto rounded-[3px] transition-transform group-hover:scale-105"
-                  quality={90}
-                />
-              ) : (
-                // Video container with fixed aspect ratio
-                <div className="relative bg-black" style={{ aspectRatio: item.aspectRatio }}>
-                  <video
-                    className="absolute top-0 left-0 w-full h-full rounded-[3px] object-cover"
-                    preload="metadata"
-                    playsInline
-                    muted
-                    loop
-                    poster={item.thumbnail} // Custom thumbnail for video
-                    onMouseEnter={(e) => e.currentTarget.play()}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.pause();
-                      e.currentTarget.currentTime = 0;
-                    }}
-                  >
-                    <source src={item.src} type="video/mp4" />
-                  </video>
-                  {/* Play button overlay – purely visual, click opens lightbox */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 z-10">
-                    <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
-                      <svg
-                        className="w-8 h-8 text-[#025C7A]"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+  {galleryItems.map((item, index) => (
+    <div
+      key={item.id}
+      className="break-inside-avoid group relative overflow-hidden rounded-[3px] shadow-xl cursor-pointer transition-transform hover:scale-[1.02]"
+      onClick={() => openLightbox(item, index)}
+    >
+      {item.type === 'image' ? (
+        // Image: square container with cover behaviour
+        <div className="relative w-full aspect-square bg-gray-100">
+          <Image
+            src={item.src}
+            alt={`Gallery Image ${index + 1}`}
+            fill
+            className="object-cover rounded-[3px] transition-transform group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            quality={90}
+          />
         </div>
+      ) : (
+        // Video: force square container (overrides any custom aspectRatio)
+        <div className="relative bg-black aspect-square">
+          <video
+            className="absolute top-0 left-0 w-full h-full rounded-[3px] object-cover"
+            preload="metadata"
+            playsInline
+            muted
+            loop
+            poster={item.thumbnail}
+            onMouseEnter={(e) => e.currentTarget.play()}
+            onMouseLeave={(e) => {
+              e.currentTarget.pause();
+              e.currentTarget.currentTime = 0;
+            }}
+          >
+            <source src={item.src} type="video/mp4" />
+          </video>
+          {/* Play button overlay */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 z-10">
+            <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+              <svg className="w-8 h-8 text-[#025C7A]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  ))}
+</div>
       </div>
 
       {/* Lightbox */}
