@@ -323,7 +323,6 @@ const orderedIds = [
   'img-46', 
   'img-47', 
   'img-48', 
-  'img-49',
   'img-5', 
   'img-50', 
   'img-51', 
